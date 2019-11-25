@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.amazonaws.regions.Regions;
-import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
+import com.amazonaws.services.lambda.runtime.*;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.ListObjectsV2Request;
@@ -82,7 +81,7 @@ public class ListAllLocalSegsHandler {
 				// just grab name *after* the slash. Note this is a SYSTEM constant
 				// I really dont understand this- where is the slash? what does this data look like?
 				int postSlash = id.indexOf('/');
-				sysConstants.add(new Segment(id.substring(postSlash+1), Quote.substring(postSlash+1), seg.substring(postSlash+1) true));
+				sysConstants.add(new Segment(id.substring(postSlash+1), name.substring(postSlash+1), quote.substring(postSlash+1), address.substring(postSlash+1) true));
 			} catch (Exception e) {
 				logger.log("Unable to parse contents of " + name);
 			}

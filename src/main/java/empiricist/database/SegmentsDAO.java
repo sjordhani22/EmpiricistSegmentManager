@@ -55,8 +55,9 @@ public class SegmentsDAO {
         	String query = "UPDATE library SET Quote=? SET Seg=? WHERE id=?;";	// I added SET seg, not sure if this wil work
         	PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, segment.id);
-            ps.setString(2, segment.Quote);
-            ps.setString(3, segment.seg);
+            ps.setString(2, segment.name);
+            ps.setString(3, segment.quote);
+            ps.setString(3, segment.address);
             int numAffected = ps.executeUpdate();
             ps.close();
             
@@ -91,10 +92,11 @@ public class SegmentsDAO {
                 resultSet.close();
                 return false;
             }
-            ps = conn.prepareStatement("INSERT INTO constants (id,Quote,seg) values(?,?,?);");
+            ps = conn.prepareStatement("INSERT INTO constants (id,name,quote,address) values(?,?,?,?);");
             ps.setString(1,segment.id);
-            ps.setString(1,segment.Quote);
-            ps.setString(2,segment.seg);
+            ps.setString(2,segment.name);
+            ps.setString(3,segment.quote);
+            ps.setString(4,segment.address);
             ps.execute();
             return true;
         } catch (Exception e) {
@@ -124,9 +126,10 @@ public class SegmentsDAO {
     
     private Segment generateSegment(ResultSet resultSet) throws Exception {
         String id  = resultSet.getString("id");
-        String Quote  = resultSet.getString("Quote");
-        String seg = resultSet.getString("seg");
-        return new Segment (id, Quote, seg, true);			// not sure if the boolean should be in the constructor?
+        String name  = resultSet.getString("name");
+        String quote = resultSet.getString("quote");
+        String address = resultSet.getString("address");
+        return new Segment (id,name,quote,address, true);			// not sure if the boolean should be in the constructor?
     }
 
 }
