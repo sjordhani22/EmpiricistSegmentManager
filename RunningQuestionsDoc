@@ -1,0 +1,5 @@
+Quesitons for Professor Heineman:
+
+- What is LambdaLogger, and where do we get it? (ListAllConstantsHandler)
+- Weird error in segment on id
+- How do you do the DatabaseUtil properly? I'm not sure where to find a place to create an environment variable

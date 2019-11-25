@@ -66,7 +66,7 @@ public class SegmentsDAO {
         }
     }
     
-    public boolean deleteConstant(Segment segment) throws Exception {
+    public boolean deleteSegment(Segment segment) throws Exception {
         try {
             PreparedStatement ps = conn.prepareStatement("DELETE FROM constants WHERE id = ?;");
             ps.setString(1, segment.id);			// not sure what the 1 is for?
@@ -81,7 +81,7 @@ public class SegmentsDAO {
     }
 
 
-    public boolean addConstant(Segment segment) throws Exception {
+    public boolean addSegment(Segment segment) throws Exception {
         try {
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM constants WHERE name = ?;"); // dont know what this is
             ps.setString(1, segment.id);
