@@ -4,10 +4,11 @@ package empiricist.model;
 // Adapted by Shannon Carey
 
 public class Segment {
-
+	
 	public final String id;
-	public final String Quote;
-	public final String seg;
+	public final String name;  // character name
+	public final String quote;
+	public final String address;
 	boolean system;	// when TRUE this is actually stored in S3 bucket
 
 //		public Constant (String name, double value) {
@@ -15,14 +16,23 @@ public class Segment {
 //			this.value = value;
 //		}
 		
-	public Segment (String name, String Quote, String seg, boolean system) {
+	public Segment (String id, String name, String quote, String address, boolean system) {
 		this.id = id;
-		this.Quote = Quote;
-		this.seg = seg;
+		this.name = name;
+		this.quote = quote;
+		this.address = address;
 		this.system = system;
 	}
-		
+	
+	// These will be the getters for our Segment
+	public String getID() {return this.id;}
+	public String getCharName() {return this.name;}
+	public String getQuote() {return this.quote;}
+	public String getSegAddress() {return this.address;}
 	public boolean getSystem() { return system; }
+	
+	// These will be the setters for our Segment 
+	
 	public void setSystem(boolean s) { system = s; }
 		
 		/**
