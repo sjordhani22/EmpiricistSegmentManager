@@ -43,25 +43,6 @@ function processListResponse(result) {
 	  return;
   }
   
-  for(segment in json.videoSegments) {
-		segment = json.videoSegments[segment];
-		var li = document.createElement('li');
-		var title = document.createElement('placehold');
-		title.innerHTML = "Sentence: " + segment['name'];
-		var characterCreate = document.createElement('placehold')
-		character.innerHTML = "Character: " + segment['characterCreate'];
-		var sourceCreate = document.createElement('source');
-		var videoCreate = document.createElement('video');
-		source.type = 'video/ogg';
-		source.src = segment['location'];
-		video.height = 250;
-		video.width = 300;
-		video.appendChild(source);
-		li.appendChild(title);
-		li.appendChild(character);
-		li.appendChild(video);
-		list.appendChild(li);
-	}
 
   // Update computation result
   constList.innerHTML = output;
