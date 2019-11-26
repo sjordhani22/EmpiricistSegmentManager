@@ -25,6 +25,7 @@ public class GetPlaylistReponse {
 	public String toString() {
 		if (list == null) { return "EmptyPlaylists"; }
 		return "AllPlaylists(" + list.size() + ")";
+		
 	}
 }
 
