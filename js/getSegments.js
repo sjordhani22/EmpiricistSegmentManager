@@ -32,14 +32,13 @@ function processListResponse(result) {
 	  console.log("res:" + result);
 	  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
 	  var js = JSON.parse(result);
-	  var segList = document.getElementById('segList');
+	  var segList = document.getElementById('id');
 	  
 	  var output = "";
 	  for (var i = 0; i < js.list.length; i++) {
 	    var constantJson = js.list[i];
 	    console.log(constantJson);
 	    
-	    var sid = constantJson["id"];
 	    var sname = constantJson["name"];
 	    var squote = constantJson["quote"];
 	    var saddress = constantJson["address"];
