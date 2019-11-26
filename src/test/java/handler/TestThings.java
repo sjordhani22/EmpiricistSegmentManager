@@ -21,7 +21,6 @@ public class TestThings {
 	    		System.out.println(s);
 	    	}
 	    } catch (Exception e) {
-	    	e.printStackTrace();
 	    	fail ("didn't work:" + e.getMessage());
 	    }
 	}
