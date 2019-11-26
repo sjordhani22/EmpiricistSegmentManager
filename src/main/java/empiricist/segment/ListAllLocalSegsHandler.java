@@ -115,6 +115,7 @@ public class ListAllLocalSegsHandler{
 		}
 		return response;
 	}
+}
 
 
 	
