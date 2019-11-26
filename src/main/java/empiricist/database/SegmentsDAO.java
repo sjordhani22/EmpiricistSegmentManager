@@ -22,13 +22,13 @@ public class SegmentsDAO {
 
     public SegmentsDAO() {
     	try  {
-    		conn = DatabaseUtil.connect();		// dont know where DatabaseUtil comes from
+    		conn = DatabaseUtil.connect();
     	} catch (Exception e) {
     		conn = null;
     	}
     }
-
-    public Segment getConstant(String name) throws Exception {
+    
+    public Segment getSegment(String name) throws Exception {
         
         try {
             Segment segment = null;
@@ -109,7 +109,7 @@ public class SegmentsDAO {
         List<Segment> allSegments = new ArrayList<>();
         try {
             Statement statement = conn.createStatement();
-            String query = "SELECT * FROM segments";					// I don't know what this line is doing
+            String query = "SELECT * FROM library";					// I don't know what this line is doing
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {						// used to iterate through rows of a database
