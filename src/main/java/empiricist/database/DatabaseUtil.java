@@ -52,4 +52,4 @@ public class DatabaseUtil {
 			throw new Exception("Failed in database connection");
 		}
 	}
-}
+} 
