@@ -1,6 +1,9 @@
 package handler;
 
+import java.util.List;
+
 import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
 import com.amazonaws.services.s3.AmazonS3;
@@ -8,8 +11,22 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 
-public class listVideoSegmentsHandler implements RequestHandler<S3Event, String> {
+import edu.wpi.cs.heineman.calculator.db.ConstantsDAO;
+import edu.wpi.cs.heineman.calculator.model.Constant;
+import empiricist.database.SegmentsDAO;
+import empiricist.model.Segment;
 
+public class listVideoSegmentsHandler implements RequestHandler<S3Event, AllSegmentResponse> {
+
+	public LambdaLogger logger;
+	
+	 List<Segment> getSegment() throws Exception {
+		logger.log("in getSegment");
+		SegmentsDAO dao = new SegmentsDAO();
+		
+		return dao.getAllSegments();
+	}
+	
     private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
 
     public listVideoSegmentsHandler() {}
@@ -20,7 +37,7 @@ public class listVideoSegmentsHandler implements RequestHandler<S3Event, String>
     }
 
     @Override
-    public String handleRequest(S3Event event, Context context) {
+    public AllSegmentResponse handleRequest(S3Event event, Context context) {
         context.getLogger().log("Received event: " + event);
 
         // Get the object from the event and show its content type
