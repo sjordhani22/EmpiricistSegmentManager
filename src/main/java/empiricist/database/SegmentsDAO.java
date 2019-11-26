@@ -27,8 +27,8 @@ public class SegmentsDAO {
     		conn = null;
     	}
     }
-
-    public Segment getConstant(String name) throws Exception {
+    
+    public Segment getSegment(String name) throws Exception {
         
         try {
             Segment segment = null;
