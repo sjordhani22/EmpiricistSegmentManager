@@ -95,7 +95,7 @@ public class PlaylistsDAO {
 	            return true;
 
 	        } catch (Exception e) {
-	            throw new Exception("Failed to insert constant: " + e.getMessage());
+	            throw new Exception("Error Inserting: " + e.getMessage());
 	        }
 	    }
 
@@ -122,7 +122,7 @@ public class PlaylistsDAO {
 	    
 	    private Playlist generatePlaylist(ResultSet resultSet) throws Exception {
 	        String name  = resultSet.getString("name");
-	       new  Arraylist<Segment>segment = resultSet.getlist("videoSegments");
+	       Arraylist<Segment>segment = resultSet.getString("videoSegments");
 	        
 	        return new Playlist(name,segment);
 	    }
