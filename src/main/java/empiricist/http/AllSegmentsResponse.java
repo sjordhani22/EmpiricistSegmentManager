@@ -6,11 +6,9 @@ import empiricist.model.Segment;
 
 
 public class AllSegmentsResponse {
-
-	public class AllSegmentsResponse {
-		public final List<Segment> list;
-		public final int statusCode;
-		public final String error;
+	public final List<Segment> list;
+	public final int statusCode;
+	public final String error;
 		
 		public AllSegmentsResponse (List<Segment> list, int code) {
 			this.list = list;
@@ -28,6 +26,6 @@ public class AllSegmentsResponse {
 			if (list == null) { return "EmptyConstants"; }
 			return "AllSegments(" + list.size() + ")";
 		}
-	}
-
 }
+
+
