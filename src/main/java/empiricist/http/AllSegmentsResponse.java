@@ -7,18 +7,18 @@ import empiricist.model.Segment;
 
 public class AllSegmentsResponse {
 
-	public class AllConstantsResponse {
+	public class AllSegmentsResponse {
 		public final List<Segment> list;
 		public final int statusCode;
 		public final String error;
 		
-		public AllConstantsResponse (List<Segment> list, int code) {
+		public AllSegmentsResponse (List<Segment> list, int code) {
 			this.list = list;
 			this.statusCode = code;
 			this.error = "";
 		}
 		
-		public AllConstantsResponse (int code, String errorMessage) {
+		public AllSegmentsResponse (int code, String errorMessage) {
 			this.list = new ArrayList<Segment>();
 			this.statusCode = code;
 			this.error = errorMessage;
