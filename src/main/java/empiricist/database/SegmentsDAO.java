@@ -52,7 +52,7 @@ public class SegmentsDAO {
     
     public boolean updateLibrary(Segment segment) throws Exception {
         try {
-        	String query = "UPDATE library SET Quote=? SET Seg=? WHERE id=?;";	// I added SET seg, not sure if this wil work
+        	String query = "UPDATE Library SET Quote=? SET Seg=? WHERE id=?;";	// I added SET seg, not sure if this wil work
         	PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, segment.id);
             ps.setString(2, segment.name);
@@ -92,7 +92,7 @@ public class SegmentsDAO {
                 resultSet.close();
                 return false;
             }
-            ps = conn.prepareStatement("INSERT INTO constants (id,name,quote,address) values(?,?,?,?);");
+            ps = conn.prepareStatement("INSERT INTO Library (id,name,quote,address) values(?,?,?,?);");
             ps.setString(1,segment.id);
             ps.setString(2,segment.name);
             ps.setString(3,segment.quote);
@@ -109,7 +109,7 @@ public class SegmentsDAO {
         List<Segment> allSegments = new ArrayList<>();
         try {
             Statement statement = conn.createStatement();
-            String query = "SELECT * FROM library";					// I don't know what this line is doing
+            String query = "SELECT * FROM Library";					// I don't know what this line is doing
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {						// used to iterate through rows of a database
