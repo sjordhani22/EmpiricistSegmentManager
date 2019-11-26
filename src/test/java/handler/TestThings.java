@@ -13,7 +13,7 @@ import empiricist.model.Segment;
 public class TestThings {
 
 	@Test
-	public void testFind() {
+	public void testSeg() {
 	    SegmentsDAO sd = new SegmentsDAO();
 	    try {
 	    	List<Segment> lists = sd.getAllSegments();
@@ -21,7 +21,19 @@ public class TestThings {
 	    		System.out.println(s);
 	    	}
 	    } catch (Exception e) {
-	    	e.printStackTrace();
+	    	fail ("didn't work:" + e.getMessage());
+	    }
+	}
+	
+	@Test
+	public void testPlay() {
+	    SegmentsDAO sd = new SegmentsDAO();
+	    try {
+	    	List<Segment> lists = sd.getAllSegments();
+	    	for (Segment s : lists) {
+	    		System.out.println(s);
+	    	}
+	    } catch (Exception e) {
 	    	fail ("didn't work:" + e.getMessage());
 	    }
 	}
