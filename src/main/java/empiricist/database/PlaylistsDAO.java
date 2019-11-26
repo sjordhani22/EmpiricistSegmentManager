@@ -47,7 +47,6 @@ public class PlaylistsDAO {
 	        try {
 	        	String query = "UPDATE playlist SET value=? WHERE name=?;";
 	        	PreparedStatement ps = conn.prepareStatement(query);
-	            //ps.setDouble(1, playlist.value);
 	            ps.setString(2, playlist.name);
 	            int numAffected = ps.executeUpdate();
 	            ps.close();
@@ -81,8 +80,7 @@ public class PlaylistsDAO {
 	            ps.setString(1, playlist.name);
 	            ResultSet resultSet = ps.executeQuery();
 	            
-	            // already present?
-	            while (resultSet.next()) {
+	              while (resultSet.next()) {
 	                Playlist c = generatePlaylist(resultSet);
 	                resultSet.close();
 	                return false;
@@ -122,11 +120,10 @@ public class PlaylistsDAO {
 	    
 	    private Playlist generatePlaylist(ResultSet resultSet) throws Exception {
 	        String name  = resultSet.getString("name");
-	       Arraylist<Segment>segment = resultSet.getString("videoSegments");
+	       Arraylist<Segment>segment = resultSet.getString("segments");
 	        
 	        return new Playlist(name,segment);
 	    }
 
 	}
 	    
-
