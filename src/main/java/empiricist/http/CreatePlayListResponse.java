@@ -11,4 +11,12 @@ public class CreatePlayListResponse {
 		this.error = error;
 	}
 
+	public String toString() {
+		if(statusCode == 200) {
+			return "Result(" + result + ")";
+		}
+		else { 
+			return "ErrorResult(" + statusCode + ", err=" + error + ")";
+		}
+	}
 }

@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.amazonaws.regions.Regions;
-import com.amazonaws.services.lambda.runtime.*;
+import com.amazonaws.services.lambda.runtime.LambdaLogger;
+import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.ListObjectsV2Request;
@@ -16,12 +17,12 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 
 import empiricist.database.SegmentsDAO;
 import empiricist.model.Segment;
-
+	
 //import edu.wpi.cs.heineman.calculator.db.ConstantsDAO;
 //import edu.wpi.cs.heineman.calculator.http.AllConstantsResponse;
 //import edu.wpi.cs.heineman.calculator.model.Constant;
 
-public class ListAllLocalSegsHandler {
+public class ListAllLocalSegsHandler{
 
 	public LambdaLogger logger;
 
