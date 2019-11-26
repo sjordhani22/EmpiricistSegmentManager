@@ -1,5 +1,8 @@
 Quesitons for Professor Heineman:
 
 - What is LambdaLogger, and where do we get it? (ListAllConstantsHandler)
-- Weird error in segment on id
+- What code goes into a Lambda Function
+	- How does that code maintain dependencies? How does it have access to eclipse?
+- How does the lambda function connect to the HTML?
+- How do you connect the HTML to the API?
 - How do you do the DatabaseUtil properly? I'm not sure where to find a place to create an environment variable
