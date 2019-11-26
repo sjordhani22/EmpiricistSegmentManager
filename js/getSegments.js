@@ -3,9 +3,16 @@
  *
  *    GET list_url
  *    RESPONSE  list of [name, value] constants 
+ *    
+ *    
+ *    
+ *    <video id="allFull" controls="" width="320" height="240">
+  <source src="startrek.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
  */
-function refreshConstantsList() {
-   var xhr = new XMLHttpRequest();
+function refreshSegmentsList() {  
+   var xhr = new XMLHttpRequest();  
    xhr.open("GET", segment_url, true);
    xhr.send();
    
