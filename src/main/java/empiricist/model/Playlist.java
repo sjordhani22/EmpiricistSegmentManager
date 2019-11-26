@@ -12,8 +12,8 @@ public class Playlist {
 		 this.segments = segments;
 	 }
 	 
-	 public Playlist() {
-		 
+	 public Playlist(String name) {
+		 this.name = name;
 	 }
 	 
 	 

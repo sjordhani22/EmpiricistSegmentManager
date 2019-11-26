@@ -1,8 +1,8 @@
 package empiricist.database;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +11,9 @@ import empiricist.model.Playlist;
 public class PlaylistsDAO {
 	
 	
-		java.sql.Connection conn;
+		Connection conn;
+		ResultSet result;
+		PreparedStatement prepare;
 
 	    public PlaylistsDAO() {
 	    	try  {
@@ -23,17 +25,17 @@ public class PlaylistsDAO {
 	    public Playlist getPlaylist(String name) throws Exception {
 	    	try {
 	            Playlist playlist = null;
-	            PreparedStatement ps = conn.prepareStatement("SELECT * FROM playlist WHERE name=?;");
-	            ps.setString(1,  name);
-	            ResultSet resultSet = ps.executeQuery();
+	            prepare = conn.prepareStatement("SELECT * FROM playlist WHERE name=?;");
+	            prepare.setString(1,  name);
+	            result = prepare.executeQuery();
 
 
 	    
-	    	while (resultSet.next()) {
-                playlist = generatePlaylist(resultSet);
+	    	while (result.next()) {
+                playlist = generatePlaylist(name);
             }
-            resultSet.close();
-            ps.close();
+	    	result.close();
+            prepare.close();
             
             return playlist;
 	    	}
@@ -46,10 +48,10 @@ public class PlaylistsDAO {
 	    public boolean updatePlaylist(Playlist playlist) throws Exception {
 	        try {
 	        	String query = "UPDATE playlist SET value=? WHERE name=?;";
-	        	PreparedStatement ps = conn.prepareStatement(query);
-	            ps.setString(2, playlist.name);
-	            int numAffected = ps.executeUpdate();
-	            ps.close();
+	        	prepare = conn.prepareStatement(query);
+	            prepare.setString(2, playlist.name);
+	            int numAffected = prepare.executeUpdate();
+	            prepare.close();
 	            
 	            return (numAffected == 1);
 	        } catch (Exception e) {
@@ -59,10 +61,10 @@ public class PlaylistsDAO {
 	    
 	    public boolean deletePlaylist(Playlist playlist) throws Exception {
 	        try {
-	            PreparedStatement ps = conn.prepareStatement("DELETE FROM playlist WHERE name = ?;");
-	            ps.setString(1, playlist.name);
-	            int numAffected = ps.executeUpdate();
-	            ps.close();
+	        	prepare = conn.prepareStatement("DELETE FROM playlist WHERE name = ?;");
+	        	prepare.setString(1, playlist.name);
+	            int numAffected = prepare.executeUpdate();
+	            prepare.close();
 	            
 	            return (numAffected == 1);
 
@@ -74,55 +76,74 @@ public class PlaylistsDAO {
 	    }
 
 
-	    public boolean addPlaylist(Playlist playlist) throws Exception {
+	    public boolean addPlaylist(String name) throws Exception {
 	        try {
-	            PreparedStatement ps = conn.prepareStatement("SELECT * FROM playlist WHERE name = ?;");
-	            ps.setString(1, playlist.name);
-	            ResultSet resultSet = ps.executeQuery();
-	            
-	              while (resultSet.next()) {
-	                Playlist c = generatePlaylist(resultSet);
-	                resultSet.close();
-	                return false;
-	            }
-
-	            ps = conn.prepareStatement("INSERT INTO playlist (name,value) values(?,?);");
-	            ps.setString(1,  playlist.name);
-	            
-	            ps.execute();
-	            return true;
-
-	        } catch (Exception e) {
-	            throw new Exception("Error Inserting: " + e.getMessage());
+	        	if (isItInDataBase(name)) {
+	        		return false;
+	        	}
+	        	prepare = conn.prepareStatement("INSERT INTO Playlist(name) VALUE(?)");
+	        	prepare.setString(1, name);
+	        	prepare.executeQuery();
+	        	return true;
+	        }catch (Exception e) {
+	        	e.printStackTrace();
+	        	return false;
 	        }
 	    }
-
 	    public List<Playlist> getAllPlaylists() throws Exception {
 	        
-	        List<Playlist> allConstants = new ArrayList<>();
 	        try {
-	            Statement statement = conn.createStatement();
-	            String query = "SELECT * FROM playlist";
-	            ResultSet resultSet = statement.executeQuery(query);
-
-	            while (resultSet.next()) {
-	                Playlist p = generatePlaylist(resultSet);
-	                allConstants.add(p);
-	            }
-	            resultSet.close();
-	            statement.close();
-	            return allConstants;
-
-	        } catch (Exception e) {
-	            throw new Exception("Failed in getting playlist: " + e.getMessage());
+	        	List<Playlist>play = new ArrayList<Playlist>();
+	        	List<String> playNames = getPlaylistNames();
+	        	for(String s : playNames) {
+	        		play.add(getPlaylist(s));
+	        	}
+	        	return play;
+	        	
+	        }catch (Exception e){
+	        	e.printStackTrace();
+	        	return null;
 	        }
 	    }
 	    
-	    private Playlist generatePlaylist(ResultSet resultSet) throws Exception {
-	        String name  = resultSet.getString("name");
-	       Arraylist<Segment>segment = resultSet.getString("segments");
-	        
-	        return new Playlist(name,segment);
+	    public List<String> getPlaylistNames(){	
+	    	try {
+	    		prepare = conn.prepareStatement("SELECT name FROM Playlist");
+	    		result = prepare.executeQuery();
+	    		List<String> names = new ArrayList<String>();
+	    		
+	    		while (result.next()) {
+	    			names.add(result.getString("name"));
+	    		}
+	    		
+	    		return names;
+	    		
+	    	}catch(Exception e) {
+	    		e.printStackTrace();
+	    		return null;
+	    	}
+	    }
+	    
+	    private Playlist generatePlaylist(String name) throws Exception {
+	        Playlist playplay = new Playlist(name);
+	        SegmentsDAO seggy = new SegmentsDAO();
+	        while (result.next()) {
+	        	playplay.appendSegment(seggy.getSegment(result.getString("address")));
+	        }
+	        return playplay;
+	    }
+	    
+	    public boolean isItInDataBase (String name) throws Exception{
+	    	try {
+	    		prepare = conn.prepareStatement("SELECT * FROM Playlist WHERE name =? ");
+	    		prepare.setString(1,name);
+	    		result = prepare.executeQuery();
+	    		boolean isit = result.next();
+	    		return isit;
+	    	}catch (Exception e) {
+	    		e.printStackTrace();
+	    		throw e;
+	    	}
 	    }
 
 	}
