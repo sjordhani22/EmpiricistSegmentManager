@@ -8,7 +8,7 @@ public class GetPlaylistReponse {
 	
 	public final List<Playlist> list;
 	public final int stats;
-	public final String error;
+	public String error;
 	
 	public GetPlaylistReponse (List<Playlist> list, int code) {
 		this.list = list;
