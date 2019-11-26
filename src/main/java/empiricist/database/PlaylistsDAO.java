@@ -123,7 +123,7 @@ public class PlaylistsDAO {
 	    private Playlist generatePlaylist(ResultSet resultSet) throws Exception {
 	        String name  = resultSet.getString("name");
 	       new  Arraylist<Segment>segment = resultSet.getlist("videoSegments");
-	        //Double value = resultSet.getDouble("value");
+	        
 	        return new Playlist(name,segment);
 	    }
 
