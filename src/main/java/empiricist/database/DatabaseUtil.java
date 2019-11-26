@@ -49,6 +49,7 @@ public class DatabaseUtil {
 			//System.out.println("Database has been connected successfully.");
 			return conn;
 		} catch (Exception ex) {
+			ex.printStackTrace();
 			throw new Exception("Failed in database connection");
 		}
 	}
