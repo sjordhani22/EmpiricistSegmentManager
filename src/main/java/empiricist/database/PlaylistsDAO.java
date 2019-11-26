@@ -10,7 +10,6 @@ import empiricist.model.Playlist;
 
 public class PlaylistsDAO {
 	
-	
 		Connection conn;
 		ResultSet result;
 		PreparedStatement prepare;
