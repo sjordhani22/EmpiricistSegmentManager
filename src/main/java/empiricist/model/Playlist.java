@@ -3,7 +3,7 @@ package empiricist.model;
 import java.util.ArrayList;
 
 public class Playlist {
-	 String name; 
+	 public String name; 
 	 ArrayList<Segment> segments = new ArrayList<Segment>();
 	 
 	 

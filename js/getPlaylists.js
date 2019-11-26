@@ -28,7 +28,7 @@ function refreshPlaylistList(){
 		  console.log("res:" + result);
 		  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
 		  var js = JSON.parse(result);
-		  var constList = document.getElementById('constantList');
+		  var PlayListList = document.getElementById('constantList');
 		  
 		  var output = "";
 		  for (var i = 0; i < js.list.length; i++) {
@@ -48,5 +48,4 @@ function refreshPlaylistList(){
 		  // Update computation result
 		  constList.innerHTML = output;
 		}
-
-
+		
