@@ -21,9 +21,9 @@ function refreshSegmentsList() {
 		console.log(xhr);
 		console.log(xhr.request);
 		if (xhr.readyState == XMLHttpRequest.DONE) {
-			processAllSegmentsResponse(xhr.responseText);
+			processSegmentsResponse(xhr.responseText);
 		} else {
-			processAllSegmentsResponse("N/A");
+			processSegmentsResponse("N/A");
 		}
 	};
 }
@@ -40,21 +40,22 @@ function processSegmentsResponse(result) {
 	  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
 	  var js = JSON.parse(result);
 	  var segList = document.getElementById('Library');
-	  
 	  var output = "";
+	  
 	  for (var i = 0; i < js.list.length; i++) {
-	    var constantJson = js.list[i];
+	    var segmentJson = js.list[i];
 	    console.log(constantJson);
 	    
-	    var cid = constantJson["id"];
-	    var cname = constantJson["name"];
-	    var cquote = constantJson["quote"];
-	    var caddress = constantJson["address"];
-	    var sysvar = constantJson["system"];
+	    var cid = segmentJson["id"];
+	    var cname = segmentJson["name"];
+	    var cquote = segmentJson["quote"];
+	    var caddress = segmentJson["address"];
+	    var sysvar = segmentJson["system"];
 	    if (sysvar) {
 	    	output = output + "<div id=\"const" + cid + "\"><b>" + cid + ":</b> = " + caddress + "<br></div>";
 	    } else {
-	    	output = output + "<div id=\"const" + cid + "\"><b>" + cid + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+	    	output = output + "<div id=\"AAAAH" + cid + "\"><b>" + cid + ":</b> = " + caddress + "<br></div>"
+	    	//output = output + "<div id=\"const" + cid + "\"><b>" + cid + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
 	    }
 	  }
 

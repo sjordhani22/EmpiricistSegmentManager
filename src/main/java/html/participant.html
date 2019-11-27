@@ -6,14 +6,20 @@
 <script type='text/javascript' src='../js/getSegments'></script>
 <script type="text/javascript">
 
-
-	function initialize(){ refreshSegmentsList(); }
+<script type="text/javascript">
+function initialize() {
+  
+   // get all segments
+   videoSegs = refreshSegmentsList();
+   
+}
 	
 	</script></head><body onload="initialize()">
 
-	<video id="Kirk1" controls="" width="320" height="240">
-  <source src="https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/KirkTheCaptain-converted.ogg" type="video/ogg">
-</video>
+	<video id= videoSegs.id controls="" width="320" height="240">
+  <source src= videoSegs.address type="video/ogg">
+	</video>
+
 	<h1>You have now been moved to the Participant Page</h1>
 
 	<p>From this page, you will have access to all participant
