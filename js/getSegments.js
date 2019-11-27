@@ -35,31 +35,29 @@ function refreshSegmentsList() {
  * -separated list of name,value pairs.
  */
 
-function processAllSegmentsResponse(result) {
-	console.log("res:" + result);
-	var js = JSON.parse(result);
-	var segList = document.getElementById('id');
+function processSegmentsResponse(result) {
+	  console.log("res:" + result);
+	  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
+	  var js = JSON.parse(result);
+	  var segList = document.getElementById('Library');
+	  
+	  var output = "";
+	  for (var i = 0; i < js.list.length; i++) {
+	    var constantJson = js.list[i];
+	    console.log(constantJson);
+	    
+	    var cid = constantJson["id"];
+	    var cname = constantJson["name"];
+	    var cquote = constantJson["quote"];
+	    var caddress = constantJson["address"];
+	    var sysvar = constantJson["system"];
+	    if (sysvar) {
+	    	output = output + "<div id=\"const" + cid + "\"><b>" + cid + ":</b> = " + caddress + "<br></div>";
+	    } else {
+	    	output = output + "<div id=\"const" + cid + "\"><b>" + cid + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+	    }
+	  }
 
-	for (segment in js.videoSegments) {
-		
-		var title = document.createElement('p');
-		var cre = document.createElement('cre');
-		var character = document.createElement('name');
-		var video = document.createElement('address');
-		var source = document.createElement('address');
-		segment = json.videoSegments[segment];
-		title.innerHTML = "Sentence: " + segment['quote'];
-		character.innerHTML = "Character: " + segment['name'];
-		source.type = 'video/ogg';
-		source.src = segment['address'];
-		video.width = 320;
-		video.height = 240;
-		video.controls = true;
-		video.appendChild(source);
-		cre.appendChild(title);
-		cre.appendChild(character);
-		cre.appendChild(video);
-		seglist.appendChild(cre);
-
-	}
+	  // Update computation result
+	  segList.innerHTML = output;
 }

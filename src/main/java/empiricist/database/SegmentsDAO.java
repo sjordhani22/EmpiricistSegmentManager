@@ -109,7 +109,7 @@ public class SegmentsDAO {
         List<Segment> allSegments = new ArrayList<>();
         try {
             Statement statement = conn.createStatement();
-            String query = "SELECT * FROM Library";					// I don't know what this line is doing
+            String query = "SELECT * FROM Library";					
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {						// used to iterate through rows of a database

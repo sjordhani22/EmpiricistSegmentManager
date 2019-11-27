@@ -29,7 +29,7 @@ public class listVideoSegmentsHandler implements RequestHandler<S3Event, AllSegm
 		logger.log("in getSegment");
 		SegmentsDAO dao = new SegmentsDAO();
 		
-		return dao.getAllSegments();
+		return dao.getAllSegments();	// returns List<Segment>
 	}
 	
     private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
