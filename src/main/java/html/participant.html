@@ -2,19 +2,19 @@
 <html>
 <body>
 
-<script type='text/javascript' src='../js/api.js'></script>
-<script type='text/javascript' src='../js/getSegments'></script>
-<script type="text/javascript">
-
-	function initialize(){
-   refreshSegmentsList();
-   }
+	<script type='text/javascript' src='../js/api.js'></script>
+	<script type='text/javascript' src='../js/getSegments'></script>
+	<script type='text/javascript' src='../js/getPlaylists'></script>
 	
-	</script></head><body onload="initialize()">
+	<script type="text/javascript">
+		function initialize() {
+			refreshSegmentsList();
+		}
+	</script>
+</head>
+<body onload="initialize()">
 
-	<video id=processAllSegmentsResponse().character controls="" width="320" height="240">
-  <source src=processAllSegmentsResponse().source type="video/ogg">
-</video>
+	
 	<h1>You have now been moved to the Participant Page</h1>
 
 	<p>From this page, you will have access to all participant
@@ -28,18 +28,90 @@
 	<button class="btn ShowPlay">Show Playlist</button>
 	<legend> </legend>
 	<p>
+	
+	<p>Playlist 1</p>
+	<p>Playlist Fun</p>
+	
+	
+		<h1>LOCAL SEGMENTS</h1>
+
+	<video id="Kirk1" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/KirkTheCaptain-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	
+	<video id="Kirk2" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/KirkNextMove-converted.ogg
+
+ type="video/ogg">
+	</video>
+	
+	<video id="Kirk3" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/KirkPickup-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="Kirk4" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/KirkAWoman-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="McCoy1" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/McCoyHisJob-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="McCoy2" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/McCoyAnswerMyQuestion-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="McCoy3" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/McCoyTheAnswer-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="Spock1" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/SpockEmpiricist-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="Spock2" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/SpockResume-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<video id="Uhura1" controls=""
+		width="320" height="240">
+		<source src= https://cs3733empiricist.s3.us-east-2.amazonaws.com/NewVideoSegs/UhuraAllClear-converted.ogg
+ type="video/ogg">
+	</video>
+	
+	<p>
+	</p>
+	
 		<label>Search</label> <select id="myList">
 			<option value="1">Search by Character</option>
 			<option value="2">Search by Quote</option>
 		</select>
 		<button class="btn searchSeg">Search Segment</button>
-
-		<p>
-	<label>Select Which Segments</label> <select id="myList">
+	<p>
+		<label>Select Which Segments</label> <select id="myList">
 			<option value="1">Remote Segments</option>
 			<option value="2">Local Segments</option>
 		</select>
-		<button class="btn displaySeg">Display Segments</button><p></p>
+		<button class="btn displaySeg">Display Segments</button>
+	<p></p>
 	<button class="btn Upload">Upload Segment</button>
 	<p></p>
 	<button class="btn Append">Append</button>
@@ -48,7 +120,7 @@
 
 	<p></p>
 	<div id="button">
-		<a href="Welcome.html">Go Back to Home Page</a>
+		<a href="./welcome.html">Go Back to Home Page</a>
 	</div>
 
 </body>
