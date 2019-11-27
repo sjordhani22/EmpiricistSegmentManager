@@ -4,21 +4,15 @@
 
 <script type='text/javascript' src='../js/api.js'></script>
 <script type='text/javascript' src='../js/getSegments'></script>
-<script type="text/javascript">
 
 <script type="text/javascript">
 function initialize() {
   
-   // get all segments
-   videoSegs = refreshSegmentsList();
-   
+   // get all constants
+   refreshConstantsList();
 }
-	
-	</script></head><body onload="initialize()">
+</script></head><body onload="initialize()">
 
-	<video id= videoSegs.id controls="" width="320" height="240">
-  <source src= videoSegs.address type="video/ogg">
-	</video>
 
 	<h1>You have now been moved to the Participant Page</h1>
 
@@ -55,6 +49,14 @@ function initialize() {
 	<div id="button">
 		<a href="Welcome.html">Go Back to Home Page</a>
 	</div>
+	
+	<h3>List of Segments</h3>
+	
+	<div id="segmentList"></div>
+	
+	<video id= seg controls="" width="320" height="240">
+  	<source src= seg type="video/ogg">
+	</video>
 
 </body>
 </html>
