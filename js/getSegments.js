@@ -11,7 +11,7 @@
  */
 function refreshSegmentsList() {
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", list_url, true);
+	xhr.open("GET", getSegment_url, true); //from API
 	xhr.send();
 
 	console.log("sent");
@@ -53,6 +53,7 @@ function processSegmentsResponse(result) {
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
 	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
+	    	console.log(output);
 	    } else {
 	    	output = output + "<div id=\"AAAAH" + cid + "\"><b>" + cid + ":</b> = " + caddress + "<br></div>"
 	    	//output = output + "<div id=\"seg" + cid + "\"><b>" + cseg + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
