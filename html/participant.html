@@ -6,10 +6,34 @@
 <script type='text/javascript' src='../js/getSegments.js'></script>
 
 <script type="text/javascript">
+function deleteMeLater(result) {
+ var js = JSON.parse(result);
+	  var segList = document.getElementById('segmentList');
+	  var output = "";
+
+console.log("in gere.");
+}
 function initialize() {
   
    // get all constants
    refreshSegmentsList();
+   
+   var delete_url = "https://5h5xyqcl1i.execute-api.us-east-2.amazonaws.com/DeleteMe/listVideoSegments";
+   var xhr = new XMLHttpRequest();
+	xhr.open("GET", delete_url, true); //from API
+	xhr.send();
+
+	console.log("sent-delete-me");
+
+	// This will process results and update HTML as appropriate.
+	xhr.onloadend = function() {
+		console.log(xhr);
+		console.log(xhr.request);
+		if (xhr.readyState == XMLHttpRequest.DONE) {
+			deleteMeLater(xhr.responseText);
+		} 
+	};
+   
 }
 </script></head><body onload="initialize()">
 
