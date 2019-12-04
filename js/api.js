@@ -12,7 +12,7 @@ var registerTP_url = base_url + "registerTP"				// POST
 var removeSegFromPlay_url = base_url + "removeSegFromPlay"	// POST
 var searchCharSegment_url = base_url + "searchCharSegment"	// POST
 var searchStringSegment_url = base_url + "searchCharSegment"// POST
-var uploadVideoSegment_url = base_url + "uploadVideoSegment"// POST
+var upload_url = base_url + "uploadVideoSegment"// POST
 var markSeg_url = base_url + "markSeg";						// POST
 var unmarkSeg_url = base_url + "unmarkSeg"					// POST
 var unregisterTP_url = base_url + "unregisterTP"			// POST
@@ -28,17 +28,16 @@ var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
 var directAdmin_url = base_url + "directAdmin"			// POST
 var directParticipant_url = base_url + "directParticipant"
 
-
-// NEEDED FOR G3					JS FILE MADE?	 	NOTES:
-// List of segments							Y 		- need help
-// Upload new segment						  		- no idea how to do this
+// NEEDED FOR G3					JS FILE MADE?		Java?			NOTES:
+// List of segments							Y 			Y				- need help
+// Upload new segment						  							- no idea how to do this
 // Delete segment							Y
 
-// List of playlists						Y 		- need help
-// Create new playlist						Y
+// List of playlists						Y 							- need help
+// Create new playlist						Y			YY
 // Delete new playlist						Y
 
-// Search for segment by character name		  		- a tomorrow problem
-// Search for segment by text				  		- a tomorrow problem
+// Search for segment by character name		  							- a tomorrow problem
+// Search for segment by text				  							- a tomorrow problem
 
-// Add a remote site						  		- a tomorrow problem
+// Add a remote site						  							- a tomorrow problem

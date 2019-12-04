@@ -1,24 +1,19 @@
 package empiricist.http;
 
 public class SearchSegmentRequest {
-	public double minValue;
-	public double maxValue;
+	String character;
 	
-	public double getMinValue( ) { return minValue; }
-	public void setMinValue(double minValue) { this.minValue = minValue; }
-	
-	public double getMaxValue( ) { return maxValue; }
-	public void setMaxValue(double maxValue) { this.maxValue = maxValue; }
+	public String getCharacter( ) { return character; }
+	public void setCharName(String charName) { this.character = charName; }
 	
 	public SearchSegmentRequest() {
 	}
 	
-	public SearchSegmentRequest (double minv, double maxv) {
-		this.minValue = minv;
-		this.maxValue = maxv;
+	public SearchSegmentRequest (String character) {
+		this.character = character;
 	}
 	
 	public String toString() {
-		return "SearchConstantRequest(" + minValue + "," + maxValue + ")";
+		return "SearchSegmentRequest(" + character + ")";
 	}
 }

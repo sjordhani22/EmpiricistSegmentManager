@@ -1,22 +1,30 @@
 package empiricist.http;
 
-public class CreatePlayListResponse {
-	public String result;
-	public int  statusCode;
-	public String error;
-	
-	public CreatePlayListResponse(int statusCode, String error) {
-		this.result = "";
-		this.statusCode = statusCode;
-		this.error = error;
-	}
+/**
+ * In most cases the response is the name of the constant that was being created.
+ * 
+ * if an error of some sort, then the response describes that error.
+ *  
+ */
 
+public class CreatePlayListResponse {
+	public final String response;
+	public final int httpCode;
+	
+	public CreatePlayListResponse (String s, int code) {
+		this.response = s;
+		this.httpCode = code;
+	}
+	
+	// 200 means success
+	public CreatePlayListResponse (String s) {
+		this.response = s;
+		this.httpCode = 200;
+	}
+	
 	public String toString() {
-		if(statusCode == 200) {
-			return "Result(" + result + ")";
-		}
-		else { 
-			return "ErrorResult(" + statusCode + ", err=" + error + ")";
-		}
+		return "Response(" + response + ")";
 	}
 }
+
+
