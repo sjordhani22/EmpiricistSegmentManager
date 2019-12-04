@@ -37,9 +37,8 @@ function refreshSegmentsList() {
 
 function processSegmentsResponse(result) {
 	  console.log("res:" + result);
-	  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
 	  var js = JSON.parse(result);
-	  var segList = document.getElementById('segmentList');
+	  var segList = document.getElementById('segmentList');		//Replace the contents of 'constantList' with a <br>* -separated list of name,value pairs. ?????
 	  var output = "";
 	  
 	  for (var i = 0; i < js.list.length; i++) {

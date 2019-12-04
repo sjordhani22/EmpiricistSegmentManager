@@ -1,27 +1,26 @@
-// This class is yet to be modified 
+// adapted from delete.js
 
-function processDeleteResponse(result) {
-  // Can grab any DIV or SPAN HTML element and can then manipulate its
-  // contents dynamically via javascript
+function processDeletePlaylistResponse(result) {
   console.log("deleted :" + result);
   
   refreshSegmentsList();
+  //refreshRemoteList();									// COMMENT ME BACK IN EVENTUALLY
 }
 
-function requestDelete(val) {
+function requestDeletePlaylist(val) {
    if (confirm("Request to delete " + val)) {
      processDelete(val);
    }
 }
 
-function processDelete(val) {
+function processDeletePlaylist(val) {
   var data = {};
-  data["name"] = val;
+  data["name"] = val;										// FIX ME
 
   var js = JSON.stringify(data);
   console.log("JS:" + js);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", delete_url, true);  // Can't be DELETE since then no data sent via JSON
+  xhr.open("POST", deletePlaylist_url, true);
 
   // send the collected data as JSON
   xhr.send(js);
@@ -41,7 +40,7 @@ function processDelete(val) {
 			  alert (err);
 		  }
 	  } else {
-		  processDeleteResponse("N/A");
+		  processDeletePlaylistResponse("N/A");
 	  }
   };
 }
