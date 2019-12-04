@@ -9,7 +9,7 @@ function processCreatePlaylistResponse(result) {
   //refreshRemoteList();														// COMMENT IN EVENTUALLY
 }
 
-function handleCreatePlaylistClick(e) {													// NEEDS TO BE UPDATED?
+function handleCreatePlaylistClick(e) {		//gets called from html
   var form = document.createForm;
  
   var data = {};
@@ -26,7 +26,7 @@ function handleCreatePlaylistClick(e) {													// NEEDS TO BE UPDATED?
   var js = JSON.stringify(data);
   console.log("JS:" + js);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST",createPlaylist_url, true);
+  xhr.open("POST",createPlaylist_url, true);		// corresponds to API
 
   // send the collected data as JSON
   xhr.send(js);
