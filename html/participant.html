@@ -14,26 +14,7 @@ function deleteMeLater(result) {
 console.log("in gere.");
 }
 function initialize() {
-  
-   // get all constants
    refreshSegmentsList();
-   
-   var delete_url = "https://5h5xyqcl1i.execute-api.us-east-2.amazonaws.com/DeleteMe/listVideoSegments";
-   var xhr = new XMLHttpRequest();
-	xhr.open("GET", delete_url, true); //from API
-	xhr.send();
-
-	console.log("sent-delete-me");
-
-	// This will process results and update HTML as appropriate.
-	xhr.onloadend = function() {
-		console.log(xhr);
-		console.log(xhr.request);
-		if (xhr.readyState == XMLHttpRequest.DONE) {
-			deleteMeLater(xhr.responseText);
-		} 
-	};
-   
 }
 	</script></head><body onload="initialize()">
 
@@ -43,16 +24,11 @@ function initialize() {
 		<p>From this page, you will have access to all participant commands.</p>
 		
 		<h2>Playlists</h2>
-		
-		
-		<form name="createPlaylistSForm" method="post">
-	   		<input name="name" value="new Playlist Name" />
-	   		<input name="base64Encoding" hidden value=""/>
-	   		<input type="button" id="createPlaylistButton" value="Create Playlist" 
-	   		onClick="JavaScript:handleCreatePlaylistClick(this)">
+		<div id="playlistList"></div>
+		<form name="createPlaylist" method="post">
+   			<input name="name" value="name" />
+   			<input type="button" id="createButton" value="Create PlayList" disabled onClick="JavaScript:handleCreatePlaylistClick(this)">
 		</form>
-
-	</script>
 
 
 	<button class="btn ShowPlay">Show Playlist</button>
@@ -79,7 +55,6 @@ function initialize() {
 	<p></p>
 	
 	<h1>Request to add values </h1>
-	
 	
 	<button class="btn Append">Append</button>
 	<button class="btn Delete">Delete</button>
