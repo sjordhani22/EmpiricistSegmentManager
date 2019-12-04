@@ -40,14 +40,13 @@ function initialize() {
 		</select>
 		<button class="btn displaySeg">Display Segments</button><p></p>
 		
+		
+	<button class="btn Upload">Upload Segment</button>
+	Select a Segment in file: <input type="file" id="segValue" name="segValue">
+	<input type="text" id="char" value="Enter Character Name Here">
+	<input type="text" id="quote" value="Enter Quote Here">
+	<p></p>
 	
-	<form name="uploadForm" method="post">
-   <input name="segCharName" value="segCharName" />
-   <input name="base64Encoding" hidden value=""/>
-   Select a constant in file: <input type="file" id="constantValue" name="constantValue">
-   <input type="button" id="createButton" value="Upload Segment" disabled onClick="JavaScript:handleCreateClick(this)">
-</form>
-
 	<button class="btn Append">Append</button>
 	<button class="btn Delete">Delete</button>
 	<button class="btn Publish">Publish</button>
