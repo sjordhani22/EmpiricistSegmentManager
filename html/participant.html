@@ -35,18 +35,24 @@ function initialize() {
 	};
    
 }
-</script></head><body onload="initialize()">
+	</script></head><body onload="initialize()">
 
 
-	<h1>You have now been moved to the Participant Page</h1>
+		<h1>You have now been moved to the Participant Page</h1>
+		
+		<p>From this page, you will have access to all participant commands.</p>
+		
+		<h2>Playlists</h2>
+		
+		
+		<form name="createPlaylistSForm" method="post">
+	   		<input name="name" value="new Playlist Name" />
+	   		<input name="base64Encoding" hidden value=""/>
+	   		<input type="button" id="createPlaylistButton" value="Create Playlist" disabled onClick="JavaScript:handleCreatePlaylistClick(this)">
+		</form>
 
-	<p>From this page, you will have access to all participant
-		commands.</p>
-	<legend> </legend>
-	<p>
-		<button class="btn createPlay">Create Playlist</button>
-		<input type="text" id="createPlay" value="Enter Playlist Name Here" />
-	</p>
+	</script>
+
 
 	<button class="btn ShowPlay">Show Playlist</button>
 	<legend> </legend>
@@ -56,8 +62,8 @@ function initialize() {
 			<option value="2">Search by Quote</option>
 		</select>
 		<button class="btn searchSeg">Search Segment</button>
-
-		<p>
+	<p>
+	
 	<label>Select Which Segments</label> <select id="myList">
 			<option value="1">Remote Segments</option>
 			<option value="2">Local Segments</option>
@@ -70,6 +76,9 @@ function initialize() {
 	<input type="text" id="char" value="Enter Character Name Here">
 	<input type="text" id="quote" value="Enter Quote Here">
 	<p></p>
+	
+	<h1>Request to add values </h1>
+	
 	
 	<button class="btn Append">Append</button>
 	<button class="btn Delete">Delete</button>

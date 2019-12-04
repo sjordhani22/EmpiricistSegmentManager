@@ -28,13 +28,13 @@ var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
 var directAdmin_url = base_url + "directAdmin"			// POST
 var directParticipant_url = base_url + "directParticipant"
 
-// NEEDED FOR G3					JS FILE MADE?		Java?			NOTES:
-// List of segments							Y 			Y				- need help
+// NEEDED FOR G3					JS FILE MADE?		Handler?			NOTES:
+// List of segments							Y 				Y			- need help
 // Upload new segment						  							- no idea how to do this
 // Delete segment							Y
 
-// List of playlists						Y 							- need help
-// Create new playlist						Y			YY
+// List of playlists						Y 				Y			- need help
+// Create new playlist						Y				Y
 // Delete new playlist						Y
 
 // Search for segment by character name		  							- a tomorrow problem

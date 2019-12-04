@@ -9,7 +9,7 @@ function processCreatePlaylistResponse(result) {
   //refreshRemoteList();														// COMMENT IN EVENTUALLY
 }
 
-function handleCreateClick(e) {													// NEEDS TO BE UPDATED?
+function handleCreatePlaylistClick(e) {													// NEEDS TO BE UPDATED?
   var form = document.createForm;
  
   var data = {};
@@ -46,7 +46,7 @@ function handleCreateClick(e) {													// NEEDS TO BE UPDATED?
 			  alert (err);
     	 }
     } else {
-      processCreateResponse("N/A");
+      processCreatePlaylistResponse("N/A");
     }
   };
 }
