@@ -24,7 +24,7 @@ import empiricist.http.AllSegmentsResponse;
 import empiricist.http.SearchSegmentRequest;
 import empiricist.model.Segment;
 
-public class listVideoSegmentsHandler implements RequestHandler<SearchSegmentRequest,AllSegmentsResponse> {
+public class listVideoSegmentsHandler implements RequestHandler<Object,AllSegmentsResponse> {
 
 	public LambdaLogger logger;
 
@@ -40,7 +40,7 @@ public class listVideoSegmentsHandler implements RequestHandler<SearchSegmentReq
 	}
 	
 	@Override
-	public AllSegmentsResponse handleRequest(SearchSegmentRequest input, Context context)  {
+	public AllSegmentsResponse handleRequest(Object wasted, Context context)  {
 		logger = context.getLogger();
 		logger.log("Loading Java Lambda handler to list all constants");
 
