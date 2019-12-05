@@ -1,6 +1,6 @@
 
 // All from API Gateway										TYPE		CODE
-var base_url = "https://8qjw2ixtxg.execute-api.us-east-1.amazonaws.com/one/"; 
+var base_url = "https://y8m0vdypsc.execute-api.us-east-1.amazonaws.com/Test/"; 
 
 // NEW ONES
 
