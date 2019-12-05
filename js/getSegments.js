@@ -11,9 +11,6 @@
  */
 function refreshSegmentsList() {
 	var xhr = new XMLHttpRequest();
-//	xhr.withCredentials = true;
-//	Access-Control-Allow-Credentials: true
-	Access-Control-Allow-Origin: *
 	xhr.open("GET", getSegment_url, true); //from API
 	xhr.send();
 	console.log("sent");
