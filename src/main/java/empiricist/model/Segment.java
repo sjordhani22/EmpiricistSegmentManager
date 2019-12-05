@@ -9,7 +9,7 @@ public class Segment {
 	public final String name;  // character name
 	public final String quote;
 	public final String address;
-	boolean system;	// when TRUE this is actually stored in S3 bucket
+	public final boolean system;	// when TRUE this is actually stored in S3 bucket
 
 //		public Constant (String name, double value) {
 //			this.name = name;
