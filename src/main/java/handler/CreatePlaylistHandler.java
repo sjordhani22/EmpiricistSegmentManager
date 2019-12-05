@@ -10,9 +10,6 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
-
-import edu.wpi.cs.heineman.calculator.db.ConstantsDAO;
-import edu.wpi.cs.heineman.calculator.model.Constant;
 import empiricist.database.PlaylistsDAO;
 import empiricist.model.Playlist;
 import empiricist.model.Segment;

@@ -1,6 +1,18 @@
 
 // All from API Gateway										TYPE		CODE
-var base_url = "https://v06rcbhkff.execute-api.us-east-2.amazonaws.com/Beta/"; 
+var base_url = "https://8qjw2ixtxg.execute-api.us-east-1.amazonaws.com/one/"; 
+
+// NEW ONES
+
+// GETs
+var getSegment_url = base_url + "listvideosegments";    	// GET		getSegments.js
+
+// POSTs
+var calculate_url  = base_url + "calculator";  // only here for testing.
+
+
+// OLD ONES to be moved up on a per-case basis
+
 
 //POSTs
 var deletePlaylist_url = base_url + "deletePlaylist"; 		// POST 	DeletePlaylist.js
@@ -19,7 +31,6 @@ var unregisterTP_url = base_url + "unregisterTP"			// POST
 
 //GETs
 var getPlaylist_url = base_url + "listPlaylists";			// GET		getPlaylists.js
-var getSegment_url = base_url + "listVideoSegments";    	// GET		getSegments.js
 var listRemoteSites_url = base_url + "listRemoteSites";		// GET
 var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
 
