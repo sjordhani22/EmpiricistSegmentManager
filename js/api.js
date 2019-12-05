@@ -5,7 +5,7 @@ var base_url = "https://y8m0vdypsc.execute-api.us-east-1.amazonaws.com/Test/";
 // NEW ONES
 
 // GETs
-var getSegment_url = base_url + "listvideosegments";    	// GET		getSegments.js
+var getSegment_url = base_url + "listVideoSegments";    	// GET		getSegments.js
 
 // POSTs
 var calculate_url  = base_url + "calculator";  // only here for testing.
