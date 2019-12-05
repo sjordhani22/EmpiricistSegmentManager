@@ -15,7 +15,6 @@ function refreshSegmentsList() {
 	Access-Control-Allow-Credentials: true
 	xhr.open("GET", getSegment_url, true); //from API
 	xhr.send();
-
 	console.log("sent");
 
 	// This will process results and update HTML as appropriate.
