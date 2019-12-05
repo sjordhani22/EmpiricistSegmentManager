@@ -19,6 +19,10 @@ function initialize() {
 		commands.</p>
 	<legend> </legend>
 	<p>
+	<h3>List of Segments</h3>
+	
+	<div id="segmentList"></div>
+	
 		<button class="btn createPlay">Create Playlist</button>
 		<input type="text" id="createPlay" value="Enter Playlist Name Here" />
 	</p>
@@ -30,16 +34,27 @@ function initialize() {
 			<option value="1">Search by Character</option>
 			<option value="2">Search by Quote</option>
 		</select>
+		<input type="text" id="searchChoice" value="Enter input"/>
 		<button class="btn searchSeg">Search Segment</button>
-
 		<p>
+		
+	<input type="text" id="charName" value="Enter Desired Character" />
+	<input type="text" id="quote" value="Enter Desired Quote" />
+	<button class="btn searchSeg">Search Segment</button>
+	<p>
+	
 	<label>Select Which Segments</label> <select id="myList">
 			<option value="1">Remote Segments</option>
 			<option value="2">Local Segments</option>
 		</select>
 		<button class="btn displaySeg">Display Segments</button><p></p>
+				
+	<input type="text" id="newSegChar" value="Enter Character Name" />
+	<input type="text" id="createPlay" value="Enter Quote" />
+	Select a Segment in file: <input type="file" id="segValue" name="segValue">
 	<button class="btn Upload">Upload Segment</button>
 	<p></p>
+	
 	<button class="btn Append">Append</button>
 	<button class="btn Delete">Delete</button>
 	<button class="btn Publish">Publish</button>
@@ -49,9 +64,7 @@ function initialize() {
 		<a href="Welcome.html">Go Back to Home Page</a>
 	</div>
 	
-	<h3>List of Segments</h3>
 	
-	<div id="segmentList"></div>
 
 
 </body>
