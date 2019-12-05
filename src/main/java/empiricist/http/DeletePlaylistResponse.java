@@ -1,9 +1,11 @@
 package empiricist.http;
 
+/** Sends back the name of the constant deleted -- easier to handle on client-side. */
 public class DeletePlaylistResponse {
 	public final String name;
 	public final int statusCode;
 	public final String error;
+
 
 	public DeletePlaylistResponse(String name, int statusCode) {
 		this.name = name;
@@ -24,5 +26,4 @@ public class DeletePlaylistResponse {
 			return "ErrorResult(" + name + ", statusCode=" + statusCode + ", err=" + error + ")";
 		}
 	}
-
 }

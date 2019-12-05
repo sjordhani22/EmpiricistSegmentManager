@@ -6,23 +6,57 @@
 <script type='text/javascript' src='../js/getSegments.js'></script>
 
 <script type="text/javascript">
+<<<<<<< HEAD
 function initialize(){  
   
    // get all constants
    refreshSegmentsList();
+=======
+
+
+function initialize() {
+	
+
+	  var data = {};
+	  data["arg1"] = "77";
+	  data["arg2"] = "123";
+
+	  var js = JSON.stringify(data);
+	  console.log("JS:" + js);
+	  var xhr = new XMLHttpRequest();
+	  xhr.open("POST", calculate_url, true);
+
+	  // send the collected data as JSON
+	  xhr.send(js);
+
+	  // This will process results and update HTML as appropriate. 
+	  xhr.onloadend = function () {
+	    console.log(xhr);
+	    console.log(xhr.request);
+	    
+	    if (xhr.readyState == XMLHttpRequest.DONE) {
+	      console.log ("XHR-add-response:" + xhr.responseText);
+	    } 
+	  };
+	  
+ //  refreshSegmentsList();
+   
+>>>>>>> branch 'ShannonTryingThings' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
 }
-</script></head><body onload="initialize()">
+	</script></head><body onload="initialize()">
 
 
-	<h1>You have now been moved to the Participant Page</h1>
+		<h1>You have now been moved to the Participant Page</h1>
+		
+		<p>From this page, you will have access to all participant commands.</p>
+		
+		<h2>Playlists</h2>
+		<div id="playlistList"></div>
+		<form name="createPlaylist" method="post">
+   			<input name="name" value="name" />
+   			<input type="button" id="createButton" value="Create PlayList" disabled onClick="JavaScript:handleCreatePlaylistClick(this)">
+		</form>
 
-	<p>From this page, you will have access to all participant
-		commands.</p>
-	<legend> </legend>
-	<p>
-		<button class="btn createPlay">Create Playlist</button>
-		<input type="text" id="createPlay" value="Enter Playlist Name Here" />
-	</p>
 
 	<button class="btn ShowPlay">Show Playlist</button>
 	<legend> </legend>
@@ -32,8 +66,8 @@ function initialize(){
 			<option value="2">Search by Quote</option>
 		</select>
 		<button class="btn searchSeg">Search Segment</button>
-
-		<p>
+	<p>
+	
 	<label>Select Which Segments</label> <select id="myList">
 			<option value="1">Remote Segments</option>
 			<option value="2">Local Segments</option>
@@ -46,6 +80,8 @@ function initialize(){
 	<input type="text" id="char" value="Enter Character Name Here">
 	<input type="text" id="quote" value="Enter Quote Here">
 	<p></p>
+	
+	<h1>Request to add values </h1>
 	
 	<button class="btn Append">Append</button>
 	<button class="btn Delete">Delete</button>

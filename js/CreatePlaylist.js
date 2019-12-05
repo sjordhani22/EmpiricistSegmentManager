@@ -9,11 +9,11 @@ function processCreatePlaylistResponse(result) {
   //refreshRemoteList();														// COMMENT IN EVENTUALLY
 }
 
-function handleCreateClick(e) {													// NEEDS TO BE UPDATED?
-  var form = document.createForm;
+function handleCreatePlaylistClick(e) {											//gets called from html
+  var form = document.createPlaylist											//form name from html
  
   var data = {};
-  data["name"] = form.constantName.value;										// NEEDS TO BE UPDATED
+  data["name"] = form.name.value;												//inputs from html- get the value from input "name"
   
   if (form.system.checked) {  // be sure to flag system constant requests...
      data["system"] = true;
@@ -26,7 +26,7 @@ function handleCreateClick(e) {													// NEEDS TO BE UPDATED?
   var js = JSON.stringify(data);
   console.log("JS:" + js);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST",createPlaylist_url, true);
+  xhr.open("POST",createPlaylist_url, true);									// corresponds to API
 
   // send the collected data as JSON
   xhr.send(js);
@@ -46,7 +46,7 @@ function handleCreateClick(e) {													// NEEDS TO BE UPDATED?
 			  alert (err);
     	 }
     } else {
-      processCreateResponse("N/A");
+      processCreatePlaylistResponse("N/A");
     }
   };
 }
