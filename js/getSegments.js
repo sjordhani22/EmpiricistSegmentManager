@@ -11,6 +11,8 @@
  */
 function refreshSegmentsList() {
 	var xhr = new XMLHttpRequest();
+	xhr.withCredentials = true;
+	Access-Control-Allow-Credentials: true
 	xhr.open("GET", getSegment_url, true); //from API
 	xhr.send();
 
@@ -58,7 +60,6 @@ function processSegmentsResponse(result) {
 	    	//output = output + "<div id=\"seg" + cid + "\"><b>" + cseg + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
 	    }
 	  }
-
 	  // Update computation result
 	  segList.innerHTML = output;
 //	  return output;

@@ -48,24 +48,24 @@ public class listVideoSegmentsHandler implements RequestHandler<Object,AllSegmen
 		for (String k: map.keySet()) {
 			logger.log(k + "=" + map.get(k));
 		}
-//		AllSegmentsResponse response;
-//		try {
-//			// get all user defined constants AND system-defined constants.
-//			// Note that user defined constants override system-defined constants.
-//			List<Segment> list = getConstants();
-//			ArrayList<Segment> passList = new ArrayList<>();
-//			for (Segment c : list) {
-//				//if (c.value >= input.minValue && c.value <= input.maxValue) {
-//					passList.add(c);
-//				//}
-//			}
-//			
-//			response = new AllSegmentsResponse(passList, 200);
-//		} catch (Exception e) {
-//			response = new AllSegmentsResponse(403, e.getMessage());
-//		}
-//		
-//		return response;
-		return new AllSegmentsResponse(new ArrayList<>(), 200);
+		AllSegmentsResponse response;
+		try {
+			// get all user defined constants AND system-defined constants.
+			// Note that user defined constants override system-defined constants.
+			List<Segment> list = getConstants();
+			ArrayList<Segment> passList = new ArrayList<>();
+			for (Segment c : list) {
+				//if (c.value >= input.minValue && c.value <= input.maxValue) {
+					passList.add(c);
+				//}
+			}
+			
+			response = new AllSegmentsResponse(passList, 200);
+		} catch (Exception e) {
+			response = new AllSegmentsResponse(403, e.getMessage());
+		}
+		
+		return response;
+		
 	}
 }
