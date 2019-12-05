@@ -1,6 +1,6 @@
 
 // All from API Gateway										TYPE		CODE
-var base_url = "https://v06rcbhkff.execute-api.us-east-2.amazonaws.com/Beta/"; 
+var base_url = "https://d7ci5h57fb.execute-api.us-east-1.amazonaws.com/Beta/"; 
 
 //POSTs
 var deletePlaylist_url = base_url + "deletePlaylist"; 		// POST 	DeletePlaylist.js
