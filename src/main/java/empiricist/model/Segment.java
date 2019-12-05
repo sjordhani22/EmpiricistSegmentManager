@@ -9,7 +9,7 @@ public class Segment {
 	public final String name;  // character name
 	public final String quote;
 	public final String address;
-	public final boolean system;	// when TRUE this is actually stored in S3 bucket
+	public boolean system;	// when TRUE this is actually stored in S3 bucket
 
 //		public Constant (String name, double value) {
 //			this.name = name;
@@ -33,7 +33,7 @@ public class Segment {
 	
 	// These will be the setters for our Segment 
 	
-	public void setSystem(boolean s) { system = s; }
+	public void setSystem(boolean s) {system = s; }
 		
 		/**
 		 * Equality of Constants determined by name alone.
