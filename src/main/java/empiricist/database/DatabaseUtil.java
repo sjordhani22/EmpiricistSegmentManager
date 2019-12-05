@@ -19,9 +19,9 @@ public class DatabaseUtil {
 //	  dbPassword = System.getenv("dbPassword");
 //	  rdsMySqlDatabaseUrl = System.getenv("rdsMySqlDatabaseUrl");
 	
-	public final static String rdsMySqlDatabaseUrl = "databaseempiricist-1.cqbdgfeayuat.us-east-2.rds.amazonaws.com";
-	public final static String dbUsername = "Empiricist373"; // db username or overall?
-	public final static String dbPassword = "Computerscience";
+	public final static String rdsMySqlDatabaseUrl = "empiricisttake2-db.c2lnihhr1cwc.us-east-1.rds.amazonaws.com";
+	public final static String dbUsername = "EmpiricistTake2"; // db username
+	public final static String dbPassword = "cs3733!!!";
 		
 	public final static String jdbcTag = "jdbc:mysql://";
 	public final static String rdsMySqlDatabasePort = "3306";
