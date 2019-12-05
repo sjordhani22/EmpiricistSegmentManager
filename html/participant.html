@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type='text/javascript' src='../js/api.js'></script>
+<script type='text/javascript' src='../js/getSegments.js'></script>
+
+<script type="text/javascript">
+
+
+function initialize() {
+	
+
+	  var data = {};
+	  data["arg1"] = "77";
+	  data["arg2"] = "123";
+
+	  var js = JSON.stringify(data);
+	  console.log("JS:" + js);
+	  var xhr = new XMLHttpRequest();
+	  xhr.open("POST", calculate_url, true);
+
+	  // send the collected data as JSON
+	  xhr.send(js);
+
+	  // This will process results and update HTML as appropriate. 
+	  xhr.onloadend = function () {
+	    console.log(xhr);
+	    console.log(xhr.request);
+	    
+	    if (xhr.readyState == XMLHttpRequest.DONE) {
+	      console.log ("XHR-add-response:" + xhr.responseText);
+	    } 
+	  };
+	  
+ //  refreshSegmentsList();
+   
+}
+	</script></head><body onload="initialize()">
+
+
+		<h1>You have now been moved to the Participant Page</h1>
+		
+		<p>From this page, you will have access to all participant commands.</p>
+		
+		<h2>Playlists</h2>
+		<div id="playlistList"></div>
+		<form name="createPlaylist" method="post">
+   			<input name="name" value="name" />
+   			<input type="button" id="createButton" value="Create PlayList" disabled onClick="JavaScript:handleCreatePlaylistClick(this)">
+		</form>
+
+
+	<button class="btn ShowPlay">Show Playlist</button>
+	<legend> </legend>
+	<p>
+		<label>Search</label> <select id="myList">
+			<option value="1">Search by Character</option>
+			<option value="2">Search by Quote</option>
+		</select>
+		<button class="btn searchSeg">Search Segment</button>
+	<p>
+	
+	<label>Select Which Segments</label> <select id="myList">
+			<option value="1">Remote Segments</option>
+			<option value="2">Local Segments</option>
+		</select>
+		<button class="btn displaySeg">Display Segments</button><p></p>
+		
+		
+	<button class="btn Upload">Upload Segment</button>
+	Select a Segment in file: <input type="file" id="segValue" name="segValue">
+	<input type="text" id="char" value="Enter Character Name Here">
+	<input type="text" id="quote" value="Enter Quote Here">
+	<p></p>
+	
+	<h1>Request to add values </h1>
+	
+	<button class="btn Append">Append</button>
+	<button class="btn Delete">Delete</button>
+	<button class="btn Publish">Publish</button>
+
+	<p></p>
+	<div id="button">
+		<a href="Welcome.html">Go Back to Home Page</a>
+	</div>
+	
+	<h3>List of Segments</h3>
+	
+	<div id="segmentList"></div>
+	
+	
+</body>
+</html>
