@@ -39,6 +39,7 @@ function processSegmentsResponse(result) {
 	  var js = JSON.parse(result);
 	  var segList = document.getElementById('segmentList');		//Replace the contents of 'constantList' with a <br>* -separated list of name,value pairs. ?????
 	  var output = "";
+
 	  
 	  for (var i = 0; i < js.list.length; i++) {
 	    var segmentJson = js.list[i];
@@ -48,12 +49,15 @@ function processSegmentsResponse(result) {
 	    var cname = segmentJson["name"];
 	    var cquote = segmentJson["quote"];
 	    var caddress = segmentJson["address"];
+	    var width = "320";
+	    var height = "240;"
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
-	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
+//	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
+	    	output = output + "<video width="+width+" height="+height+" controls> <source src=" +caddress+ "type=video/ogg> AAAh</video>";
 	    	console.log(output);
 	    } else {
-	    	output = output + "<div id=\"AAAAH" + cid + "\"><b>" + cid + ":</b> = " + caddress + "<br></div>"
+	    	output = AAAH;
 	    	//output = output + "<div id=\"seg" + cid + "\"><b>" + cseg + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
 	    }
 	  }
@@ -61,3 +65,28 @@ function processSegmentsResponse(result) {
 	  segList.innerHTML = output;
 //	  return output;
 }
+
+
+//This was in participant html
+
+//var data = {};
+//data["arg1"] = "77";
+//data["arg2"] = "123";
+//
+//var js = JSON.stringify(data);
+//console.log("JS:" + js);
+//var xhr = new XMLHttpRequest();
+//xhr.open("POST", calculate_url, true);
+//
+//// send the collected data as JSON
+//xhr.send(js);
+//
+//// This will process results and update HTML as appropriate. 
+//xhr.onloadend = function () {
+//  console.log(xhr);
+//  console.log(xhr.request);
+//  
+//  if (xhr.readyState == XMLHttpRequest.DONE) {
+//    console.log ("XHR-add-response:" + xhr.responseText);
+//  } 
+//};
