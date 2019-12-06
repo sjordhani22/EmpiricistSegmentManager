@@ -108,11 +108,11 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
       
         
         if (failed) {
-    		response = new CreatePlayListResponse(Wresponse, 200);
+    		response = new CreatePlayListResponse(403, FResponse);
     	}
         
         else {
-    		response = new CreatePlayListResponse(FResponse, 403);
+    		response = new CreatePlayListResponse(Wresponse, 200);
     	}
         return response;
     }
