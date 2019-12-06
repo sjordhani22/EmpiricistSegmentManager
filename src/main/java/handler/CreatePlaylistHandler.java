@@ -39,7 +39,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		PlaylistsDAO dao = new PlaylistsDAO();
 		
 	//	ArrayList<Segment> segments = new ArrayList<Segment>();
-	
+	//
 		// check if present
 		Playlist exist = dao.getPlaylist(name);
 //		Playlist playlist = new Playlist (name, segments);
