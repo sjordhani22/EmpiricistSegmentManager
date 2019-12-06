@@ -11,14 +11,19 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import empiricist.database.PlaylistsDAO;
+import empiricist.http.CreatePlayListRequest;
+import empiricist.http.CreatePlayListResponse;
 import empiricist.model.Playlist;
 import empiricist.model.Segment;
 
-public class CreatePlaylistHandler implements RequestHandler<S3Event, String> {
-	
+public class CreatePlaylistHandler implements RequestHandler<CreatePlayListRequest, CreatePlayListResponse> {
+	boolean failed=false;
 	LambdaLogger logger;
-
-    private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
+	String Wresponse = "";
+	String FResponse ="";
+	String playlistName;
+	boolean worked=false;
+   // private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
 	//private AmazonS3 s3 = null;			// should we use this instead?
     
 
@@ -29,15 +34,15 @@ public class CreatePlaylistHandler implements RequestHandler<S3Event, String> {
 //        this.s3 = s3;
 //    }
     
-    boolean createPlaylist(String name, String segname, int order ) throws Exception { 
+    boolean createPlaylist(String name /*String segname, int order*/ ) throws Exception { 
 		if (logger != null) { logger.log("in createConstant"); }
 		PlaylistsDAO dao = new PlaylistsDAO();
 		
-		ArrayList<Segment> segments = new ArrayList<Segment>();
+	//	ArrayList<Segment> segments = new ArrayList<Segment>();
 	
 		// check if present
 		Playlist exist = dao.getPlaylist(name);
-		Playlist playlist = new Playlist (name, segments);
+//		Playlist playlist = new Playlist (name, segments);
 		
 		if (exist == null) {
 			return dao.addPlaylist(name);				// in his version he gave it the whole "playlist"
@@ -48,23 +53,59 @@ public class CreatePlaylistHandler implements RequestHandler<S3Event, String> {
     
     
     @Override
-    public String handleRequest(S3Event event, Context context) {
-        context.getLogger().log("Received event: " + event);
+    public CreatePlayListResponse handleRequest(CreatePlayListRequest request, Context context) {
+        logger = context.getLogger();
+        logger.log("Loading Java CreatePlaylistHandler to create playlists");
+        logger.log(request.toString());
+        
+        CreatePlayListResponse response;
 
         // Get the object from the event and show its content type
-        String bucket = event.getRecords().get(0).getS3().getBucket().getName();
-        String key = event.getRecords().get(0).getS3().getObject().getKey();
+        
         try {
-            S3Object response = s3.getObject(new GetObjectRequest(bucket, key));
-            String contentType = response.getObjectMetadata().getContentType();
-            context.getLogger().log("CONTENT TYPE: " + contentType);
-            return contentType;
+        	
+         playlistName = request.getName();
+        	
+        	
+           
+//            String contentType = response.getObjectMetadata().getContentType();
+//            context.getLogger().log("CONTENT TYPE: " + contentType);
+//            return contentType;
         } catch (Exception e) {
-            e.printStackTrace();
-            context.getLogger().log(String.format(
-                "Error getting object %s from bucket %s. Make sure they exist and"
-                + " your bucket is in the same region as this function.", key, bucket));
-            throw e;
+        FResponse = "The name doesn't exist ";	
+        failed = true;
+           
         }
+        
+        try {
+        	worked = createPlaylist(playlistName);
+        	
+        	if(worked) {
+        	Wresponse = "Done";
+        }
+        	else {
+        		Wresponse ="A Playlist with this name already exists.";
+        	}
+        }
+        catch(Exception e) {
+        	
+        	FResponse= "Failed to create playlist" ;
+        	failed= true;
+        }
+        
+  
+        	
+        	
+        
+      
+        
+        if (failed) {
+    		response = new CreatePlayListResponse(Wresponse, 200);
+    	}
+        
+        else {
+    		response = new CreatePlayListResponse(FResponse, 403);
+    	}
+        return response;
     }
 }
