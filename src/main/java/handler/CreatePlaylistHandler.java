@@ -29,7 +29,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 	LambdaLogger logger;
 	String Wresponse = "";
 	String FResponse ="";
-	String playlistName;
+	String name;
 	boolean worked=false;
    // private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
 	//private AmazonS3 s3 = null;			// should we use this instead?
@@ -72,7 +72,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
         
         try {
         	
-         playlistName = request.getName();
+          name = request.getName();
         	
         	
            
@@ -86,7 +86,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
         }
         
         try {
-        	worked = createPlaylist(playlistName);
+        	worked = createPlaylist(name);
         	
         	if(worked) {
         	Wresponse = "Done";
