@@ -39,16 +39,18 @@ function processSegmentsResponse(result) {
 	  var js = JSON.parse(result);
 	  var segList = document.getElementById('segmentList');		//Replace the contents of 'constantList' with a <br>* -separated list of name,value pairs. ?????
 	  var output = "";
-
+	  var library = {};
 	  
 	  for (var i = 0; i < js.list.length; i++) {
 	    var segmentJson = js.list[i];
 	    console.log(segmentJson);
-	    
 	    var cid = segmentJson["id"];
 	    var cname = segmentJson["name"];
 	    var cquote = segmentJson["quote"];
 	    var caddress = segmentJson["address"];
+	    //String id, String name, String quote, String address, boolean system
+	    var thisSegment = new Segment (cid, cname, cquote, caddress, true);
+	    library.add(thisSegment);
 	    var width = "320";
 	    var height = "240;"
 	    var sysvar = true; // segmentJson["system"];
