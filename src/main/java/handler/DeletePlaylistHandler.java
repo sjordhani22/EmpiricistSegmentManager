@@ -27,10 +27,10 @@ public class DeletePlaylistHandler {
 			if (dao.deletePlaylist(pl)) {
 				response = new DeletePlaylistResponse(req.name, 200);
 			} else {
-				response = new DeletePlaylistResponse(req.name, 422, "Unable to delete constant.");
+				response = new DeletePlaylistResponse(req.name, 422, "Unable to delete Playlist.");
 			}
 		} catch (Exception e) {
-			response = new DeletePlaylistResponse(req.name, 403, "Unable to delete constant: " + req.name + "(" + e.getMessage() + ")");
+			response = new DeletePlaylistResponse(req.name, 403, "Unable to delete Playlist: " + req.name + "(" + e.getMessage() + ")");
 		}
 
 		return response;

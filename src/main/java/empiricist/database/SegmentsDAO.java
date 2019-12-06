@@ -32,7 +32,7 @@ public class SegmentsDAO {
         
         try {
             Segment segment = null;
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM constants WHERE name=?;");
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE name=?;");
             ps.setString(1,  name);
             ResultSet resultSet = ps.executeQuery();
             
@@ -52,12 +52,12 @@ public class SegmentsDAO {
     
     public boolean updateLibrary(Segment segment) throws Exception {
         try {
-        	String query = "UPDATE Library SET Quote=? SET Seg=? WHERE id=?;";	// I added SET seg, not sure if this wil work
+        	String query = "UPDATE Library SET quote=? SET name=? WHERE id=?;";	// I added SET seg, not sure if this wil work
         	PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, segment.id);
             ps.setString(2, segment.name);
             ps.setString(3, segment.quote);
-            ps.setString(3, segment.address);
+            ps.setString(4, segment.address);
             int numAffected = ps.executeUpdate();
             ps.close();
             
@@ -69,7 +69,7 @@ public class SegmentsDAO {
     
     public boolean deleteSegment(Segment segment) throws Exception {
         try {
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM constants WHERE id = ?;");
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM Library WHERE id = ?;");
             ps.setString(1, segment.id);			// not sure what the 1 is for?
             int numAffected = ps.executeUpdate();	// this isnt an int?
             ps.close();
@@ -84,7 +84,7 @@ public class SegmentsDAO {
 
     public boolean addSegment(Segment segment) throws Exception {
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM constants WHERE name = ?;"); // dont know what this is
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE name = ?;"); // dont know what this is
             ps.setString(1, segment.id);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {						   // already present?
