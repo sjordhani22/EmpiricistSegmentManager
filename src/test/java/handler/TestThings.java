@@ -9,10 +9,11 @@ import org.junit.Test;
 
 import empiricist.database.PlaylistsDAO;
 import empiricist.database.SegmentsDAO;
+import empiricist.model.Playlist;
 import empiricist.model.Segment;
 
 public class TestThings {
-
+	
 	@Test
 	public void testSeg() {
 	    SegmentsDAO sd = new SegmentsDAO();
@@ -25,13 +26,28 @@ public class TestThings {
 	    	fail ("didn't work:" + e.getMessage());  
 	    }
 	}
+
+	
+	@Test
+	public void testPlayNames() {
+	    PlaylistsDAO pd = new PlaylistsDAO();
+	    try {
+	    	List<String> lists = pd.getPlaylistNames();
+	    	for (String s : lists) {
+	    		System.out.println(s);
+	    	}
+	    } catch (Exception e) {
+	    	fail ("didn't work:" + e.getMessage());
+	    }
+	}
+	
 	
 	@Test
 	public void testPlay() {
 	    PlaylistsDAO pd = new PlaylistsDAO();
 	    try {
-	    	List<String> lists = pd.getPlaylistNames();
-	    	for (String s : lists) {
+	    	List<Playlist> lists = pd.getAllPlaylists();
+	    	for (Playlist s : lists) {
 	    		System.out.println(s);
 	    	}
 	    } catch (Exception e) {

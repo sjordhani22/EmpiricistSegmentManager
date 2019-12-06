@@ -1,16 +1,26 @@
 package handler;
 
+import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.ObjectMetadata;
+import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3Object;
+
+
 import empiricist.database.PlaylistsDAO;
+import empiricist.http.CreatePlayListRequest;
+import empiricist.http.CreatePlayListResponse;
 import empiricist.model.Playlist;
 import empiricist.model.Segment;
 
@@ -67,4 +77,63 @@ public class CreatePlaylistHandler implements RequestHandler<S3Event, String> {
             throw e;
         }
     }
+    /*
+    boolean createSystemConstant(String name, byte[]  contents) throws Exception {
+		if (logger != null) { logger.log("in createSystemConstant"); }
+		
+		if (s3 == null) {
+			logger.log("attach to S3 request");
+			s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
+			logger.log("attach to S3 succeed");
+		}
+
+		String bucket = REAL_BUCKET;
+		boolean useTestDB = System.getenv("TESTING") != null;
+		if (useTestDB) {
+			bucket = TEST_BUCKET;
+		}
+
+		ByteArrayInputStream bais = new ByteArrayInputStream(contents);
+		ObjectMetadata omd = new ObjectMetadata();
+		omd.setContentLength(contents.length);
+		
+		// makes the object publicly visible
+		PutObjectResult res = s3.putObject(new PutObjectRequest("cs3733wpi", bucket + name, bais, omd)
+				.withCannedAcl(CannedAccessControlList.PublicRead));
+		
+		// if we ever get here, then whole thing was stored
+		return true;
+	}
+	
+	@Override 
+	public CreatePlayListResponse handleRequest(CreatePlayListRequest req, Context context)  {
+		logger = context.getLogger();
+		logger.log(req.toString());
+
+		CreatePlayListResponse response;
+		try {
+			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
+			if (req.system) {
+				if (createSystemConstant(req.name, encoded)) {
+					response = new CreatePlayListResponse(req.name);
+				} else {
+					response = new CreatePlayListResponse(req.name, 422);
+				}
+			} else {
+				String contents = new String(encoded);
+				double value = Double.valueOf(contents);
+				
+				if (createPlaylist(req.name, value)) {
+					response = new CreatePlayListResponse(req.name);
+				} else {  
+					response = new CreatePlayListResponse(req.name, 422);
+				}
+			}
+		} catch (Exception e) {
+			response = new CreatePlayListResponse("Unable to create constant: " + req.name + "(" + e.getMessage() + ")", 400);
+		}
+
+		return response;
+	}
+	*/
 }

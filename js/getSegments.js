@@ -54,7 +54,7 @@ function processSegmentsResponse(result) {
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
 //	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
-	    	output = output + "<video width="+width+" height="+height+" controls> <source src=" +caddress+ "type=video/ogg> AAAh</video>";
+	    	output = output + "<video id="+cid+" width="+width+" height="+height+" controls> <source src=" +caddress+" type=video/ogg></video>";
 	    	console.log(output);
 	    } else {
 	    	output = AAAH;

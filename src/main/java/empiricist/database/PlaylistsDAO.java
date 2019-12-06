@@ -24,7 +24,7 @@ public class PlaylistsDAO {
 	    public Playlist getPlaylist(String name) throws Exception {
 	    	try {
 	            Playlist playlist = null;
-	            prepare = conn.prepareStatement("SELECT * FROM playlist WHERE name=?;");
+	            prepare = conn.prepareStatement("SELECT * FROM Playlist WHERE name=?;");
 	            prepare.setString(1,  name);
 	            result = prepare.executeQuery();
 
@@ -46,7 +46,7 @@ public class PlaylistsDAO {
 	    
 	    public boolean updatePlaylist(Playlist playlist) throws Exception {
 	        try {
-	        	String query = "UPDATE playlist SET value=? WHERE name=?;";
+	        	String query = "UPDATE Playlist SET name=? WHERE name=?;";
 	        	prepare = conn.prepareStatement(query);
 	            prepare.setString(2, playlist.name);
 	            int numAffected = prepare.executeUpdate();
@@ -60,7 +60,7 @@ public class PlaylistsDAO {
 	    
 	    public boolean deletePlaylist(Playlist playlist) throws Exception {
 	        try {
-	        	prepare = conn.prepareStatement("DELETE FROM playlist WHERE name = ?;");
+	        	prepare = conn.prepareStatement("DELETE FROM Playlist WHERE name = ?;");
 	        	prepare.setString(1, playlist.name);
 	            int numAffected = prepare.executeUpdate();
 	            prepare.close();
@@ -127,7 +127,7 @@ public class PlaylistsDAO {
 	        Playlist playplay = new Playlist(name);
 	        SegmentsDAO seggy = new SegmentsDAO();
 	        while (result.next()) {
-	        	playplay.appendSegment(seggy.getSegment(result.getString("address")));
+	        	playplay.appendSegment(seggy.getSegment(result.getString("segname")));
 	        }
 	        return playplay;
 	    }

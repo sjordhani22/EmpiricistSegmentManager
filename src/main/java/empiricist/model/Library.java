@@ -55,7 +55,13 @@ public class Library {
 		public List<Playlist> getAllPlaylist(){
 			return this.playplay;
 		}
-		
+		/*
+		public List<String> getAllPlaylistNames(){
+			List<String> names = new ArrayList<String>();
+			for()
+			
+		}
+		*/
 		public List<Segment> getSegments(){ // gets all segments
 			return this.seggy;
 		}

@@ -1,5 +1,6 @@
 package handler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.amazonaws.services.lambda.runtime.Context;
@@ -9,6 +10,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import empiricist.http.GetPlaylistReponse;
 import empiricist.model.Library;
 import empiricist.model.Playlist;
+import empiricist.model.Segment;
 
 public class listPlaylistsHandler implements RequestHandler<Object, GetPlaylistReponse> {
 
@@ -25,7 +27,8 @@ public class listPlaylistsHandler implements RequestHandler<Object, GetPlaylistR
         try {
             logger.log("We are getting Playlists");
             Library lib = new Library();
-            List<Playlist>lister = lib.getAllPlaylist();
+            logger.log("We are in library!");
+            List<Playlist>lister = lib.getAllPlaylist();  
             response = new GetPlaylistReponse(lister,200);
             response.error = lister.get(0).toString();
             
