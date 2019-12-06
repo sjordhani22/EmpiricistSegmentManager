@@ -21,7 +21,7 @@ public class Playlist {
 	 public ArrayList<Segment> getListOfSegs() {return this.segments;}
 	 
 	 public void appendSegment(Segment s) {
-		 segments.add(segments.size() + 1, s);  
+		 segments.add(s);
 	 }
 	 
 	 public void removeSegment(int order) {

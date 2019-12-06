@@ -107,7 +107,7 @@ public class PlaylistsDAO {
 	    
 	    public List<String> getPlaylistNames(){	
 	    	try {
-	    		prepare = conn.prepareStatement("SELECT name FROM Playlist");
+	    		prepare = conn.prepareStatement("SELECT DISTINCT name FROM Playlist");
 	    		result = prepare.executeQuery();
 	    		List<String> names = new ArrayList<String>();
 	    		

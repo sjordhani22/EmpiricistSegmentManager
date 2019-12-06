@@ -40,8 +40,7 @@ public class TestThings {
 	    	fail ("didn't work:" + e.getMessage());
 	    }
 	}
-	
-	
+
 	@Test
 	public void testPlay() {
 	    PlaylistsDAO pd = new PlaylistsDAO();
@@ -54,5 +53,5 @@ public class TestThings {
 	    	fail ("didn't work:" + e.getMessage());
 	    }
 	}
-	
+
 }

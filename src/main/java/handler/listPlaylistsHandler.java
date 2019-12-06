@@ -24,11 +24,11 @@ public class listPlaylistsHandler implements RequestHandler<Object, GetPlaylistR
     	logger = context.getLogger();
     	logger.log("Loading");
        
-        try {
+        try {    
             logger.log("We are getting Playlists");
             Library lib = new Library();
             logger.log("We are in library!");
-            List<Playlist>lister = lib.getAllPlaylist();  
+            List<Playlist>lister = lib.getAllPlaylist();    
             response = new GetPlaylistReponse(lister,200);
             response.error = lister.get(0).toString();
             
