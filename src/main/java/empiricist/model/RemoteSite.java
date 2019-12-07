@@ -2,7 +2,7 @@ package empiricist.model;
 
 public class RemoteSite {
 	
-	private  String Url;
+	private String Url;
 
 	
 	public RemoteSite(String URL) {

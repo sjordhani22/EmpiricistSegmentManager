@@ -30,7 +30,7 @@ public class RemoteSitesDAO {
 		 
 		
          prepare = conn.prepareStatement("SELECT * FROM Remote WHERE url=?;");
-         prepare.setString(1,  RemoteSite.getUrl());
+         prepare.setString(1,  remote.getUrl());
          result = prepare.executeQuery();
          
          
@@ -40,7 +40,7 @@ public class RemoteSitesDAO {
          }
          
          prepare = conn.prepareStatement("INSERT INTO RemoteSites (siteURL) values(?);");
-         prepare.setString(1, RemoteSite.getUrl());
+         prepare.setString(1, remote.getUrl());
          prepare.execute();
          return true;
 
