@@ -12,6 +12,6 @@ public class RemoteSite {
 	public static  String getUrl() {
 		return Url;
 	}
-	
+	//
 	
 }
