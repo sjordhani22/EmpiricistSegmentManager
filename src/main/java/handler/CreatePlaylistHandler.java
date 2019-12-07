@@ -87,7 +87,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		omd.setContentLength(contents.length);
 		
 		// makes the object publicly visible
-		PutObjectResult res = s3.putObject(new PutObjectRequest("cs3733wpi", bucket + name, bais, omd)
+		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + name, bais, omd)
 				.withCannedAcl(CannedAccessControlList.PublicRead));
 		
 		// if we ever get here, then whole thing was stored
@@ -122,7 +122,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 				}
 			}
 		} catch (Exception e) {
-			response = new CreatePlayListResponse("Unable to create constant: " + req.name + "(" + e.getMessage() + ")", 400);
+			response = new CreatePlayListResponse("Unable to create playlist: " + req.name + "(" + e.getMessage() + ")", 400);
 		}
 
 		return response;

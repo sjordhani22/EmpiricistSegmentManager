@@ -85,7 +85,7 @@ public class PlaylistsDAO {
 	                return false;
 	            }
 
-	            ps = conn.prepareStatement("INSERT INTO constants (name,value) values(?,?);");
+	            ps = conn.prepareStatement("INSERT INTO Playlist (name) values(?);");
 	            ps.setString(1, playlist.name);
 	            ps.execute();
 	            return true;
