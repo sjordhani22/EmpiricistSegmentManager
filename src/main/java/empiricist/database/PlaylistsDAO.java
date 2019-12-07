@@ -22,25 +22,24 @@ public class PlaylistsDAO {
 	    	}
 	    }
 	    public Playlist getPlaylist(String name) throws Exception {
-	    	try {
-	            Playlist playlist = null;
-	            prepare = conn.prepareStatement("SELECT * FROM Playlist WHERE name=?;");
-	            prepare.setString(1,  name);
-	            result = prepare.executeQuery();
+	        
+	        try {
+	           	Playlist playlist = null;
+	            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Playlist WHERE name=?;");
+	            ps.setString(1,  name);
+	            ResultSet resultSet = ps.executeQuery();
+	            
+	            while (resultSet.next()) {
+	                playlist = generatePlaylist(resultSet);
+	            }
+	            resultSet.close();
+	            ps.close();
+	            
+	            return playlist;
 
-
-	    
-	    	while (result.next()) {
-                playlist = generatePlaylist(name);
-            }
-	    	result.close();
-            prepare.close();
-            
-            return playlist;
-	    	}
-	    	catch (Exception e) {
+	        } catch (Exception e) {
 	        	e.printStackTrace();
-	            throw new Exception("Cannot get playlist: " + e.getMessage());
+	            throw new Exception("Failed in getting playlist: " + e.getMessage());
 	        }
 	    }
 	    
@@ -54,7 +53,7 @@ public class PlaylistsDAO {
 	            
 	            return (numAffected == 1);
 	        } catch (Exception e) {
-	            throw new Exception("Failed to update report: " + e.getMessage());
+	            throw new Exception("Failed to update playlist: " + e.getMessage());
 	        }
 	    }
 	    
@@ -64,9 +63,7 @@ public class PlaylistsDAO {
 	        	prepare.setString(1, playlist.name);
 	            int numAffected = prepare.executeUpdate();
 	            prepare.close();
-	            
 	            return (numAffected == 1);
-
 	        } 
 	        
 	        catch (Exception e) {
@@ -75,20 +72,30 @@ public class PlaylistsDAO {
 	    }
 
 
-	    public boolean addPlaylist(String name) throws Exception {
+	    public boolean addPlaylist(Playlist playlist) throws Exception {
 	        try {
-	        	if (isItInDataBase(name)) {
-	        		return false;
-	        	}
-	        	prepare = conn.prepareStatement("INSERT INTO Playlist(name) VALUE(?)");
-	        	prepare.setString(1, name);
-	        	prepare.executeQuery();
-	        	return true;
-	        }catch (Exception e) {
-	        	e.printStackTrace();
-	        	return false;
+	            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Playlist WHERE name = ?;");
+	            ps.setString(1, playlist.name);
+	            ResultSet resultSet = ps.executeQuery();
+	            
+	            // already present?
+	            while (resultSet.next()) {
+	                Playlist p = generatePlaylist(resultSet);
+	                resultSet.close();
+	                return false;
+	            }
+
+	            ps = conn.prepareStatement("INSERT INTO constants (name,value) values(?,?);");
+	            ps.setString(1, playlist.name);
+	            ps.execute();
+	            return true;
+
+	        } catch (Exception e) {
+	            throw new Exception("Failed to insert constant: " + e.getMessage());
 	        }
 	    }
+	    
+	    
 	    public List<Playlist> getAllPlaylists() throws Exception {
 	        
 	        try {
@@ -123,13 +130,9 @@ public class PlaylistsDAO {
 	    	}
 	    }
 	    
-	    private Playlist generatePlaylist(String name) throws Exception {
-	        Playlist playplay = new Playlist(name);
-	        SegmentsDAO seggy = new SegmentsDAO();
-	        while (result.next()) {
-	        	playplay.appendSegment(seggy.getSegment(result.getString("segname")));
-	        }
-	        return playplay;
+	    private Playlist generatePlaylist(ResultSet resultSet) throws Exception {
+	        String name  = resultSet.getString("name");
+	        return new Playlist (name);
 	    }
 	    
 	    public boolean isItInDataBase (String name) throws Exception{
