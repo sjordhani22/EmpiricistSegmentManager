@@ -17,7 +17,6 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3Object;
 
-
 import empiricist.database.PlaylistsDAO;
 import empiricist.http.CreatePlayListRequest;
 import empiricist.http.CreatePlayListResponse;
@@ -25,8 +24,18 @@ import empiricist.model.Playlist;
 import empiricist.model.Segment;
 
 public class CreatePlaylistHandler implements RequestHandler<CreatePlayListRequest, CreatePlayListResponse> {
-	boolean failed=false;
+	
 	LambdaLogger logger;
+	
+	// To access S3 storage
+	private AmazonS3 s3 = null;
+		
+	// Note: this works, but it would be better to move this to environment/configuration mechanisms
+	// which you don't have to do for this project.
+	public static final String REAL_BUCKET = "empiricistbucket2/";
+	
+	boolean failed=false;
+
 	String Wresponse = "";		//success or win response
 	String FResponse ="";		//fail response
 	String name;	
@@ -42,8 +51,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 //        this.s3 = s3;
 //    }
     
-    
-    /*String segname, int order*/ 
+
     boolean createPlaylist(String name) throws Exception { 
 		if (logger != null) { logger.log("in createPlaylist"); }
 		PlaylistsDAO dao = new PlaylistsDAO();
@@ -59,56 +67,57 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		}
 	}
     
+	boolean createSystemPlaylist(String name, byte[]  contents) throws Exception {
+		if (logger != null) { logger.log("in createSystemConstant"); }
+		
+		if (s3 == null) {
+			logger.log("attach to S3 request");
+			s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
+			logger.log("attach to S3 succeed");
+		}
+
+		String bucket = REAL_BUCKET;
+
+		ByteArrayInputStream bais = new ByteArrayInputStream(contents);
+		ObjectMetadata omd = new ObjectMetadata();
+		omd.setContentLength(contents.length);
+		
+		// makes the object publicly visible
+		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + name, bais, omd)
+				.withCannedAcl(CannedAccessControlList.PublicRead));
+		
+		// if we ever get here, then whole thing was stored
+		return true;
+	}
+    
     
     @Override
-    public CreatePlayListResponse handleRequest(CreatePlayListRequest request, Context context) {
+    public CreatePlayListResponse handleRequest(CreatePlayListRequest request, Context context) {	
         logger = context.getLogger();
         logger.log("Loading Java CreatePlaylistHandler to create playlists");
         logger.log(request.toString());
         
         CreatePlayListResponse response;
-
-        // Get the object from the event and show its content type
-        
         try {
-        	
-          name = request.getPlayListName();
-        	
-        	
-           
-//            String contentType = response.getObjectMetadata().getContentType();
-//            context.getLogger().log("CONTENT TYPE: " + contentType);
-//            return contentType;
-          
-        } catch (Exception e) {
-        FResponse = "The name doesn't exist ";	
-        failed = true;
-           
-        }
-        
-        try {
-        	worked = createPlaylist(name);
-        	
-        	if(worked) {
-        	Wresponse = "Done";
-        }
-        	else {
-        		Wresponse ="A Playlist with this name already exists.";
-        	}
-        }
-        catch(Exception e) {
-        	
-        	FResponse= "Failed to create playlist" ;
-        	failed= true;
-        }
+			byte[] encoded = java.util.Base64.getDecoder().decode(request.base64EncodedValue);
+			if (request.system) {
+				if (createSystemPlaylist(request.name, encoded)) {
+					response = new CreatePlayListResponse(request.name);
+				} else {
+					response = new CreatePlayListResponse(request.name, 422);
+				}
+			} else {
+				String contents = new String(encoded);
+				double value = Double.valueOf(contents);
+				
+				if (createPlaylist(request.name)) {
+					response = new CreatePlayListResponse(request.name);} 
+				else {response = new CreatePlayListResponse(request.name, 422);}
+			}
+		} catch (Exception e) {
+			response = new CreatePlayListResponse("Unable to create playlist: " + request.name + "(" + e.getMessage() + ")", 400);
+		}
 
-        if (failed) {
-    		response = new CreatePlayListResponse(403, FResponse);
-    	}
-        
-        else {
-    		response = new CreatePlayListResponse(Wresponse, 200);
-    	}
-        return response;
-    }
+		return response;
+	}
 }

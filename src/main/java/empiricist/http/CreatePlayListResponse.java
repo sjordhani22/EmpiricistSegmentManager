@@ -8,22 +8,21 @@ package empiricist.http;
  */
 
 public class CreatePlayListResponse {
-	public  String name;
+	public final String response;
 	public  int httpCode;
 	public String error;
+
 	
 	public CreatePlayListResponse (String s, int code) {
-		this.name= s;
+		this.response= s;
 		this.httpCode = code;
 		this.error= "";
 	}
 	
 	// 200 means success
-	public CreatePlayListResponse (int httpCode, String errorMessage) {
-		
-		this.httpCode = httpCode;
-		this.error = errorMessage;
-		this.name ="";
+	public CreatePlayListResponse (String s) {
+		this.response = s;
+		this.httpCode = 200;
 	}
 	
 	public String toString() {

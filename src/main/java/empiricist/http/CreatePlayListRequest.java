@@ -5,7 +5,7 @@ public class CreatePlayListRequest {
 	public String base64EncodedValue;
 	public boolean system;
 	
-	public String getPlayListName( ) { return name; }
+	public String getName( ) { return name; }
 	public void setName(String name) { this.name = name; }
 	
 	public boolean getSystem( ) { return system; }
