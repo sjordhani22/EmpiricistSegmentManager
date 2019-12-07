@@ -2,14 +2,14 @@ package empiricist.model;
 
 public class RemoteSite {
 	
-	private static String Url;
+	private  String Url;
 
 	
 	public RemoteSite(String URL) {
 		this.Url = URL;
 	}
 	
-	public static  String getUrl() {
+	public  String getUrl() {
 		return Url;
 	}
 	//
