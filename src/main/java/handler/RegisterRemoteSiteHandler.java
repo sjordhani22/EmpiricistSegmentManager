@@ -67,6 +67,7 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
     	logger.log(" Loading Java Handler to Register Remote Sites");
     	
     	RegisterSiteResponse response;
+    	logger.log(request.toString());
     	
     	
     	try {
