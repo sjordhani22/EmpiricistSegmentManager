@@ -20,14 +20,14 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
 	
 	LambdaLogger logger;
 
-    private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
+   // private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
 
    //  public RegisterRemoteSiteHandler() {}
 
     // Test purpose only.
-    RegisterRemoteSiteHandler(AmazonS3 s3) {
-        this.s3 = s3;
-    }
+//    RegisterRemoteSiteHandler(AmazonS3 s3) {
+//        this.s3 = s3;
+//    }
     
     boolean RegisterRemoteSite(String Url) throws Exception {
 		if(logger!=null) {logger.log("Registering");}
@@ -76,7 +76,7 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
     		}
     	
     		else {
-    			response = new RegisterSiteResponse(request.Url,403);
+    			response = new RegisterSiteResponse(request.Url,422);
     		}
     	}
     	catch(Exception e){
