@@ -67,8 +67,8 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		}
 	}
     
-	boolean createSystemPlaylist(String name) throws Exception {
-		if (logger != null) { logger.log("in createSystemConstant"); }
+	boolean createSystemPlaylist(String name, byte[]  contents) throws Exception {
+		if (logger != null) { logger.log("in createSystemPlaylist"); }
 		
 		if (s3 == null) {
 			logger.log("attach to S3 request");
@@ -77,43 +77,52 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		}
 
 		String bucket = REAL_BUCKET;
+//		boolean useTestDB = System.getenv("TESTING") != null;
+//		if (useTestDB) {
+//			bucket = TEST_BUCKET;
+//		}
 
-		byte[] contents = new byte[10];
 		ByteArrayInputStream bais = new ByteArrayInputStream(contents);
 		ObjectMetadata omd = new ObjectMetadata();
 		omd.setContentLength(contents.length);
 		
 		// makes the object publicly visible
-		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + name, bais, omd)
+		PutObjectResult res = s3.putObject(new PutObjectRequest("cs3733wpi", bucket + name, bais, omd)
 				.withCannedAcl(CannedAccessControlList.PublicRead));
 		
 		// if we ever get here, then whole thing was stored
 		return true;
 	}
-    
-    
-    @Override
-    public CreatePlayListResponse handleRequest(CreatePlayListRequest request, Context context) {	
-        logger = context.getLogger();
-        logger.log("Loading Java CreatePlaylistHandler to create playlists");
-        logger.log(request.toString());
-        
-        CreatePlayListResponse response;
-        try {
-			//byte[] encoded = java.util.Base64.getDecoder().decode(request.base64EncodedValue);
-			if (request.system) {
-				if (createSystemPlaylist(request.name)) {response = new CreatePlayListResponse(request.name);} 
-				else {response = new CreatePlayListResponse(request.name, 422);}
+	
+	@Override 
+	public CreatePlayListResponse handleRequest(CreatePlayListRequest req, Context context)  {
+		logger = context.getLogger();
+		logger.log(req.toString());
+
+		CreatePlayListResponse response;
+		try {
+			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
+			if (req.system) {
+				if (createSystemPlaylist(req.name, encoded)) {
+					response = new CreatePlayListResponse(req.name);
+					logger.log("sys=True, if");
+				} else {
+					response = new CreatePlayListResponse(req.name, 422);
+					logger.log("sys=True, else");
+				}
 			} else {
-				//String contents = new String(encoded);
-				String contents = new String();
+				String contents = new String(encoded);
 				double value = Double.valueOf(contents);
-				if (createPlaylist(request.name)) {
-					response = new CreatePlayListResponse(request.name);} 
-				else {response = new CreatePlayListResponse(request.name, 422);}
+				if (createPlaylist(req.name)) {
+					response = new CreatePlayListResponse(req.name);
+					logger.log("sys=False, if");
+				} else {
+					response = new CreatePlayListResponse(req.name, 422);
+					logger.log("sys=False, else");
+				}
 			}
 		} catch (Exception e) {
-			response = new CreatePlayListResponse("Unable to create playlist: " + request.name + "(" + e.getMessage() + ")", 400);
+			response = new CreatePlayListResponse("Unable to create constant: " + req.name + "(" + e.getMessage() + ")", 400);
 		}
 
 		return response;
