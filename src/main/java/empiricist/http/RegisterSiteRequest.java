@@ -2,7 +2,7 @@ package empiricist.http;
 
 public class RegisterSiteRequest {
 
-String Url;
+public String Url;
 
 public void setUrl(String url) {
 	this.Url = url;

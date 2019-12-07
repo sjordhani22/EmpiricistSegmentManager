@@ -12,9 +12,11 @@ import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 
 import empiricist.database.RemoteSitesDAO;
+import empiricist.http.RegisterSiteRequest;
+import empiricist.http.RegisterSiteResponse;
 import empiricist.model.RemoteSite;
 
-public class RegisterRemoteSiteHandler implements RequestHandler<S3Event, String> {
+public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteRequest, RegisterSiteResponse> {
 	
 	LambdaLogger logger;
 
@@ -60,23 +62,29 @@ public class RegisterRemoteSiteHandler implements RequestHandler<S3Event, String
     
 
     @Override
-    public String handleRequest(S3Event event, Context context) {
-        context.getLogger().log("Received event: " + event);
-
-        // Get the object from the event and show its content type
-        String bucket = event.getRecords().get(0).getS3().getBucket().getName();
-        String key = event.getRecords().get(0).getS3().getObject().getKey();
-        try {
-            S3Object response = s3.getObject(new GetObjectRequest(bucket, key));
-            String contentType = response.getObjectMetadata().getContentType();
-            context.getLogger().log("CONTENT TYPE: " + contentType);
-            return contentType;
-        } catch (Exception e) {
-            e.printStackTrace();
-            context.getLogger().log(String.format(
-                "Error getting object %s from bucket %s. Make sure they exist and"
-                + " your bucket is in the same region as this function.", key, bucket));
-            throw e;
-        }
-    }
+    public RegisterSiteResponse handleRequest(RegisterSiteRequest request, Context context) {
+    	logger = context.getLogger();
+    	logger.log(" Loading Java Handler to Register Remote Sites");
+    	
+    	RegisterSiteResponse response;
+    	
+    	
+    	try {
+    		if(RegisterRemoteSite(request.Url)) {
+    			
+    			response = new RegisterSiteResponse(request.Url,200);
+    		}
+    	
+    		else {
+    			response = new RegisterSiteResponse(request.Url,403);
+    		}
+    	}
+    	catch(Exception e){
+    		
+    		response = new RegisterSiteResponse("Unable to register remote site: " + request.Url + "(" + e.getMessage() + ")", 403);
+    		
+    	}
+    	
+    	return response;
+}
 }
