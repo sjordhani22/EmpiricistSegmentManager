@@ -17,6 +17,11 @@ public class CreatePlayListRequest {
 	public CreatePlayListRequest() {
 	}
 	
+	public CreatePlayListRequest(String n, boolean system) {
+		this.name = n;
+		this.system = system;
+	}
+	
 	public CreatePlayListRequest(String n, String encoding) {
 		this.name = n;
 		this.base64EncodedValue = encoding;

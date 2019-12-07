@@ -91,7 +91,7 @@ public class PlaylistsDAO {
 	            return true;
 
 	        } catch (Exception e) {
-	            throw new Exception("Failed to insert constant: " + e.getMessage());
+	            throw new Exception("Failed to add playlist: " + e.getMessage());
 	        }
 	    }
 	    

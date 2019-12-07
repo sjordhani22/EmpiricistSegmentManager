@@ -98,12 +98,14 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 	public CreatePlayListResponse handleRequest(CreatePlayListRequest req, Context context)  {
 		logger = context.getLogger();
 		logger.log(req.toString());
+		logger.log("do you even CreatePlayListResponse bro");
 
 		CreatePlayListResponse response;
 		try {
-			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
+			//byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
+			logger.log("no encoding necessary thank you very much");
 			if (req.system) {
-				if (createSystemPlaylist(req.name, encoded)) {
+				if (createSystemPlaylist(req.name, null)) {
 					response = new CreatePlayListResponse(req.name);
 					logger.log("sys=True, if");
 				} else {
@@ -111,8 +113,8 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 					logger.log("sys=True, else");
 				}
 			} else {
-				String contents = new String(encoded);
-				double value = Double.valueOf(contents);
+				//String contents = new String();
+				//double value = Double.valueOf(contents);
 				if (createPlaylist(req.name)) {
 					response = new CreatePlayListResponse(req.name);
 					logger.log("sys=False, if");
