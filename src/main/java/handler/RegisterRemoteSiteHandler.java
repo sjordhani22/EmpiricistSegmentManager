@@ -27,13 +27,36 @@ public class RegisterRemoteSiteHandler implements RequestHandler<S3Event, String
         this.s3 = s3;
     }
     
-    boolean RegisterRemoteSite(String url) {
+    boolean RegisterRemoteSite(String Url) throws Exception {
 		if(logger!=null) {logger.log("Registering");}
 		RemoteSitesDAO dao = new RemoteSitesDAO();
-	ArrayList<RemoteSite> remoteSites =	
+	
 		
+		ArrayList<RemoteSite> remoteSites =	dao.getAllRemoteSites();
+	boolean isthere = false;
+	
+		
+	for(int i= 0; i< remoteSites.size(); i++) {
+		
+		if( remoteSites.get(i).getUrl().contentEquals(Url)) {
+			
+			isthere= true;
+		}
+		
+		else if(!isthere) {
+			return dao.AddRemote(new RemoteSite(Url));
+		}
+		
+			
+		
+		else {
     	return false;
     }
+		
+	}
+	return false;
+		
+	}
     
 
     @Override
