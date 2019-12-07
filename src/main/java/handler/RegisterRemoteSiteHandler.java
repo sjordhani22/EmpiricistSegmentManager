@@ -22,7 +22,7 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
 
     private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
 
-  //  public RegisterRemoteSiteHandler() {}
+   //  public RegisterRemoteSiteHandler() {}
 
     // Test purpose only.
     RegisterRemoteSiteHandler(AmazonS3 s3) {
