@@ -67,7 +67,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 		}
 	}
     
-	boolean createSystemPlaylist(String name, byte[]  contents) throws Exception {
+	boolean createSystemPlaylist(String name) throws Exception {
 		if (logger != null) { logger.log("in createSystemConstant"); }
 		
 		if (s3 == null) {
@@ -78,6 +78,7 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 
 		String bucket = REAL_BUCKET;
 
+		byte[] contents = new byte[10];
 		ByteArrayInputStream bais = new ByteArrayInputStream(contents);
 		ObjectMetadata omd = new ObjectMetadata();
 		omd.setContentLength(contents.length);
@@ -99,17 +100,14 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
         
         CreatePlayListResponse response;
         try {
-			byte[] encoded = java.util.Base64.getDecoder().decode(request.base64EncodedValue);
+			//byte[] encoded = java.util.Base64.getDecoder().decode(request.base64EncodedValue);
 			if (request.system) {
-				if (createSystemPlaylist(request.name, encoded)) {
-					response = new CreatePlayListResponse(request.name);
-				} else {
-					response = new CreatePlayListResponse(request.name, 422);
-				}
+				if (createSystemPlaylist(request.name)) {response = new CreatePlayListResponse(request.name);} 
+				else {response = new CreatePlayListResponse(request.name, 422);}
 			} else {
-				String contents = new String(encoded);
+				//String contents = new String(encoded);
+				String contents = new String();
 				double value = Double.valueOf(contents);
-				
 				if (createPlaylist(request.name)) {
 					response = new CreatePlayListResponse(request.name);} 
 				else {response = new CreatePlayListResponse(request.name, 422);}
