@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
+<body style="background-color: powderblue;">
 
 	<script type='text/javascript' src='../js/api.js'></script>
 	<script type='text/javascript' src='../js/getSegments.js'></script>
+	<script type='text/javascript' src='../js/getPlaylists.js'></script>
+
 
 	<script type="text/javascript">
 		function initialize() {
@@ -17,8 +19,8 @@
 
 	<p>From this page, you will have access to all participant
 		commands.</p>
-		
-	<h1> Segments Menu</h1>
+
+	<h1>Segments Menu</h1>
 	<label>Search</label>
 	<select id="myList">
 		<option value="1">Search by Character</option>
@@ -53,10 +55,10 @@
 	<p>---------------------------------------------------------------------------------------</p>
 	<h2>Playlists</h2>
 	<div id="playlistList"></div>
-	
+
 	<form name="createPlaylist" method="post">
-		<input name="name" value="name" /> <input type="button"
-			id="createButton" value="Create PlayList" disabled
+		<input name="name" value="name" id="playName" /> <input type="button"
+			id="createButton" value="Create PlayList"
 			onClick="JavaScript:handleCreatePlaylistClick(this)">
 	</form>
 
@@ -64,12 +66,6 @@
 	<button class="btn ShowPlay">Show Playlist</button>
 	<legend> </legend>
 	<p>
-	<h1>Request to add values</h1>
-
-	<button class="btn Append">Append</button>
-	<button class="btn Delete">Delete</button>
-	<button class="btn Publish">Publish</button>
-
 	<p></p>
 	<div id="button">
 		<a href="Welcome.html">Go Back to Home Page</a>
