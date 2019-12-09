@@ -9,15 +9,8 @@ function processCreatePlaylistResponse(result) {
   // refreshRemoteList(); // COMMENT IN EVENTUALLY
 }
 
-function handleCreatePlaylistClick(e) {											// gets
-																				// called
-																				// from
-																				// html
-	
-  var userIn = document.getElementById("playName");											// form
-																							// name
-																							// from
-																							// html
+function handleCreatePlaylistClick(e) {	
+  var userIn = document.getElementById("playName");	
   console.log(userIn);
   var playListName = userIn.value;
   console.log(playListName);
@@ -25,10 +18,15 @@ function handleCreatePlaylistClick(e) {											// gets
   if (playListName != ""){
 	  
 	  var data = {};
-	  data{"name"} = playListName;
+	  data["name"] = playListName;
+	  
+	  var js = JSON.stringify(data);
+	  
 	  var xhr = new XMLHttpRequest();
-	  xhr.open("POST",createPlaylist_url,data);
-	  xhr.send();
+	  xhr.open("POST",createPlaylist_url, true);
+	  xhr.send(js);
+	  
+	  
 	  console.log("sent Playlist data");
 	// This will process results and update HTML as appropriate.
 	  xhr.onloadend = function (){

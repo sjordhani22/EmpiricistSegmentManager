@@ -16,7 +16,7 @@ var calculate_url  = base_url + "calculator";  // only here for testing.
 
 //POSTs
 var deletePlaylist_url = base_url + "deletePlaylist"; 		// POST 	DeletePlaylist.js
-var createPlaylist_url = base_url + "createPlayList"; 		// POST		CreatePlaylist.js
+var createPlaylist_url = base_url + "createPlaylist"; 		// POST		CreatePlaylist.js
 var deleteSeg_url = base_url + "deleteVideoSegment";		// POST		DeleteSeg.js
 var appendSeg_url = base_url + "appendSeg";					// POST
 var playPlaylist_url = base_url + "playPlaylist"			// POST
