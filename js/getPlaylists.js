@@ -4,7 +4,7 @@
 
 function refreshPlaylistList(){
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", getPlaylistsURL, true); //Correct URL
+	xhr.open("GET", getPlaylist_url, true); //Correct URL
 	xhr.send(); //SEND
 	
 	console.log("sent");
@@ -36,14 +36,13 @@ function refreshPlaylistList(){
 		    var corder = constantJson["order"];
 		    var sysvar = constantJson["system"];
 		    if (sysvar) {
-		    	output = output + "<div id=\"Playlist" + cname + "\"><b>" + cname + ":</b> = " + cseg + "<br></div>";
+		    	output = output + cname;
 		    } else {
-		    	output = output + "<div id=\"Playlist" + cname + "\"><b>" + cname + ":</b> = " + cseg + "<br></div>";
+		    	output = output + cname;
 		    	//"(<a href='javaScript:requestDelete(\"" + cseg + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
 		    }
 		  }
 
 		  // Update computation result
-		  constList.innerHTML = output;
+		  PlayListList.innerHTML = output;
 		}
-		

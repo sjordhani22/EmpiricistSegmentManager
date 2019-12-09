@@ -49,10 +49,11 @@ function processSegmentsResponse(result) {
 	    var cquote = segmentJson["quote"];
 	    var caddress = segmentJson["address"];
 	    //String id, String name, String quote, String address, boolean system
-	    var thisSegment = new Segment (cid, cname, cquote, caddress, true);
-	    library.add(thisSegment);
+	    //var thisSegment = new Segment (cid, cname, cquote, caddress, true);
+	    //library.add(thisSegment);
 	    var width = "320";
 	    var height = "240;"
+	    	
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
 //	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
