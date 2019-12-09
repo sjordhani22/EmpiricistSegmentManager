@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style="background-color: powderblue;">
+
+	<script type='text/javascript' src='../js/api.js'></script>
+	<script type='text/javascript' src='../js/getSegments.js'></script>
+
+	<script type="text/javascript">
+		function initialize() {
+			refreshSegmentsList();
+		}
+	</script>
+</head>
+<body onload="initialize()">
 
 
+	<h1>You have now been moved to the Administrator Page</h1>
 
-<h1>You have now been moved to the Administrator Page</h1>
+	<p>From this page, you will have access to all administrator
+		commands.</p>
 
-<p>From this page, you will have access to all administrator commands. </p>
-<button class="btn show">Show</button>
-<legend> </legend>
-        <p>
-          <button class="btn register">Register</button>
-          <input type = "text"
-                 id = "searchURL"
-                 value = "Enter URL Here" />
-        </p>
+	<h2>Available Segments</h2>
+	<div id="segmentList"></div>
+	<p>
+		<button class="btn register">Register</button>
+		<input type="text" id="searchURL" value="Enter URL Here" />
+	</p>
 
-<button class="btn mark">Mark</button>
-<button class="btn unmark">Unmark</button>
+	<form name="searchQuote" method="post">
+		<input name="char" value="Enter Segment ID" />
+		<input type="button" id="mark" value="Mark Segment" 
+			onClick="JavaScript:handleSearchByCharacterThis(this)">
+			<input type="button" id="unmark" value="Unmark Segment" 
+			onClick="JavaScript:handleSearchByCharacterThis(this)">
+			
+	</form>
+	<p></p>
 
-<p>
-</p>
-<div id="button"><a href="Welcome.html">Go Back to Welcome Page</a></div>
+	<div id="button">
+		<a href="Welcome.html">Go Back to Welcome Page</a>
+	</div>
 
 </body>
 </html>

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
+<body style="background-color: powderblue;">
 
 	<script type='text/javascript' src='../js/api.js'></script>
 	<script type='text/javascript' src='../js/getSegments.js'></script>
-
+	<script type='text/javascript' src='../js/getPlaylists.js'></script>
+	<script type='text/javascript' src='../js/CreatePlaylist.js'></script>
+	
 	<script type="text/javascript">
 		function initialize() {
 			refreshSegmentsList();
+			refreshPlaylistList();
 		}
 	</script>
 </head>
@@ -17,21 +20,33 @@
 
 	<p>From this page, you will have access to all participant
 		commands.</p>
-		
-	<h1> Segments Menu</h1>
-	<label>Search</label>
-	<select id="myList">
-		<option value="1">Search by Character</option>
-		<option value="2">Search by Quote</option>
-	</select>
-	<input type="text" id="searchChoice" value="Enter input" />
-	<button class="btn searchSeg">Search Segment</button>
-	<p>
 
-		<input type="text" id="charName" value="Enter Desired Character" /> <input
-			type="text" id="quote" value="Enter Desired Quote" />
-		<button class="btn searchSeg">Search Segment</button>
-	<p>
+	<h1>Segments Menu</h1>
+	
+	<form name="searchChar" method="post">
+		<input name="char" value="Enter Character Name" /> <input type="button"
+			id="searchCharButton" value="Search Segment by Desired Character" 
+			onClick="JavaScript:handleSearchByCharacterThis(this)">
+	</form>
+	<p></p>
+	
+	<form name="searchQuote" method="post">
+		<input name="quote" value="Enter Desired Quote" /> <input type="button"
+			id="searchQuoteButton" value="Search Segment by Entered Quote" 
+			onClick="JavaScript:handleSearchByCharacterThis(this)">
+	</form>
+	<p></p>
+	
+	<form name="searchQuote" method="post">
+		<input name="quote" value="Enter Desired Quote" /> 
+		<input name="char" value="Enter Character Name" />
+		<input type="button" id="searchByBothButton" value="Search Segment by Quote and Character" 
+			onClick="JavaScript:handleSearchByCharacterThis(this)">
+			
+	</form>
+	<p></p>
+
+
 
 		<label>Select Which Segments</label> <select id="myList">
 			<option value="1">Remote Segments</option>
@@ -53,16 +68,14 @@
 	<p>---------------------------------------------------------------------------------------</p>
 	<h2>Playlists</h2>
 	<div id="playlistList"></div>
-	
+
 	<form name="createPlaylist" method="post">
-		<input name="name" value="name" /> <input type="button"
-			id="createButton" value="Create PlayList" disabled
+		<input name="name" value="name" id="playName"/> <input type="button"
+			id="createButton" value="Create PlayList" 
 			onClick="JavaScript:handleCreatePlaylistClick(this)">
 	</form>
 
 
-	<button class="btn ShowPlay">Show Playlist</button>
-	<legend> </legend>
 	<p>
 	<h1>Request to add values</h1>
 
