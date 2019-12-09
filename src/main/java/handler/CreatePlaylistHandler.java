@@ -25,6 +25,8 @@ import empiricist.model.Segment;
 
 public class CreatePlaylistHandler implements RequestHandler<CreatePlayListRequest, CreatePlayListResponse> {
 	
+	// THIS VERSION WORKS :)
+	
 	LambdaLogger logger;
 	
 	// To access S3 storage
