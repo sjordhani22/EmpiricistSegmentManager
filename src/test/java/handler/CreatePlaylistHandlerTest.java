@@ -48,7 +48,14 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 		 Assert.assertEquals(outgoing, response.response);
 	        Assert.assertEquals(200, response.httpCode);
 	    }
-		 
+	void testFalseInput(String incoming, String outgoing) throws IOException {
+    	CreatePlaylistHandler handler = new CreatePlaylistHandler();
+    	CreatePlayListRequest request = new Gson().fromJson(incoming, CreatePlayListRequest.class);
+
+    	CreatePlayListResponse response = handler.handleRequest(request, createContext("CreatePlaylist"));
+    	
+        Assert.assertEquals(400, response.httpCode);
+    }
 		 
 	 @Test
 	 public void TestCreatePlaylist() {
@@ -67,8 +74,17 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 	 public void FailTest() {
 		 String SAMPLE_INPUT_STRING = "{\"namef\": \"Heineman is a god\"}";
 		 String RESULT = "Unable to Create Playlist: Heineman is a god";
+		 try {
+	        	testFalseInput(SAMPLE_INPUT_STRING, RESULT);
+		 
+		 
 		 
 		// 
+	 }
+		 catch(Exception ioe){
+			 Assert.fail("Unable to Create Playlist: Heineman is a god " + ioe.getMessage());
+		 }
+
 	 }
 }
 
