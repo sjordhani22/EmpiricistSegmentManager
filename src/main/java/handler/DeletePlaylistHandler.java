@@ -2,13 +2,16 @@ package handler;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
+import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import empiricist.database.PlaylistsDAO;
+import empiricist.http.CreatePlayListRequest;
+import empiricist.http.CreatePlayListResponse;
 import empiricist.http.DeletePlaylistRequest;
 import empiricist.http.DeletePlaylistResponse;
 import empiricist.model.Playlist;
 
-public class DeletePlaylistHandler {
+public class DeletePlaylistHandler implements RequestHandler<DeletePlaylistRequest,DeletePlaylistResponse> {
 	public LambdaLogger logger = null;
 
 	public DeletePlaylistResponse handleRequest(DeletePlaylistRequest req, Context context) {
