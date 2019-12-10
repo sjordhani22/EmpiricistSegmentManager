@@ -73,7 +73,7 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 	 @Test
 	 public void FailTest() {
 		 String SAMPLE_INPUT_STRING = "{\"namef\": \"Heineman is a god\"}";
-		 String RESULT = "Unable to Create Playlist: Heineman is a god";
+		 String RESULT = "Unable to Create Playlist:";
 		 try {
 	        	testFalseInput(SAMPLE_INPUT_STRING, RESULT);
 		 
@@ -82,7 +82,7 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 		// 
 	 }
 		 catch(Exception ioe){
-			 Assert.fail("Unable to Create Playlist: Heineman is a god " + ioe.getMessage());
+			 Assert.fail("Unable to Create Playlist:"  + ioe.getMessage());
 		 }
 
 	 }
