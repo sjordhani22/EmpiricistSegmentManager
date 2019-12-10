@@ -9,7 +9,7 @@ function processDeletePlaylistResponse(result) {
 
 function requestDeletePlaylist(val) {
    if (confirm("Request to delete " + val)) {
-     processDelete(val);
+	   processDeletePlaylist(val);
    }
 }
 
@@ -32,7 +32,7 @@ function processDeletePlaylist(val) {
 	  if (xhr.readyState == XMLHttpRequest.DONE) {
 		  if (xhr.status == 200) {
 			  console.log ("XHR:" + xhr.responseText);
-			  processDeleteResponse(xhr.responseText);
+			  processDeletePlaylistResponse(xhr.responseText);
 		  } else {
 			  console.log("actual:" + xhr.responseText)
 			  var js = JSON.parse(xhr.responseText);
