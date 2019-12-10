@@ -36,9 +36,9 @@ function refreshPlaylistList(){
 		    var corder = constantJson["order"];
 		    var sysvar = constantJson["system"];
 		    if (sysvar) {
-		    	output = output + cname;
+		    	output = output + cname + "(<a href='javaScript:requestDeletePlaylist(\"" + cname + "\")'><img src='trash icon.png'></img></a>) <br></div>"; 
 		    } else {
-		    	output = output + cname;
+		    	output = output + cname + "(<a href='javaScript:requestDeletePlaylist(\"" + cname + "\")'><img src='trash icon.png'></img></a>) <br></div>";
 		    	//"(<a href='javaScript:requestDelete(\"" + cseg + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
 		    }
 		  }
