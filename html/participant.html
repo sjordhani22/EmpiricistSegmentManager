@@ -60,7 +60,9 @@
 	<input type="text" id="createPlay" value="Enter Quote" /> Select a
 	Segment in file:
 	<input type="file" id="segValue" name="segValue">
-	<button class="btn Upload">Upload Segment</button>
+	<input type="button" id="uploadButton" value="Upload New Segment" 
+			disabled onClick="JavaScript:handleUploadClick(this)">
+   
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
 
@@ -74,6 +76,7 @@
 		<input name="name" value="name" id="playName"/> <input type="button"
 			id="createButton" value="Create PlayList" 
 			onClick="JavaScript:handleCreatePlaylistClick(this)">
+			
 	</form>
 
 

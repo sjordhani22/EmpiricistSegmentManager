@@ -5,7 +5,7 @@ function processCreatePlaylistResponse(result) {
   // contents dynamically via javascript
   console.log("result:" + result);
 
-  refreshSegmentsList();
+  refreshPlaylistList;
   // refreshRemoteList(); // COMMENT IN EVENTUALLY
 }
 
