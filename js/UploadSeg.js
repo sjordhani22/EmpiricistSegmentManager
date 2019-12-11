@@ -20,8 +20,8 @@ function processUploadResponse(newChar, newQuote, result) {
 }
 
 function handleUploadClick(e) {
-  var form = document.addForm;
-  var newChar = form.newChar.value;
+  var form = document.uploadSeg;
+  var newChar = form.newSegChar.value;
   var newQuote = form.newQuote.value;
   var newID = newChar + newQuote.substring(0,5);
   

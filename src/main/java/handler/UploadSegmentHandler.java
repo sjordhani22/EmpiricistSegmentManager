@@ -98,11 +98,11 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
 			if (req.system) {
 				if (createSystemSegment(req.id, encoded)) {
-					// you now know the url to bucket 
-					String ID = req.name + req.quote.substring(0,5);			
-					String address = baseBucketURL + ID + ".ogg";				// NOW write this to the RDS database through DAO
-					String uid =  UUID.randomUUID().toString();
-					uploadSegment(uid, req.name, req.quote, address, true); 
+					// things have now been added to the bucket	
+					// ID, Address, and everthing else are already set by the js which passes it off through "request"
+					//String address = baseBucketURL + req.id + ".ogg";				// NOW write this to the RDS database through DAO
+					//String uid =  UUID.randomUUID().toString();
+					uploadSegment(req.id, req.name, req.quote, req.address, true); 
 					response = new UploadSegmentResponse(req.id);
 				} else {
 					response = new UploadSegmentResponse(req.id, 422);

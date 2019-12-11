@@ -56,12 +56,14 @@
 		<button class="btn displaySeg">Display Segments</button>
 	<p></p>
 
-	<input type="text" id="newSegChar" value="Enter Character Name" />
-	<input type="text" id="createPlay" value="Enter Quote" /> Select a
+	<form name="uploadSeg" method="post">
+	<input type="text" id="newChar" value="Enter Character Name" />
+	<input type="text" id="newQuote" value="Enter Quote" /> Select a
 	Segment in file:
 	<input type="file" id="segValue" name="segValue">
 	<input type="button" id="uploadButton" value="Upload New Segment" 
 			disabled onClick="JavaScript:handleUploadClick(this)">
+  	</form>
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>

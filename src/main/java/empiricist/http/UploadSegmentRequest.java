@@ -3,7 +3,8 @@ package empiricist.http;
 public class UploadSegmentRequest {
 	public String id;
 	public String name;
-	public String quote; 
+	public String quote;
+	public String address;
 	public String base64EncodedValue;
 	public boolean system;
 	
