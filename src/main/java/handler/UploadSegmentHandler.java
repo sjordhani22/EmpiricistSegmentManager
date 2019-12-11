@@ -21,9 +21,7 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3Object;
 
-import edu.wpi.cs.heineman.calculator.db.ConstantsDAO;
-import edu.wpi.cs.heineman.calculator.http.CreateConstantResponse;
-import edu.wpi.cs.heineman.calculator.model.Constant;
+
 import empiricist.database.SegmentsDAO;
 import empiricist.http.UploadSegmentRequest;
 import empiricist.http.UploadSegmentResponse;
