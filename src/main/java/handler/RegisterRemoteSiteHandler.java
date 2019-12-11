@@ -30,7 +30,7 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
 //    }
     
     boolean RegisterRemoteSite(String Url) throws Exception {
-		if(logger!=null) {logger.log("Registering");}
+		if(logger!=null) {logger.log("Registering");} 
 		RemoteSitesDAO dao = new RemoteSitesDAO();
 	
 		
