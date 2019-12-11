@@ -23,10 +23,11 @@ function handleUploadClick(e) {
   var form = document.uploadSeg;
   var newChar = form.newSegChar.value;
   var newQuote = form.newQuote.value;
+  var newSeg = form.segValue.value;
   var newID = newChar + newQuote.substring(0,5);
   
 
-  var data = {};										// FIXME
+  var data = {};										
   data["id"] = newID;
   data["name"] = newChar;
   data["quote"] = newQuote;
