@@ -12,7 +12,6 @@ function requestDeleteSeg(val) {
 	   processDeleteSeg(val);
    }
 }
-
 function processDeleteSeg(val) {
   var data = {};
   data["name"] = val;									// FIX ME

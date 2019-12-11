@@ -16,6 +16,7 @@ public class DeleteSegmentHandler implements RequestHandler<DeleteSegmentRequest
 	public DeleteSegmentResponse handleRequest(DeleteSegmentRequest req, Context context) {
 		logger = context.getLogger();
 		logger.log("Loading Java Lambda handler to delete");
+		
 
 		DeleteSegmentResponse response = null;
 		logger.log(req.toString());
