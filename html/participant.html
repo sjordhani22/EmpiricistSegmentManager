@@ -92,6 +92,12 @@
   // register
   document.getElementById('segValue').addEventListener('change', handleFileSelect, false);
 </script>
+
+<form name="append" method="post">
+		<input name="segment" value="Enter Segment ID" /> 
+		<input type="button" id="appendButton" value="Search Segment by Desired Character" 
+			onClick="JavaScript:handleAppendClick(this)">
+	</form>
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
