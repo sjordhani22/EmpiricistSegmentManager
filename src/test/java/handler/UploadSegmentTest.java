@@ -17,7 +17,7 @@ public class UploadSegmentTest extends LambdaTest {
 	@Test
 	public void TestUpload() {
 		
-		String path = "src/test/resources/UhuraAllClear-converted.ogg";
+		String path = "src/test/resources/Test64";
 		File file = new File(path);
 		String truePath = file.getAbsolutePath();
 		
