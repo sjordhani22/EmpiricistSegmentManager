@@ -48,7 +48,7 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 		 CreatePlayListResponse response = handler.handleRequest(request, createContext(null));
 		
 		 Assert.assertEquals(outgoing, response.response);
-	        Assert.assertEquals(200, response.httpCode);
+	        Assert.assertEquals(422, response.httpCode);
 	    }
 	void testFalseInput(String incoming, String outgoing) throws IOException {
     	CreatePlaylistHandler handler = new CreatePlaylistHandler();
@@ -59,7 +59,7 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
         Assert.assertEquals(400, response.httpCode);
     }
 	
-	@Test
+	
 	public void TestDeleteInput(String incoming, String outgoing) throws IOException {
 		DeletePlaylistHandler handler = new DeletePlaylistHandler();
 		DeletePlaylistRequest request = new Gson().fromJson(incoming, DeletePlaylistRequest.class);
@@ -86,14 +86,14 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 	 @Test
 	 public void TestDeletePlaylist() throws IOException {
 		 String SAMPLE_INPUT_STRING = "{\"name\": \"Heineman is a god\"}";
-		 String RESULT = "Heineman youre a wizard"; //
+		 String RESULT = "Heineman is a god"; //
 		 try {
 	        	testInput(SAMPLE_INPUT_STRING, RESULT);
 	        	TestDeleteInput(SAMPLE_INPUT_STRING,RESULT);
 	 }
 		 catch (IOException ioe) {
 			 Assert.fail("Unable to Create Playlist:" + RESULT+ ioe.getMessage());
-		 }
+		 }//
 	 }
 	  
 	 

@@ -28,12 +28,12 @@ public class SegmentsDAO {
     	}
     }
     
-    public Segment getSegment(String name) throws Exception {
+    public Segment getSegment(String id throws Exception {
         
         try {
             Segment segment = null;
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE name=?;");
-            ps.setString(1,  name);
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE id=?;");
+            ps.setString(1, id);
             ResultSet resultSet = ps.executeQuery();
             
             while (resultSet.next()) {
@@ -46,7 +46,7 @@ public class SegmentsDAO {
 
         } catch (Exception e) {
         	e.printStackTrace();
-            throw new Exception("Failed in getting constant: " + e.getMessage());
+            throw new Exception("Failed in getting segment: " + e.getMessage());
         }
     }
     
@@ -84,7 +84,7 @@ public class SegmentsDAO {
 
     public boolean addSegment(Segment segment) throws Exception {
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE name = ?;"); // dont know what this is
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Library WHERE id = ?;"); // dont know what this is
             ps.setString(1, segment.id);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {						   // already present?
