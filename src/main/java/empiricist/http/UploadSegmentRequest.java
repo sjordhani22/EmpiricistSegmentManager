@@ -56,7 +56,8 @@ public class UploadSegmentRequest {
 	public UploadSegmentRequest() {
 	}
 	
-	public UploadSegmentRequest(String charName, String quote, String encode) {
+	public UploadSegmentRequest(String id, String charName, String quote, String encode) {
+		this.id = id;
 		this.name = charName;
 		this.quote = quote;
 		this.base64EncodedValue = encode;
