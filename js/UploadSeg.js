@@ -23,13 +23,14 @@ function handleUploadClick(e) {
   var form = document.addForm;
   var newChar = form.newChar.value;
   var newQuote = form.newQuote.value;
-  var newID = newChar + "7"							// have it randomly generate a new id number FIX
+  var newID = newChar + newQuote.substring(0,5);
+  
 
-  var data = {};
+  var data = {};										// FIXME
   data["id"] = newID;
   data["name"] = newChar;
   data["quote"] = newQuote;
-  data["address"] = ;
+  data["address"] = "https://empiricistbucket2.s3.amazonaws.com/" + newID + ".ogg" ;
 
   var js = JSON.stringify(data);
   console.log("JS:" + js);
