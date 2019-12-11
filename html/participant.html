@@ -17,10 +17,9 @@
 </head>
 <body onload="initialize()">
 
-	<h1>Participant Page</h1>
+	<h1><center>Participant Page</center></h1>
 
-	<p>From this page, you will have access to all participant
-		commands.</p>
+	<p><center>From this page, you will have access to all participant commands.</center></p>
 
 	<h1>Segments Menu</h1>
 	
@@ -93,22 +92,32 @@
   // register
   document.getElementById('segValue').addEventListener('change', handleFileSelect, false);
 </script>
+
+<form name="append" method="post">
+		<input name="segment" value="Enter Segment ID" /> 
+		<input type="button" id="appendButton" value="Search Segment by Desired Character" 
+			onClick="JavaScript:handleAppendClick(this)">
+	</form>
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
+<table style="width:100%">
+  <tr>
+    <th><h2>Available Segments</h2></th>
+    <th><h2>Playlists</h2></th>
+  </tr>
+  <tr>
+    <td><div id="segmentList"></div></td>
+    <td valign="top">><div id="playlistList"></div></td>
+  </tr>
+</table>
 
-	<h2>Available Segments</h2>
-	<div id="segmentList"></div>
 	<p>---------------------------------------------------------------------------------------</p>
-	<h2>Playlists</h2>
-	<div id="playlistList"></div>
 
 	<form name="createPlaylist" method="post">
 		<input name="name" value="name" id="playName"/> <input type="button"
 			id="createButton" value="Create PlayList" 
 			onClick="JavaScript:handleCreatePlaylistClick(this); history.go(0);">
-			 
-			
 	</form>
 
 	<p>
