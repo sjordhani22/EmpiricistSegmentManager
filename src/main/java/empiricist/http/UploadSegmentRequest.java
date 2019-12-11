@@ -4,7 +4,8 @@ public class UploadSegmentRequest {
 	public String id;
 	public String charName;
 	public String quote; 
-	//public String base64EncodedValue;
+	
+	public String base64EncodedValue;
 	public boolean system;
 	
 	// not sure how to make a random id for a segment?
@@ -23,6 +24,16 @@ public class UploadSegmentRequest {
 	
 	public String getQuote(){
 		return this.quote;
+	}
+	
+	public void setAddress(String add) {
+		this.base64EncodedValue = add;
+		
+		
+	}
+	
+	public String getAddress() {
+		return this.base64EncodedValue;
 	}
 	
 	public void setSystem(boolean system) {

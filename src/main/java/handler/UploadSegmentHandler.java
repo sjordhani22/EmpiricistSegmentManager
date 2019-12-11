@@ -52,13 +52,16 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 //    }
     
 
-    boolean uploadSegment(String id) throws Exception { 
-		if (logger != null) { logger.log("in createPlaylist"); }
+    boolean uploadSegment(String id, String charname, String quote, String address, boolean system) throws Exception { 
+		if (logger != null) { logger.log("in uploadSegment"); }
 		SegmentsDAO dao = new SegmentsDAO();
 		
 		// check if present
+	
 		Segment exist = dao.getSegment(id); // gets from database
-		Segment segment = new Segment(id);
+		Segment segment = new Segment(id, charname, quote, address, system);
+		
+		dao.addSegment(segment);
 		
 		if (exist == null) {
 			return dao.addSegment(segment);
@@ -99,6 +102,9 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 		logger = context.getLogger();
 		logger.log(req.toString());
 		logger.log("UploadSegmentResponse");
+		String segname = req.id;
+		String charname = req.charName;
+		String address = req.base64EncodedValue;
 
 		UploadSegmentResponse response;
 		try {
