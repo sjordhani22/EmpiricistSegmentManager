@@ -86,7 +86,7 @@ public class CreatePlaylistHandlerTest extends LambdaTest {
 	 @Test
 	 public void TestDeletePlaylist() throws IOException {
 		 String SAMPLE_INPUT_STRING = "{\"name\": \"Heineman is a god\"}";
-		 String RESULT = "Heineman youre a wizard";
+		 String RESULT = "Heineman youre a wizard"; //
 		 try {
 	        	testInput(SAMPLE_INPUT_STRING, RESULT);
 	        	TestDeleteInput(SAMPLE_INPUT_STRING,RESULT);
