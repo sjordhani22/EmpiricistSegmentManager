@@ -55,7 +55,7 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
     boolean uploadSegment(String id, String charname, String quote, String address, boolean system) throws Exception { 
 		if (logger != null) { logger.log("in uploadSegment"); }
 		SegmentsDAO dao = new SegmentsDAO();
-		
+		//
 		// check if present
 	
 		Segment exist = dao.getSegment(id); // gets from database
