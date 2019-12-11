@@ -26,7 +26,6 @@ function handleUploadClick(e) {
   var newSeg = form.segValue.value;
   var newID = newChar + newQuote.substring(0,5);
   
-
   var data = {};										
   data["id"] = newID;
   data["name"] = newChar;
