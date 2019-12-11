@@ -120,9 +120,11 @@ public class CreatePlaylistHandler implements RequestHandler<CreatePlayListReque
 				if (createPlaylist(req.name)) {
 					response = new CreatePlayListResponse(req.name);
 					logger.log("sys=False, if");
+					req.system = true;
 				} else {
 					response = new CreatePlayListResponse(req.name, 422);
 					logger.log("sys=False, else");
+					req.system = true;
 				}
 			}
 		} catch (Exception e) {
