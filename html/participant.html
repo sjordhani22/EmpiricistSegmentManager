@@ -75,18 +75,12 @@
 	<form name="createPlaylist" method="post">
 		<input name="name" value="name" id="playName"/> <input type="button"
 			id="createButton" value="Create PlayList" 
-			onClick="JavaScript:handleCreatePlaylistClick(this)">
+			onClick="JavaScript:handleCreatePlaylistClick(this); history.go(0);">
+			 
 			
 	</form>
 
-
 	<p>
-	<h1>Request to add values</h1>
-
-	<button class="btn Append">Append</button>
-	<button class="btn Delete">Delete</button>
-	<button class="btn Publish">Publish</button>
-
 	<p></p>
 	<div id="button">
 		<a href="Welcome.html">Go Back to Home Page</a>
