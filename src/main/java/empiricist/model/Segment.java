@@ -24,6 +24,13 @@ public class Segment {
 		this.system = system;
 	}
 	
+	public Segment(String s) {
+		this.address = "";
+		this.id = "";
+		this.quote = "";
+		this.name = s;
+	}
+
 	// These will be the getters for our Segment
 	public String getID() {return this.id;}
 	public String getCharName() {return this.name;}

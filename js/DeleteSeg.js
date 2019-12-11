@@ -9,7 +9,7 @@ function processDeleteSegResponse(result) {
 
 function requestDeleteSeg(val) {
    if (confirm("Request to delete " + val)) {
-     processDelete(val);
+	   processDeleteSeg(val);
    }
 }
 
@@ -32,7 +32,7 @@ function processDeleteSeg(val) {
 	  if (xhr.readyState == XMLHttpRequest.DONE) {
 		  if (xhr.status == 200) {
 			  console.log ("XHR:" + xhr.responseText);
-			  processDeleteResponse(xhr.responseText);
+			  processDeleteSegResponse(xhr.responseText);
 		  } else {
 			  console.log("actual:" + xhr.responseText)
 			  var js = JSON.parse(xhr.responseText);
