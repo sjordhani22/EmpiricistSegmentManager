@@ -5,6 +5,7 @@ import java.io.ByteArrayInputStream;
 //taken from CreatePlaylistHandler
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.lambda.runtime.Context;
@@ -20,6 +21,9 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3Object;
 
+import edu.wpi.cs.heineman.calculator.db.ConstantsDAO;
+import edu.wpi.cs.heineman.calculator.http.CreateConstantResponse;
+import edu.wpi.cs.heineman.calculator.model.Constant;
 import empiricist.database.SegmentsDAO;
 import empiricist.http.UploadSegmentRequest;
 import empiricist.http.UploadSegmentResponse;
@@ -31,38 +35,27 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 	
 	// To access S3 storage
 	private AmazonS3 s3 = null;
+		
+	// Note: this works, but it would be better to move this to environment/configuration mechanisms
+	// which you don't have to do for this project.
 	public static final String REAL_BUCKET = "empiricistbucket2/";
 	
-	boolean failed=false;
-
-	String Wresponse = "";		//success or win response
-	String FResponse ="";		//fail response
-	String name;	
-	boolean worked=false;
+	//https://empiricistbucket2.s3.amazonaws.com/KirkLogic-converted.ogg
+	public static final String baseBucketURL = "https://empiricistbucket2.s3.amazonaws.com/";  // don't forget to add .ogg!
 	
-   // private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
-	//private AmazonS3 s3 = null;			// should we use this instead?
-    
+	
+	/** Store into RDS.
+	 * 
+	 * @throws Exception 
+	 */
 
-    public UploadSegmentHandler() {}
-
-//    // Test purpose only.
-//    CreatePlaylistHandler(AmazonS3 s3) {
-//        this.s3 = s3;
-//    }
-    
-
-    boolean uploadSegment(String id, String charname, String quote, String address, boolean system) throws Exception { 
-		if (logger != null) { logger.log("in uploadSegment"); }
+    boolean uploadSegment(String id, String name, String quote, String address, boolean system) throws Exception { 
+		if (logger != null) { logger.log("in createConstant"); }
 		SegmentsDAO dao = new SegmentsDAO();
-		//
+		
 		// check if present
-	
-		Segment exist = dao.getSegment(id); // gets from database
-		Segment segment = new Segment(id, charname, quote, address, system);
-		
-		dao.addSegment(segment);
-		
+		Segment exist = dao.getSegment(id);
+		Segment segment = new Segment (id, name, quote, address, system);
 		if (exist == null) {
 			return dao.addSegment(segment);
 		} else {
@@ -70,8 +63,8 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 		}
 	}
     
-	boolean createSystemPlaylist(String name, byte[]  contents) throws Exception {
-		if (logger != null) { logger.log("in createSystemPlaylist"); }
+	boolean createSystemSegment(String id, byte[]  contents) throws Exception {
+		if (logger != null) { logger.log("in createSystemConstant"); }
 		
 		if (s3 == null) {
 			logger.log("attach to S3 request");
@@ -90,7 +83,7 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 		omd.setContentLength(contents.length);
 		
 		// makes the object publicly visible
-		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + name, bais, omd)
+		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + id, bais, omd)
 				.withCannedAcl(CannedAccessControlList.PublicRead));
 		
 		// if we ever get here, then whole thing was stored
@@ -101,39 +94,35 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 	public UploadSegmentResponse handleRequest(UploadSegmentRequest req, Context context)  {
 		logger = context.getLogger();
 		logger.log(req.toString());
-		logger.log("UploadSegmentResponse");
-		String segname = req.id;
-		String charname = req.charName;
-		String address = req.base64EncodedValue;
 
 		UploadSegmentResponse response;
 		try {
-			// how do I store the actual file?
-			//byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
-			logger.log("no encoding");
+			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
 			if (req.system) {
-				if (createSystemPlaylist(req.id, null)) {
+				if (createSystemSegment(req.id, encoded)) {
+					// you now know the url to bucket 
+					String ID = req.name + req.quote.substring(0,5);			
+					String address = baseBucketURL + ID + ".ogg";				// NOW write this to the RDS database through DAO
+					String uid =  UUID.randomUUID().toString();
+					uploadSegment(uid, req.name, req.quote, address, true); 
 					response = new UploadSegmentResponse(req.id);
-					logger.log("sys=True, if");
 				} else {
 					response = new UploadSegmentResponse(req.id, 422);
-					logger.log("sys=True, else");
 				}
 			} else {
-				//String contents = new String();
+				String contents = new String(encoded);
 				//double value = Double.valueOf(contents);
-				if (uploadSegment(req.id)) {
+				String ID = req.name + req.quote.substring(0,5);
+				String address = baseBucketURL + ID + ".ogg";
+				String uid =  UUID.randomUUID().toString();
+				if (uploadSegment(req.id, req.name, req.quote, address, false)) {
 					response = new UploadSegmentResponse(req.id);
-					logger.log("sys=False, if");
-					req.system = true;
 				} else {
 					response = new UploadSegmentResponse(req.id, 422);
-					logger.log("sys=False, else");
-					req.system = true;
 				}
 			}
 		} catch (Exception e) {
-			response = new UploadSegmentResponse("Unable to create playlist: " + req.id + "(" + e.getMessage() + ")", 400);
+			response = new UploadSegmentResponse("Unable to create constant: " + req.id + "(" + e.getMessage() + ")", 400);
 		}
 
 		return response;
