@@ -57,8 +57,9 @@ function processSegmentsResponse(result) {
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
 //	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
-	    	output = output + "<video id="+cid+" width="+width+" height="+height+" controls> <source src=" +caddress+" type=video/ogg></video>" +
-	    					"(<a href='javaScript:requestDeleteSeg(\"" + cid + "\")'><img src='trash icon.png'></img></a>) <br></div>";
+	    	output = output + "<b>" + cid + "<br/></b>" 
+	    					+ "<video id="+cid+" width="+width+" height="+height+" controls> <source src=" +caddress+" type=video/ogg></video>" 
+	    					+ "<a href='javaScript:requestDeleteSeg(\"" + cid + "\")'><img src='trash icon.png'></img></a> <br></div>";
 	    	console.log(output);
 	    } else {
 	    	output = output + cid + "(<a href='javaScript:requestDeleteSeg(\"" + cid + "\")'><img src='trash icon.png'></img></a>) <br></div>"; 
