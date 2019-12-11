@@ -11,20 +11,26 @@ function processAppendResponse(result) {
 }
 
 function handleAppendClick(e) {	
-  var userIn = document.getElementById("playName");	
-  console.log(userIn);
-  var playListName = userIn.value;
-  console.log(playListName);
+  var userInSeg = document.getElementById("segApp");	
+  var userInPlay = document.getElementById("playApp");	
+  console.log(userInSeg);
+  console.log(userInPlay);
+  var segName = userInSeg.value;
+  var playName = userInPlay.value;
+  console.log(segName);
+  console.log(playName);
   
   if (playListName != ""){
 	  
 	  var data = {};
-	  data["seg"] = playListName;
+	  data["segName"] = playListName;
+	  data["playName"] = playListName;
+	  
 	  
 	  var js = JSON.stringify(data);
 	  
 	  var xhr = new XMLHttpRequest();
-	  xhr.open("POST",createPlaylist_url, true);
+	  xhr.open("POST",appendSeg_url, true);
 	  xhr.send(js);
 	  
 	  
