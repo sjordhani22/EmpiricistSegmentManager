@@ -110,10 +110,7 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 			} else {
 				String contents = new String(encoded);
 				//double value = Double.valueOf(contents);
-				String ID = req.name + req.quote.substring(0,5);
-				String address = baseBucketURL + ID + ".ogg";
-				String uid =  UUID.randomUUID().toString();
-				if (uploadSegment(req.id, req.name, req.quote, address, false)) {
+				if (uploadSegment(req.id, req.name, req.quote, req.address, false)) {
 					response = new UploadSegmentResponse(req.id);
 				} else {
 					response = new UploadSegmentResponse(req.id, 422);

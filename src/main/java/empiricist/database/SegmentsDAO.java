@@ -28,7 +28,7 @@ public class SegmentsDAO {
     	}
     }
     
-    public Segment getSegment(String id throws Exception {
+    public Segment getSegment(String id) throws Exception {
         
         try {
             Segment segment = null;
