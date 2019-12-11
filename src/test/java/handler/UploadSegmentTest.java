@@ -36,6 +36,8 @@ public class UploadSegmentTest extends LambdaTest {
     	UploadSegmentRequest  request = new UploadSegmentRequest("UhuraAll c", "Uhura", "All channels cleared sir", new String(encoding));
     	UploadSegmentResponse response = new UploadSegmentHandler().handleRequest(request, createContext(null));
     	Assert.assertEquals("UhuraAll c", response.response);
+    	
+    	
 	}
 
     	
