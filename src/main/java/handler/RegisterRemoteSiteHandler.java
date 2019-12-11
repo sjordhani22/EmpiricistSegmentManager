@@ -82,7 +82,7 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
     	}
     	catch(Exception e){
     		
-    		response = new RegisterSiteResponse("Unable to register remote site: " + request.Url + "(" + e.getMessage() + ")", 403);
+    		response = new RegisterSiteResponse("Unable to register remote site: " + request.Url + "(" + e.getMessage() + ")", 400);
     		
     	}
     	
