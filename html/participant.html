@@ -96,19 +96,23 @@
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
+<table style="width:100%">
+  <tr>
+    <th><h2>Available Segments</h2></th>
+    <th><h2>Playlists</h2></th>
+  </tr>
+  <tr>
+    <td><div id="segmentList"></div></td>
+    <td>	<div id="playlistList"></div></td>
+  </tr>
+</table>
 
-	<h2>Available Segments</h2>
-	<div id="segmentList"></div>
 	<p>---------------------------------------------------------------------------------------</p>
-	<h2>Playlists</h2>
-	<div id="playlistList"></div>
 
 	<form name="createPlaylist" method="post">
 		<input name="name" value="name" id="playName"/> <input type="button"
 			id="createButton" value="Create PlayList" 
 			onClick="JavaScript:handleCreatePlaylistClick(this); history.go(0);">
-			 
-			
 	</form>
 
 	<p>
