@@ -57,11 +57,11 @@ function processSegmentsResponse(result) {
 	    var sysvar = true; // segmentJson["system"];
 	    if (sysvar) {
 //	    	output = output + "<div id=\"seg" + cname + "\"><b>" + cname + ":</b> = " + caddress + "<br></div>";
-	    	output = output + "<video id="+cid+" width="+width+" height="+height+" controls> <source src=" +caddress+" type=video/ogg></video>";
+	    	output = output + "<video id="+cid+" width="+width+" height="+height+" controls> <source src=" +caddress+" type=video/ogg></video>" +
+	    					"(<a href='javaScript:requestDeleteSeg(\"" + cid + "\")'><img src='trash icon.png'></img></a>) <br></div>";
 	    	console.log(output);
 	    } else {
-	    	output = AAAH;
-	    	//output = output + "<div id=\"seg" + cid + "\"><b>" + cseg + ":</b> = " + caddress + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+	    	output = output + cid + "(<a href='javaScript:requestDeleteSeg(\"" + cid + "\")'><img src='trash icon.png'></img></a>) <br></div>"; 
 	    }
 	  }
 	  // Update computation result

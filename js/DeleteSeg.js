@@ -14,7 +14,7 @@ function requestDeleteSeg(val) {
 }
 function processDeleteSeg(val) {
   var data = {};
-  data["name"] = val;									// FIX ME
+  data["id"] = val;
 
   var js = JSON.stringify(data);
   console.log("JS:" + js);
