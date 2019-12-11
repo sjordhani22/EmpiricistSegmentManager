@@ -10,6 +10,8 @@ function refreshPlaylistList(){
 	console.log("sent");
 	
 	xhr.onloadend = function(){
+		console.log(xhr);
+		console.log(xhr.request);
 		if (xhr.readyState == XMLHttpRequest.DONE) {
 		      console.log ("XHR:" + xhr.responseText);
 		      processListResponse(xhr.responseText);
@@ -17,7 +19,7 @@ function refreshPlaylistList(){
 		      processListResponse("N/A");
 		    }
 		  };
-		}
+}
 
 
 		function processListResponse(result) {

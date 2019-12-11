@@ -23,11 +23,13 @@ function handleUploadClick(e) {
   var form = document.addForm;
   var newChar = form.newChar.value;
   var newQuote = form.newQuote.value;
-  var newName = newChar + "7"							// have it randomly generate a new id number FIX
+  var newID = newChar + "7"							// have it randomly generate a new id number FIX
 
   var data = {};
-  data["arg1"] = arg1;
-  data["arg2"] = arg2;
+  data["id"] = newID;
+  data["name"] = newChar;
+  data["quote"] = newQuote;
+  data["address"] = ;
 
   var js = JSON.stringify(data);
   console.log("JS:" + js);
@@ -44,9 +46,9 @@ function handleUploadClick(e) {
     
     if (xhr.readyState == XMLHttpRequest.DONE) {
       console.log ("XHR:" + xhr.responseText);
-      processAddResponse(arg1, arg2, xhr.responseText);
+      processUploadResponse(name, quote, xhr.responseText);
     } else {
-      processAddResponse(arg1, arg2, "N/A");
+      processUploadResponse(name, quote, "N/A");
     }
   };
 }
