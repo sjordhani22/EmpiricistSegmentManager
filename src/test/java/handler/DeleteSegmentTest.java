@@ -8,15 +8,15 @@ import org.junit.Test;
 
 import com.google.gson.Gson;
 
-import empiricist.http.CreatePlayListRequest;
-import empiricist.http.CreatePlayListResponse;
-import empiricist.http.DeletePlaylistRequest;
-import empiricist.http.DeletePlaylistResponse;
+
 import empiricist.http.DeleteSegmentRequest;
 import empiricist.http.DeleteSegmentResponse;
+<<<<<<< HEAD
 import empiricist.http.GetPlaylistReponse;
 import empiricist.http.UploadSegmentRequest;
 import empiricist.http.UploadSegmentResponse;
+=======
+>>>>>>> branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
 import junit.framework.Assert;
 
 public class DeleteSegmentTest extends LambdaTest {
