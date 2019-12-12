@@ -43,19 +43,19 @@ public class PlaylistsDAO {
 	        }
 	    }
 	    
-	    public boolean updatePlaylist(Playlist playlist) throws Exception {
-	        try {
-	        	String query = "UPDATE Playlist SET name=? WHERE name=?;";
-	        	prepare = conn.prepareStatement(query);
-	            prepare.setString(2, playlist.name);
-	            int numAffected = prepare.executeUpdate();
-	            prepare.close();
-	            
-	            return (numAffected == 1);
-	        } catch (Exception e) {
-	            throw new Exception("Failed to update playlist: " + e.getMessage());
-	        }
-	    }
+//	    public boolean updatePlaylist(Playlist playlist) throws Exception {
+//	        try {
+//	        	String query = "UPDATE Playlist SET name=? WHERE name=?;";
+//	        	prepare = conn.prepareStatement(query);
+//	            prepare.setString(2, playlist.name);
+//	            int numAffected = prepare.executeUpdate();
+//	            prepare.close();
+//	            
+//	            return (numAffected == 1);
+//	        } catch (Exception e) {
+//	            throw new Exception("Failed to update playlist: " + e.getMessage());
+//	        }
+//	    }
 	    
 	    public boolean deletePlaylist(Playlist playlist) throws Exception {
 	        try {

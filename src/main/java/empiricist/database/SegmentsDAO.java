@@ -54,22 +54,22 @@ public class SegmentsDAO {
         }
     }
     
-    public boolean updateLibrary(Segment segment) throws Exception {
-        try {
-        	String query = "UPDATE Library SET quote=? SET name=? WHERE id=?;";	// I added SET seg, not sure if this wil work
-        	PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, segment.id);
-            ps.setString(2, segment.name);
-            ps.setString(3, segment.quote);
-            ps.setString(4, segment.address);
-            int numAffected = ps.executeUpdate();
-            ps.close();
-            
-            return (numAffected == 1);
-        } catch (Exception e) {
-            throw new Exception("Failed to update Library: " + e.getMessage());
-        }
-    }
+//    public boolean updateLibrary(Segment segment) throws Exception {
+//        try {
+//        	String query = "UPDATE Library SET quote=? SET name=? WHERE id=?;";	// I added SET seg, not sure if this wil work
+//        	PreparedStatement ps = conn.prepareStatement(query);
+//            ps.setString(1, segment.id);
+//            ps.setString(2, segment.name);
+//            ps.setString(3, segment.quote);
+//            ps.setString(4, segment.address);
+//            int numAffected = ps.executeUpdate();
+//            ps.close();
+//            
+//            return (numAffected == 1);
+//        } catch (Exception e) {
+//            throw new Exception("Failed to update Library: " + e.getMessage());
+//        }
+//    }
     
     public boolean deleteSegment(Segment segment) throws Exception {
         try {
