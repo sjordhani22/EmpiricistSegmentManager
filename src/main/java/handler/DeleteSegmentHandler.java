@@ -1,11 +1,18 @@
 package handler;
 
+import com.amazonaws.AmazonServiceException;
+import com.amazonaws.SdkClientException;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.CannedAccessControlList;
+import com.amazonaws.services.s3.model.DeleteBucketRequest;
+import com.amazonaws.services.s3.model.DeleteObjectRequest;
+import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.PutObjectResult;
 
 import empiricist.database.SegmentsDAO;
 import empiricist.http.DeleteSegmentRequest;
@@ -44,6 +51,21 @@ public class DeleteSegmentHandler implements RequestHandler<DeleteSegmentRequest
 			logger.log("attach to S3 succeed");
 			return true;
 		}
+		
+		
+		
+//	    public DeleteObjectRequest(String bucketName, String key) {
+//	        setBucketName(bucketName);
+//	        setKey(key);
+//	    }
+		
+		//  public void deleteObject(DeleteObjectRequest deleteObjectRequest)
+        //throws SdkClientException, AmazonServiceException;
+		
+		s3.deleteObject(new DeleteObjectRequest(REAL_BUCKET,id));
+		 
+		
+		
 		return false;
 	}
 
