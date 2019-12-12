@@ -49,24 +49,11 @@ public class DeleteSegmentHandler implements RequestHandler<DeleteSegmentRequest
 			logger.log("attach to S3 request");
 			s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
 			logger.log("attach to S3 succeed");
-			return true;
+			
 		}
 		
-		
-		
-//	    public DeleteObjectRequest(String bucketName, String key) {
-//	        setBucketName(bucketName);
-//	        setKey(key);
-//	    }
-		
-		//  public void deleteObject(DeleteObjectRequest deleteObjectRequest)
-        //throws SdkClientException, AmazonServiceException;
-		
 		s3.deleteObject(new DeleteObjectRequest(REAL_BUCKET,id));
-		 
-		
-		
-		return false;
+		return true;
 	}
 
 		@Override 

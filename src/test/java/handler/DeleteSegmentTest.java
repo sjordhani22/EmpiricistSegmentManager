@@ -21,7 +21,6 @@ import junit.framework.Assert;
 public class DeleteSegmentTest extends LambdaTest {
 
 	
-	
 	public void TestDeleteInput(String incoming, String outgoing) throws IOException {
 		DeleteSegmentHandler handler = new DeleteSegmentHandler();
 		DeleteSegmentRequest request = new Gson().fromJson(incoming, DeleteSegmentRequest.class);
@@ -31,7 +30,7 @@ public class DeleteSegmentTest extends LambdaTest {
         Assert.assertEquals(200, response.statusCode);
     }
 
-public void testInput(String incoming, String outgoing) throws IOException {
+	public void testInput(String incoming, String outgoing) throws IOException {
 	 UploadSegmentHandler handler = new UploadSegmentHandler();
 	 UploadSegmentRequest request = new Gson().fromJson(incoming, UploadSegmentRequest.class);
 	 
@@ -45,8 +44,8 @@ public void testInput(String incoming, String outgoing) throws IOException {
 	
 	 @Test
 	 public void TestDeleteSegment() throws IOException {
-		 String SAMPLE_INPUT_STRING = "{\"id\": \"Test\"}";
-		 String RESULT = "Test"; //
+		 String SAMPLE_INPUT_STRING = "{\"id\": \"UhuraAll c\"}";
+		 String RESULT = "UhuraAll c"; //
 		 try {
 	        	
 	        	TestDeleteInput(SAMPLE_INPUT_STRING,RESULT);
