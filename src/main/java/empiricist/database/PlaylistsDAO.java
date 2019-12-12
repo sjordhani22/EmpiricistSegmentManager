@@ -135,18 +135,7 @@ public class PlaylistsDAO {
 	        return new Playlist (name);
 	    }
 	    
-	    public boolean isItInDataBase (String name) throws Exception{
-	    	try {
-	    		prepare = conn.prepareStatement("SELECT * FROM Playlist WHERE name =? ");
-	    		prepare.setString(1,name);
-	    		result = prepare.executeQuery();
-	    		boolean isit = result.next();
-	    		return isit;
-	    	}catch (Exception e) {
-	    		e.printStackTrace();
-	    		throw e;
-	    	}
-	    }
+	   
 
 	}
 	    

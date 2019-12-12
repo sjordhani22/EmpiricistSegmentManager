@@ -21,7 +21,7 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 
 import empiricist.database.SegmentsDAO;
 import empiricist.http.AllSegmentsResponse;
-import empiricist.http.SearchSegmentRequest;
+//import empiricist.http.SearchSegmentRequest;
 import empiricist.model.Segment;
 
 public class listVideoSegmentsHandler implements RequestHandler<Object,AllSegmentsResponse> {
