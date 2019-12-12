@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import empiricist.model.Playlist;
 import empiricist.model.Segment;
 
 public class SegmentsDAO {
@@ -17,8 +18,11 @@ public class SegmentsDAO {
  * Modified by Shannon Carey
  */
 	
+	Connection conn;
+	ResultSet result;
+	PreparedStatement prepare;
 
-	java.sql.Connection conn;
+	//java.sql.Connection conn;
 
     public SegmentsDAO() {
     	try  {
@@ -69,15 +73,15 @@ public class SegmentsDAO {
     
     public boolean deleteSegment(Segment segment) throws Exception {
         try {
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM Library WHERE id = ?;");
-            ps.setString(1, segment.id);			// not sure what the 1 is for?
-            int numAffected = ps.executeUpdate();	// this isnt an int?
-            ps.close();
-            
+        	prepare = conn.prepareStatement("DELETE FROM Library WHERE id = ?;");
+        	prepare.setString(1, segment.name);
+            int numAffected = prepare.executeUpdate();
+            prepare.close();
             return (numAffected == 1);
-
-        } catch (Exception e) {
-            throw new Exception("Failed to insert constant: " + e.getMessage());
+        } 
+        
+        catch (Exception e) {
+            throw new Exception("Failed to insert playlist: " + e.getMessage());
         }
     }
 

@@ -4,7 +4,7 @@ function processDeletePlaylistResponse(result) {
   console.log("deleted :" + result);
   
   refreshSegmentsList();
-  refreshPlaylistList
+  refreshPlaylistList();
   //refreshRemoteList();									// COMMENT ME BACK IN EVENTUALLY
 }
 

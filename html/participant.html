@@ -7,6 +7,8 @@
 	<script type='text/javascript' src='../js/getPlaylists.js'></script>
 	<script type='text/javascript' src='../js/CreatePlaylist.js'></script>
 	<script type='text/javascript' src='../js/DeletePlaylist.js'></script>
+	<script type='text/javascript' src='../js/UploadSeg.js'></script>
+	<script type='text/javascript' src='../js/DeleteSeg.js'></script>
 	
 	<script type="text/javascript">
 		function initialize() {
@@ -62,7 +64,7 @@
 		 Select a Segment in file:
 		<input type="file" id="segValue" name="segValue">
 		<input type="button" id="uploadButton" value="Upload New Segment" 
-			disabled onClick="JavaScript:handleUploadClick(this)">
+			onClick="JavaScript:handleUploadClick(this)">
   	</form>
   	
   	<script>
@@ -93,13 +95,26 @@
   document.getElementById('segValue').addEventListener('change', handleFileSelect, false);
 </script>
 
+
+   <p>---------------------------------------------------------------------------------------</p>
+   
+   <h1>Playlist Menu</h1>
+   
+   	<form name="createPlaylist" method="post">
+			<input name="name" value="name" id="playName"/> <input type="button"
+			id="createButton" value="Create PlayList" 
+			onClick="JavaScript:handleCreatePlaylistClick(this)">
+	</form>
+	
+	<p></p>
+	
 	<form name="append" method="post">
-		<p>Append a Segment to a Playlist <p>
 		<input name="segment" value="Enter Segment ID" id= "segApp" /> 
 		<input name="playlist" value="Enter Playlist Name" id = "playApp" /> 
 		<input type="button" id="appendButton" value="Append to Playlist"
 			onClick="JavaScript:handleAppendClick(this)">
 	</form>
+   
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
@@ -116,11 +131,7 @@
 
 	<p>---------------------------------------------------------------------------------------</p>
 
-	<form name="createPlaylist" method="post">
-		<input name="name" value="name" id="playName"/> <input type="button"
-			id="createButton" value="Create PlayList" 
-			onClick="JavaScript:handleCreatePlaylistClick(this); history.go(0);">
-	</form>
+
 
 	<p>
 	<p></p>

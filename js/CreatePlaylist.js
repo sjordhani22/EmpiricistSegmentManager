@@ -5,7 +5,7 @@ function processCreatePlaylistResponse(result) {
   // contents dynamically via javascript
   console.log("result:" + result);
 
-  refreshPlaylistList;
+  refreshPlaylistList();
   // refreshRemoteList(); // COMMENT IN EVENTUALLY
 }
 
@@ -46,3 +46,6 @@ function handleCreatePlaylistClick(e) {
 	  }
   };
 }
+
+//; history.go(0);
+// from create html

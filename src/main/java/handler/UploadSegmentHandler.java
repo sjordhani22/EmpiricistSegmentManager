@@ -28,29 +28,29 @@ import empiricist.http.UploadSegmentResponse;
 import empiricist.model.Segment;
 
 public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest, UploadSegmentResponse> {
-	
+
 	LambdaLogger logger;
-	
+
 	// To access S3 storage
 	private AmazonS3 s3 = null;
-		
+
 	// Note: this works, but it would be better to move this to environment/configuration mechanisms
 	// which you don't have to do for this project.
 	public static final String REAL_BUCKET = "empiricistbucket2/";
-	
+
 	//https://empiricistbucket2.s3.amazonaws.com/KirkLogic-converted.ogg
 	public static final String baseBucketURL = "https://empiricistbucket2.s3.amazonaws.com/";  // don't forget to add .ogg!
-	
-	
+
+
 	/** Store into RDS.
 	 * 
 	 * @throws Exception 
 	 */
 
-    boolean uploadSegment(String id, String name, String quote, String address, boolean system) throws Exception { 
-		if (logger != null) { logger.log("in createConstant"); }
+	boolean addSegmentToDatabase(String id, String name, String quote, String address, boolean system) throws Exception { 
+		if (logger != null) { logger.log("in createConstant "); }
 		SegmentsDAO dao = new SegmentsDAO();
-		
+
 		// check if present
 		Segment exist = dao.getSegment(id);
 		Segment segment = new Segment (id, name, quote, address, system);
@@ -60,10 +60,10 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 			return false;
 		}
 	}
-    
+
 	boolean createSystemSegment(String id, byte[]  contents) throws Exception {
 		if (logger != null) { logger.log("in createSystemConstant"); }
-		
+
 		if (s3 == null) {
 			logger.log("attach to S3 request");
 			s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
@@ -71,19 +71,19 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 		}
 
 		String bucket = REAL_BUCKET;
-//		boolean useTestDB = System.getenv("TESTING") != null;
-//		if (useTestDB) {
-//			bucket = TEST_BUCKET;
-//		}
+		//		boolean useTestDB = System.getenv("TESTING") != null;
+		//		if (useTestDB) {
+		//			bucket = TEST_BUCKET;
+		//		}
 
 		ByteArrayInputStream bais = new ByteArrayInputStream(contents);
 		ObjectMetadata omd = new ObjectMetadata();
 		omd.setContentLength(contents.length);
-		
+
 		// makes the object publicly visible
-		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", bucket + id, bais, omd)
+		PutObjectResult res = s3.putObject(new PutObjectRequest("empiricistbucket2", id, bais, omd)
 				.withCannedAcl(CannedAccessControlList.PublicRead));
-		
+
 		// if we ever get here, then whole thing was stored
 		return true;
 	}
@@ -96,25 +96,15 @@ public class UploadSegmentHandler implements RequestHandler<UploadSegmentRequest
 		UploadSegmentResponse response;
 		try {
 			byte[] encoded = java.util.Base64.getDecoder().decode(req.base64EncodedValue);
-			if (req.system) {
-				if (createSystemSegment(req.id, encoded)) {
-					// things have now been added to the bucket	
-					// ID, Address, and everthing else are already set by the js which passes it off through "request"
-					//String address = baseBucketURL + req.id + ".ogg";				// NOW write this to the RDS database through DAO
-					//String uid =  UUID.randomUUID().toString();
-					uploadSegment(req.id, req.name, req.quote, req.address, true); 
-					response = new UploadSegmentResponse(req.id);
-				} else {
-					response = new UploadSegmentResponse(req.id, 422);
-				}
+			if (createSystemSegment(req.id, encoded)) {
+				// things have now been added to the bucket	
+				// ID, Address, and everthing else are already set by the js which passes it off through "request"
+				//String address = baseBucketURL + req.id + ".ogg";				// NOW write this to the RDS database through DAO
+				//String uid =  UUID.randomUUID().toString();
+				addSegmentToDatabase(req.id, req.name, req.quote, req.address, true); 
+				response = new UploadSegmentResponse(req.id);
 			} else {
-				String contents = new String(encoded);
-				//double value = Double.valueOf(contents);
-				if (uploadSegment(req.id, req.name, req.quote, req.address, false)) {
-					response = new UploadSegmentResponse(req.id);
-				} else {
-					response = new UploadSegmentResponse(req.id, 422);
-				}
+				response = new UploadSegmentResponse(req.id, 422);
 			}
 		} catch (Exception e) {
 			response = new UploadSegmentResponse("Unable to create constant: " + req.id + "(" + e.getMessage() + ")", 400);

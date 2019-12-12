@@ -1,5 +1,7 @@
 package empiricist.http;
 
+// NOTE: this has helper constructor that computes request based on FIXED BUCKET NAME
+
 public class UploadSegmentRequest {
 	public String id;
 	public String name;
@@ -9,6 +11,7 @@ public class UploadSegmentRequest {
 	public boolean system;
 	
 	// not sure how to make a random id for a segment?
+	// gson naming conventions! camel case
 	
 	public void setCharName(String character) {
 		this.name = character;
@@ -42,14 +45,20 @@ public class UploadSegmentRequest {
 		return this.system;
 	}
 	
-	public String getID() {
+	public String getId() {
 		return this.id;
 	}
-	public void setbase64EncodedValue(String val) {
+	
+
+	public void setId(String i) {
+		this.id = i;
+	}
+	
+	public void setBase64EncodedValue(String val) {
 		this.base64EncodedValue = val;
 	}
 	
-	public String getbase64EncodedValue(){
+	public String getBase64EncodedValue(){
 		return this.base64EncodedValue;
 	}
 	
@@ -61,6 +70,9 @@ public class UploadSegmentRequest {
 		this.name = charName;
 		this.quote = quote;
 		this.base64EncodedValue = encode;
+		String newID = charName + quote.substring(0,5);
+		this.address = "https://empiricistbucket2.s3.amazonaws.com/" + newID + ".ogg";
+    	
 	}
 	
 	public UploadSegmentRequest(String charName, String quote, String encode, boolean system) {
