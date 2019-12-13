@@ -1,0 +1,1970 @@
+commit 2ceec5881e69f7bab8c129942fc3be24f28118fb
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:47:23 2019 -0500
+
+    getRemote
+
+commit 70d6f180f89e7e52c1e3821198ccf2914511a637
+Merge: 91881713 f8c184f8
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:35:17 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 918817131efc20758818bb517384a9330e77a19d
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:35:08 2019 -0500
+
+    sj
+
+commit f8c184f850060d301f7b6f8c5d4bea729a9b7465
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 16:34:21 2019 -0500
+
+    aah
+
+commit 61e4ae1c5b1c96ba6e84bafd8f97cccb51befe6a
+Merge: 6ec7f92a b0462977
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 16:33:17 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            js/getRemote.js
+
+commit 6ec7f92a08cc3b7fa4a112b4da7904f0e51fc921
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 16:32:45 2019 -0500
+
+    k
+
+commit b0462977ed382d0947a38cccb2546ba38f9dc5db
+Merge: f5b4d17c 3637a23b
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:22:13 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            js/getRemote.js
+
+commit f5b4d17c4f81ddbd82fb6b0e4c025e01f31bcfa9
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:16:08 2019 -0500
+
+    hello..i want to be done
+
+commit 3637a23b0f46b0edfd25eace7ecb79da11cec270
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 16:14:45 2019 -0500
+
+    sysvar
+
+commit 0230945c446fe46de5a40bbd139f14f01365d28b
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 16:11:43 2019 -0500
+
+    sj
+
+commit 58714b70ad301590d611661c5ec600fa44d00dcd
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 16:10:36 2019 -0500
+
+    foff
+
+commit 3658ee8a90d8815c04a94e79ffdc8f20f13c3ac1
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 15:33:06 2019 -0500
+
+    slkahoisehgioewdbndo
+
+commit 4b32383ff1106c7b6918e0f8bfb89e309b783838
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 15:27:55 2019 -0500
+
+    fixed handleRegisterSite
+
+commit 01cb04a5cdb998c422423229b53b980a3ebc8ab0
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 15:26:33 2019 -0500
+
+    onemoretime
+
+commit e41d114c3fc0839a5ffeb9dd387ca83634f5316a
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 15:22:22 2019 -0500
+
+    take2
+
+commit fe576b404f0fcef32dcbe34a71564e472055035d
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 15:18:49 2019 -0500
+
+    getREmote changes cause template is weirrd
+
+commit 34ff6179e50e70ab1c20dbaf06699facceb95786
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 15:11:21 2019 -0500
+
+    SJ
+
+commit 0013b375c1e3c9f7eae91bc7c8b72b768914b251
+Merge: 08e49c48 c71b59f9
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 15:11:01 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 08e49c48085bdd718489a3486364a498eff9b3e3
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 15:10:29 2019 -0500
+
+    SJ
+
+commit c71b59f99a2d5b5c985ee7e7760e1ecf739197e3
+Merge: f5565905 17bc7e64
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 15:09:22 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit f5565905f90c39d660bf1522184c67ce8ff5523a
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 15:09:11 2019 -0500
+
+    test
+
+commit 17bc7e6432b2c688ff60ed82e0499836edbf3161
+Merge: 4bd1bb79 7d1b732c
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 15:08:49 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            js/getRemote.js
+
+commit 4bd1bb791f8726f69f7c7497377e75384aff24de
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 15:07:44 2019 -0500
+
+    SJ
+
+commit 7d1b732c2738859be6dec7e21523454067128ede
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 14:11:57 2019 -0500
+
+    getREmote
+
+commit 26e146265fef2eb103461c037272c07b9e7c1b20
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 14:00:08 2019 -0500
+
+    stuffnthings remote
+
+commit 5d07c211f7ac73d5036ccaaaa21c784ce5fe4d04
+Merge: facca08f edf1b3df
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 13:57:26 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit facca08fafc86e61150a488d336ac297c7efce13
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 13:55:07 2019 -0500
+
+    vieo
+
+commit edf1b3dffe0bb8a4ce02395b9f498ee3b40b1109
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:53:27 2019 -0500
+
+    Remote
+
+commit 33eecf5f99fed08346333a97463fc9a66329968f
+Merge: fcb44cfc ee4cbeea
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:53:13 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit ee4cbeea0bcde5c8d8c33830719f1c82789f9eb1
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 13:52:53 2019 -0500
+
+    remote stuff
+
+commit fcb44cfcec7ff9cf205caa69efdc1db677c17d2a
+Merge: d1bf17c3 6987460d
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:52:50 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit d1bf17c342b0325eda8d8face3fbba18351c5faf
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:52:32 2019 -0500
+
+    RemoteStuff
+
+commit 6987460d1ee7862a1499754c03a57d87aacd5c7d
+Merge: ccea7066 531d5082
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 13:44:22 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            js/api.js
+
+commit ccea70665648ef376dd880d1fbd8e986b8c30667
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 13:40:02 2019 -0500
+
+    lets see if this kills things
+
+commit 531d5082407ac4ff873c70a4d84c974911c0e149
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:39:23 2019 -0500
+
+    Remote
+
+commit c5322eab094ac997094b9632ab9cd94fa6aae4d4
+Merge: 79ae119c 7b9d4fc4
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:38:22 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 79ae119c5fa922e75fca1b2a2a700b3ce2c9e87e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 13:38:06 2019 -0500
+
+    Remote
+
+commit 7b9d4fc476c5d876838f21fa83108f1a19f6bcd1
+Merge: cfeeff93 c393dac5
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 13:27:04 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            .settings/com.amazonaws.eclipse.lambda.project.json
+
+commit cfeeff93634c1dc5e724c95beaaf8ed9560d9b48
+Author: sjordhani22 <sjordhani22@130.215.122.58>
+Date:   Fri Dec 13 13:25:33 2019 -0500
+
+    Listing Remote segments. SJ
+
+commit c393dac5edcc81a40d8dd2b647c40c0433ffcb6d
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 12:50:22 2019 -0500
+
+    more
+
+commit 636dbe60301e5496a548f0eac51498d8015d0c7e
+Merge: 12ea2183 617326ac
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 12:47:39 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            .settings/com.amazonaws.eclipse.lambda.project.json
+
+commit 12ea2183fa3dfa8d109fb77ee322857622d54620
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Fri Dec 13 12:47:03 2019 -0500
+
+    remote front-end
+
+commit 617326ac8105f6fa23a226295b377101ad948796
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 12:21:02 2019 -0500
+
+    Remote Sites
+
+commit 90225a072049b67d81faf3fe3ecb529d00a0eba0
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 13 10:56:58 2019 -0500
+
+    Changes
+
+commit af3da350d84f24dffb2514e9a821cd330cf8a633
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 16:28:54 2019 -0500
+
+    coverage
+
+commit e4ea50589897d7b8064b9a5e298737d8576a372d
+Merge: f93f5f82 19736b16
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 16:28:31 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit f93f5f8217da2e68828495ce7e66e2488bf3db87
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 16:28:23 2019 -0500
+
+    coverage
+
+commit 19736b16bfef6d5cc2a6abfdaa6bf41c692e6a0e
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Thu Dec 12 16:27:54 2019 -0500
+
+    Append Segment. SJ
+
+commit ac3c4f6f1e1eb93f7c84f272bd67b0a16a335c2d
+Merge: a3a0a585 2010f13e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 16:08:29 2019 -0500
+
+    coverage
+
+commit a3a0a5851228139d73936b47e85508795d38153a
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 16:06:35 2019 -0500
+
+    Coverage
+
+commit 2010f13e7dbea961b131ee7663384b987a894338
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 16:06:09 2019 -0500
+
+    commented out the sad functions
+
+commit f028038f1cd3d2f2e7577625fbea390d8e9463e4
+Merge: 9c1b14f6 fac4dd6c
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 15:55:25 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 9c1b14f644d5ad5b2226e28015a21e7f079a6227
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 15:55:18 2019 -0500
+
+    some stuff
+
+commit fac4dd6c45ad8a1ac68ac5f118f20a19ec2d7d8e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 15:01:13 2019 -0500
+
+    Tests
+
+commit 3d705b6ddcae350e805485480fa781796e34eb21
+Merge: 7bef2406 3628f7b6
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 14:13:22 2019 -0500
+
+    DeleteSegment handler
+
+commit 7bef24065b17dfebada9eb02f73fd59da188dea7
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 12 13:55:55 2019 -0500
+
+    bhjbh
+
+commit 3628f7b6780e3836ee2f86434e4f902fbd931f47
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 13:54:34 2019 -0500
+
+    del
+
+commit ad137012a23ce3bcc3ac030be36eeb37c0a5c4c9
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 13:41:19 2019 -0500
+
+    delete
+
+commit 9bfd18c790ee8a5d4021839300ce57aed82eecf3
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 11:28:22 2019 -0500
+
+    deleteSeg now passes but doesnt work
+
+commit 7e0bb0c6877a3faa3edfa3f0cba6c9930599711e
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Thu Dec 12 11:04:08 2019 -0500
+
+    Office Hours are a Blessing
+
+commit ae58706ff1d36efab9bee147d19767e6c57e5efe
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:49:03 2019 -0500
+
+    aah
+
+commit 17c3532a08bba09536049b2c9d1241e7fefb0cac
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:48:46 2019 -0500
+
+    append.js
+
+commit 76aab5f2c07bdd5ab3a5e49388f147d6fcbec2c6
+Merge: 32a9b518 02f4bc62
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:43:55 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 32a9b5189c543b98ae4ea5f063f9421a91359852
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:43:45 2019 -0500
+
+    Append html and existance of js
+
+commit 02f4bc62a464eddee2564eb0415a9da837046c5f
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 17:42:35 2019 -0500
+
+    TESTS
+
+commit 1826066ce77fe04ef23e9389556b6b9d164cdff5
+Merge: a238cb58 1ec04a11
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 17:42:12 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit a238cb58f8b80e68d7ee0c2e4cfecd6994c5b23f
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 17:42:03 2019 -0500
+
+    TESTS
+
+commit 1ec04a113745e12ee6b38a877dea7480887946a2
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:41:34 2019 -0500
+
+    beginning Append
+
+commit 12d3c96dce22299dbf0737ba3cc51f51810b351c
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:35:24 2019 -0500
+
+    Html looking a little better
+
+commit 6369da3c6c39c610354f6c19ef8d4638a7c66608
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:22:01 2019 -0500
+
+    HTML update
+
+commit ccad73598c5a4adee63b9ab175ad19823c90a9ac
+Merge: 8b508fe7 cff10435
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 17:08:27 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit cff10435e1e7aaaaa20135b8696d2a62636b41e0
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 17:03:19 2019 -0500
+
+    delete handler
+
+commit 8b508fe7a9a7606870b4173828616ef99fb6d64f
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 16:59:46 2019 -0500
+
+    Connected DeleteSeg HTML to JS
+
+commit b77397a5de0aab2a306587bdf5bd22703f651674
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 16:51:14 2019 -0500
+
+    upload test
+
+commit b13a8baeb908eefac4eed1e7f25ccb92657df550
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 16:42:47 2019 -0500
+
+    Upload Test
+
+commit cbcfc33b0dbb16f42c6d7968525e441b902ac067
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 16:42:24 2019 -0500
+
+    test456?
+
+commit 18ece69a8288b9910682ee3118eecdd9a333f822
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 16:42:07 2019 -0500
+
+    Test123
+
+commit e7927bf6622f054f9f81031a8d62fde5d765a28e
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 16:08:58 2019 -0500
+
+    man I hate syntax
+
+commit dfc644daeedc680eddea1b1eca369b04d667c43e
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 15:56:17 2019 -0500
+
+    ah
+
+commit 6ee6369b2625b652058e432155643015954f6e25
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 15:45:26 2019 -0500
+
+    upload might work now? who knows
+
+commit 414045a0505db3b3e92f1e3783a96d56c9728017
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 15:32:16 2019 -0500
+
+    Have some images
+
+commit b248b148c09ed98556078472ea997a1217daa584
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 15:26:50 2019 -0500
+
+    RegisterRemoteSite
+
+commit 7a3c7e9d94d5f25149afd5fb8c45445f61fe310e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 15:23:06 2019 -0500
+
+    json
+
+commit 57c561c28c2d5614e0f07c383893f273d0040814
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 15:10:25 2019 -0500
+
+    upload seg import
+
+commit a0637851c12b85b710a6a33272dc95b9c960c0cd
+Merge: af86fe00 17d7c7ad
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 15:08:23 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            .settings/com.amazonaws.eclipse.lambda.project.json
+
+commit af86fe00ae37e1979372f0a9d0ca62ae301fbcc7
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 15:07:58 2019 -0500
+
+    changes
+
+commit 17d7c7ad1aec7e951a3f44530e62b55e8bff5398
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 15:07:23 2019 -0500
+
+    talked to H about Upload and such
+
+commit 529ef3394376d317c57e1556c4f47ece1a52a7a9
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 13:59:22 2019 -0500
+
+    upload seg
+
+commit c4c8cf38b97d14e2aba127605e0c04b62fa08e52
+Merge: cde0a7ca 833054ce
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 13:59:06 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit cde0a7cac68c7780d74dec919f9e94fda01a0af1
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 13:58:58 2019 -0500
+
+    Upload Seg
+
+commit 833054ce9404bcd1cae1ea558ef399a576dfde02
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Wed Dec 11 13:00:22 2019 -0500
+
+    -JP
+
+commit 9e64fae3fbde2b5a013a6c17a1645ad74362deb7
+Merge: 39138ef6 b6ba17d7
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Wed Dec 11 13:00:03 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 39138ef6dde6d215a46a06edd15f2fb5ff1648c4
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Wed Dec 11 12:59:42 2019 -0500
+
+    working delete and create, auto refresh on click for create -JP
+
+commit b6ba17d709cd23e03db75e8e84a153f2dabada2b
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 12:54:45 2019 -0500
+
+    //
+
+commit 061c1da086e7fdcae212ead0cfa33514b713267d
+Merge: d05ec9bb 0737d945
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 12:54:16 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit d05ec9bbfcfbd642f3d6ef7c4be32adc487a8833
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 12:54:00 2019 -0500
+
+    Working CreatePlayListHandler
+
+commit 0737d94583bbc176c3438c0545613ebb921297d0
+Author: Shannon <Shannon@130.215.174.78>
+Date:   Wed Dec 11 12:36:41 2019 -0500
+
+    messed around with uploadSegment stuff. Sorry for any potential errors,
+    they'll get better
+
+commit 3787f0367926b544afcc0d8756654ffcef952203
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Wed Dec 11 12:03:00 2019 -0500
+
+    SJ
+
+commit 2a57947bc3e0f7a3d64a98189edfa993946eaca8
+Merge: aedc3223 dacf8f00
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Wed Dec 11 12:02:07 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit aedc322334eef4c2bd109cb0f17bd74a9231d596
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Wed Dec 11 12:01:41 2019 -0500
+
+    Delete Segment. SJ
+
+commit dacf8f00edcabe7a27cf247b0f20401693ba761c
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 11:16:08 2019 -0500
+
+    CreatePlaylist Test
+
+commit dcbe12f1f75443b4523e8d38f6451bd2e06a779c
+Merge: e3093f5d 3300fd87
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 11:15:24 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e3093f5d32742bcd2168910a236d92d81fbd76d8
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 11 11:15:13 2019 -0500
+
+    Test Handler
+
+commit 3300fd87666f0c589ffba3f30443aa47cbd68b6f
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 15:05:10 2019 -0500
+
+    Couldn't solve anything but fussed with refreshing display for awhile
+
+commit 399a97dbcf72c5314d327d12de64d083b2536551
+Merge: abec10f0 74a0fa36
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 14:43:38 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit abec10f01fcab23578319af330e9f909c9fa41f5
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 14:43:26 2019 -0500
+
+    tesr
+
+commit 74a0fa36bc47b0c30cf1f67f0819df514721b067
+Merge: c0da1b08 e1007307
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 14:10:10 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit c0da1b08607cf7cb5942d4449dc88695a09f450a
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 14:08:43 2019 -0500
+
+    aaah
+
+commit e1007307dbf62544514bd29329ef6c6aa475492d
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 14:07:09 2019 -0500
+
+    Fall Test Try
+
+commit f4ef88e94af49e2412d1ca8dfdf76a9c1abf4225
+Merge: c6da505f c59afa86
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 14:03:45 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit c6da505fedf6f6743b86aa547cddb7993edb522d
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 14:03:33 2019 -0500
+
+    turns out handlers need to know how to handle things
+
+commit c59afa86edce460ee522990c2567a86dcd8aa137
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 14:00:08 2019 -0500
+
+    Tests
+
+commit aa394e2f80a770734e51a30ee5d26e39e8dd0e65
+Merge: 88e2dc32 83a21450
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 13:59:41 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 88e2dc322c53c8e24da0f7c4fa46a37edcde47df
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 10 13:59:30 2019 -0500
+
+    Test
+
+commit 83a21450b7282e516c8bdaccb2249b8f39bca610
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Tue Dec 10 13:56:11 2019 -0500
+
+    sj
+
+commit 071603aae69a96d1dd6e987c178cac153e1e384c
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Tue Dec 10 13:45:57 2019 -0500
+
+    including things helps
+
+commit 243336008e5d87394ee0530f0ddbce6c6b7c96a4
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Tue Dec 10 13:38:20 2019 -0500
+
+    sj
+
+commit e6e354438b194549ba8bd9fe18fea1877db9e5d1
+Author: sjordhani22 <sjordhani22@130.215.208.245>
+Date:   Tue Dec 10 13:28:52 2019 -0500
+
+    Javascript for Delete Playlist. SJ
+
+commit e0e5a682eb8511ca1698da2de26bdeef69c79438
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 19:15:52 2019 -0500
+
+    update -JP
+
+commit dec08e65e9314f689668ad94b3ab11aaa83b596f
+Merge: 6a10802c 1636156e
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 19:14:56 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 6a10802cf1a721f174b527f9e5c471b0ecdb9d4d
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 17:17:53 2019 -0500
+
+    working create -JP
+
+commit 3c37ee89b19518a28d3003eaa3358740689019c8
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 17:17:01 2019 -0500
+
+    working create -JP
+
+commit 1636156e9f775ab5ecdaadd4c41b84037d9b539a
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Dec 9 14:39:01 2019 -0500
+
+    testing
+
+commit eca290d3db16a331e3885223203eae04efad1200
+Merge: 38a16bf6 cd5cd1a7
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Dec 9 14:37:53 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit cd5cd1a75f5e8e331fa7cf597ee8902ae7243024
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 14:37:11 2019 -0500
+
+    updated everything lol -JP
+
+commit a63f90588a9c3c37ed77765232b3a2bcf34fc723
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Mon Dec 9 14:24:07 2019 -0500
+
+    updated js and html -JP
+
+commit 7ca2bc866b5f45833103e3b9d1054091a8256273
+Author: Shannon <Shannon@130.215.169.234>
+Date:   Mon Dec 9 14:17:40 2019 -0500
+
+    CreatePlaylistHandler adds things to database!
+
+commit 38a16bf65bbf0d3a76918c707472c4b150efa5a6
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 18:56:19 2019 -0500
+
+    tp
+
+commit 90a10a616f22f557d05e77002b2fdca615bee0bb
+Merge: f6d0c231 e74b7c63
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:46:20 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            .settings/com.amazonaws.eclipse.lambda.project.json
+
+commit f6d0c2316aa222569157f102dc2de4ce34c7d491
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:45:00 2019 -0500
+
+    WE MADE IT OMG WE GOT A PLAYLIST
+
+commit e74b7c63def03d818272eccf5361ed0fa4b88460
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 18:34:26 2019 -0500
+
+    json
+
+commit ce40439ede937621ebffaea577da977f0e7a0547
+Merge: a7855943 5c6f624b
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:18:07 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit a78559430feec5e4968400f71fb3faed84e7b5a8
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:17:57 2019 -0500
+
+    weird stuff happening with jsons...
+    com.amazonaws.eclipse.lambda.project.json- .settings file is having
+    problems?
+    
+    Take 5 of CreatePlaylist
+
+commit 5c6f624b48030481a3ba6b3597588ff9955ddc1b
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 18:07:53 2019 -0500
+
+    RegisterSiteRequest
+
+commit 7ff5e96486c79479ab1f6c893d5f68f0a964bb83
+Merge: 15f35aaf 975a3f84
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:00:57 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 15f35aaf0c3e9ee9e1a0b0419b570303f5946240
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 18:00:48 2019 -0500
+
+    take... 4? createPlaylistHandler
+
+commit 975a3f84ff7485c2796344650ecdcc6a7a2d773e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 18:00:28 2019 -0500
+
+    RemoteSite-vk
+
+commit c53786c189c9ec7804ee758b3c4ea1bec605a3ba
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:54:50 2019 -0500
+
+    remoteSite
+
+commit 76284f3aa5776442f8ce9e090d8a68835a461590
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:50:15 2019 -0500
+
+    Register Remote
+
+commit 86175448f020c2cb336a5f8883eaf46572902bc8
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:44:12 2019 -0500
+
+    json
+
+commit b21cb2ef6f31d271371cb0717e0eed9750cf5ba8
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:41:19 2019 -0500
+
+    register RemoteSite stuff -vk
+
+commit 6a9a56677ce5596ea58588013f10d2d2388cbf85
+Merge: 35ae8a66 2b577571
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:40:49 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 35ae8a66cdb9585628422be73ef21402a6e5dfdd
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:40:38 2019 -0500
+
+    RemoteSite Stuff -vk
+
+commit 2b577571103323644e36155d837281f51ef941ef
+Merge: da6f9b02 217f9c8e
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 17:37:31 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit da6f9b0274d7678eb3b6e8e2e421765cc8b06def
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 17:37:23 2019 -0500
+
+    take3 createPlaylist
+
+commit 217f9c8eef82f0a5155691fdc83e0f245dd7071c
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:18:44 2019 -0500
+
+    RegisterSiteRequest -vk
+
+commit 928d0964d0ef2f2027d1a65272dc2ee06a9e8c55
+Merge: ce9ef70f b54434b4
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:18:14 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit ce9ef70f0d70ce91e3a0e853111b3603cfa69a12
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:18:01 2019 -0500
+
+    RegisterSiteRequest -vk
+
+commit b54434b4154dfc666e856e16c56689ccf52598fc
+Merge: 5fd2e3cf 6ae24e16
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 17:15:10 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 5fd2e3cf80c6bf268af823a0983d9ae44d6d4967
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 17:13:56 2019 -0500
+
+    okay maybe we have the createPlaylist for real this time
+
+commit 6ae24e16065afe34c31e9cf7814db81c8f96365e
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 17:09:24 2019 -0500
+
+    RemoteSite -vk
+
+commit 60195dfaa54db9f495ceb2d5e941c632b0571ee1
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 16:44:52 2019 -0500
+
+    RemoteSite -vk
+
+commit 4119ae1a8099d3b13e022b9e823a19c82762c671
+Merge: a445f322 90bbb966
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 16:44:25 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit a445f322eb2fb817e5f85715e29ff61304809b0b
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Sat Dec 7 16:44:08 2019 -0500
+
+    RemoteSiteStuff-vk
+
+commit 90bbb96647a3b6408b0e275cd50b6c2177a703a1
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sat Dec 7 16:34:08 2019 -0500
+
+    Changed playlistHandler so things are compatible... now instead of
+    failing everything, it passes everything. Whoops.
+
+commit b32ea4b181f7990973e112b148f6136cd2f89f41
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 6 18:43:56 2019 -0500
+
+    Create Playlist
+
+commit 8f3e12150aeb3e4480007d441f08431352cf2d9a
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 6 18:06:52 2019 -0500
+
+    CreatePlaylistHandler
+
+commit b642826e1ad2dcee3a429916500353493066189f
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 6 17:56:48 2019 -0500
+
+    json
+
+commit 7a786aadb67b75bb0bbd47251e1b5cd07d2e5ae3
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Fri Dec 6 17:43:11 2019 -0500
+
+    CreatePlaylist stuff-vk
+
+commit e41f7d38fbafaf18a9e0d2f9d2e60eb9ee5cfdfd
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Fri Dec 6 14:48:51 2019 -0500
+
+    Heineman is a God. SJ
+
+commit 88083add879c28c06cb391665d7bb1b931a8e560
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Fri Dec 6 14:20:08 2019 -0500
+
+    SJ
+
+commit ad1bc6e6e44c89d9eccfeb05d6f4ed50d20006a8
+Merge: feef3307 7cfe124a
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Fri Dec 6 13:45:52 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            .settings/com.amazonaws.eclipse.lambda.project.json
+
+commit feef3307ab56695b7072d23d3d6f509167d17605
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Fri Dec 6 13:44:42 2019 -0500
+
+    SJ
+
+commit 7cfe124a151ada7dc8dc561d21cac550a9b8b443
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Fri Dec 6 13:43:19 2019 -0500
+
+    segments are now objects in a list called library
+
+commit aee6a86d3a0797f644dffd3a5371abdb59fcc426
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 5 22:05:57 2019 -0500
+
+    CreatePlaylistHandler-vk
+
+commit 9f3dae4de7113bf838402b1653e0c406e42a0c6c
+Merge: e96c7a94 f824ee42
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 5 22:05:14 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e96c7a94db751c209a717534f7868feb5ab2a218
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 5 22:05:03 2019 -0500
+
+    CreatePlaylistsHandler-VK
+
+commit f824ee42e31aa5b1ee667066b3d1610984999116
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Thu Dec 5 21:16:08 2019 -0500
+
+    there are now MANY dysfunctional videos! yay progress!
+
+commit 349031132f1deeb541d19f65deb3d552fef9254c
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 15:03:21 2019 -0500
+
+    Removed Access-Control Headers -JP
+
+commit 2c40caddfe5f01b412d184acf94da2161a825574
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 15:01:24 2019 -0500
+
+    updated listVideoSegments -JP
+
+commit 55d958cf979b433f9efd93eed196d8900afc1358
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Thu Dec 5 14:59:08 2019 -0500
+
+    access control allow origin
+
+commit 5c8a0ce3e1d997f1db068e54a84ce31dc9be524b
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 14:56:36 2019 -0500
+
+    Access-Control-Origin Modification -JP
+
+commit 52e12adcb3f449d6a9bbc2543d466d5985ab110d
+Merge: 4d886663 c53728a8
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 14:55:06 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 4d886663422fd04fe00c1bd0a295e9e2e14da6be
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 14:54:51 2019 -0500
+
+    Access-Control-Origin Changes within JS -JP
+
+commit c53728a8a08e3443f436df14a6054a693bd6320c
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 5 14:02:32 2019 -0500
+
+    colors
+
+commit ee14ab471a99c0b06fdb644c386dca04d15516e8
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 13:57:52 2019 -0500
+
+    -JP
+
+commit 64d9e9ae10dc2b6cb771f89b9bbf1f567b414db0
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Thu Dec 5 12:48:54 2019 -0500
+
+    SJ
+
+commit aaad119f7fe08549e361d97835ccf2226a2857e6
+Merge: b14191af 6d730463
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Thu Dec 5 12:47:53 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit b14191af450919ed263e324fe33cbd079f195a0c
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Thu Dec 5 12:47:43 2019 -0500
+
+    sj
+
+commit 6d7304636026bdd0199645483792c7072d70e0fb
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Thu Dec 5 12:47:02 2019 -0500
+
+    color
+
+commit 7455e30589014c411d1114e38b77182a6966a07b
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Thu Dec 5 12:28:58 2019 -0500
+
+    updated databaseUtil
+
+commit 458cc2a6bfb20d65fb448457e0eed1611e185440
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Thu Dec 5 12:28:43 2019 -0500
+
+    yUUURRRR. SJ
+
+commit d3d1d299f7312fec8700f9a55374a2a42e4cc3b5
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 12:07:56 2019 -0500
+
+    -JP
+
+commit 5f8657ff2bdf7456cd09b4066a3bb61ef96e1f64
+Merge: 4bfcdd08 867943ce
+Author: jerryperez <jerryperez@autoreg-172150.dyn.wpi.edu>
+Date:   Thu Dec 5 12:06:09 2019 -0500
+
+    Merge remote-tracking branch 'origin/ShannonTryingThings'
+    
+    Conflicts:
+            src/main/java/html/participant.html
+
+commit 867943ce617485c5df6ce55a8aa60a662c6b8a20
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Thu Dec 5 11:31:07 2019 -0500
+
+    Screw Nancy, God Bless Heineman
+
+commit 3e4a505ccf2f30ba2e17df7d850eb4a5732ab1a3
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 22:07:07 2019 -0500
+
+    Undid it because it broke things
+
+commit 30d4ca4bef32303935f84091ee9a66fae69dc88d
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 22:02:38 2019 -0500
+
+    Prof. Recommended fix to Segments system var
+
+commit 0d802f71dcc13f9dc8673f3227c5ea5e3b8c4647
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 14:42:47 2019 -0500
+
+    Heineman helped and now I kind of understand some things? Still nothing
+    working obviously
+
+commit 14a045dfbba08b9dcd37ef42212e9bf301bf83e6
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 13:53:11 2019 -0500
+
+    Still messing around with createPlaylists stuff
+
+commit f94332fe91e32f4399624019c2f6339037ed6eab
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 13:39:24 2019 -0500
+
+    working on getting Create Playlist working-
+
+commit 91f2887991173615b44cdf65fe30cd174bf374ad
+Merge: fd85ce39 04de2bf4
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 12:19:23 2019 -0500
+
+    Merge branch 'ShannonTryingThings' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git into
+    ShannonTryingThings
+    
+    Conflicts:
+            src/main/java/empiricist/http/DeletePlaylistResponse.java
+
+commit fd85ce3904e5e1a2da4bd206163f8c1c28d2d775
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Wed Dec 4 12:16:54 2019 -0500
+
+    fixing js files, java files, and Handlers for GP3
+
+commit 04de2bf4a043f05ed0ba94c24cdcfbbc283c7200
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 4 11:50:25 2019 -0500
+
+    comment
+
+commit a87a4dfa9e1950957f68925acfc16f9b0e17a6b9
+Merge: 58ade8cc dcfc5ea3
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 4 11:46:59 2019 -0500
+
+    Merge branch 'ShannonTryingThings' of https://github.com/sjordhani22/EmpiricistSegmentManager.git into ShannonTryingThings
+
+commit dcfc5ea3186a150b3e9c779ce6d83c1ad92e6ff6
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Wed Dec 4 11:46:32 2019 -0500
+
+    sj
+
+commit 58ade8cca4b5f1f118538ec0cc703ee15a71cb50
+Merge: ad7a55b7 db818906
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 4 11:43:58 2019 -0500
+
+    Merge branch 'ShannonTryingThings' of https://github.com/sjordhani22/EmpiricistSegmentManager.git into ShannonTryingThings
+
+commit ad7a55b78805360e710a9b7b3dea9bab25729b91
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Wed Dec 4 11:43:47 2019 -0500
+
+    office hours
+
+commit db8189067c8cf95cc9164895c574ab13bf2e926a
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Wed Dec 4 11:40:23 2019 -0500
+
+    HTTP + HTML. SJ
+
+commit c828431816b1c26561882215b8cf3201830b0096
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Dec 3 23:46:14 2019 -0500
+
+    Changed a lot of the API stuff to include new functions, went through
+    and made "templates" with notes for each of the functions I had any idea
+    how to do.
+
+commit 1a487de3ec419a2b8a3b8f9005540db90db4f38e
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Tue Dec 3 22:00:36 2019 -0500
+
+    HTTP and JS. SJ
+
+commit bd282c7f72432dc8c7608f2a3539afb3bfe8a71b
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Dec 3 17:27:44 2019 -0500
+
+    Office Hours
+
+commit 9bea7e64e720b61b9cd9e3c2a25fde74c67368e5
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Mon Dec 2 19:51:02 2019 -0500
+
+    for office hours
+
+commit e30d560ed0139ec5c66177733e3f1c2814102834
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 22:00:56 2019 -0500
+
+    I have litterally no idea why this isnt working and apparently its night
+    now so I guess I'll go home
+
+commit 4bfcdd081cacb1a4329c827a8ee556b8e6484209
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Tue Nov 26 20:43:35 2019 -0500
+
+    HTML. SJ
+
+commit 6bf5328b81334d0ecbd4e30ff097b5423d583bf0
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 20:29:34 2019 -0500
+
+    AaaaaaAAAAaAa
+
+commit 3d8a9690db37b2c5b0786ca97fc9b5dbf6613d98
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 19:41:41 2019 -0500
+
+    Trying to impliment appropriate JSON structure after session with TA.
+    Unlikely to work, but I'd like to try anyway, after all we went through.
+
+commit e6dfef44e6f05ebe226e194718ba254700657257
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:57:51 2019 -0500
+
+    -JP
+
+commit 726edd6f20ec52283a631ab30bb4449bd30c9dbb
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:43:05 2019 -0500
+
+    Changes to getSegments js. JP
+
+commit b2c91c957f9494d565de5a84d1769f45dc998ba6
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:17:51 2019 -0500
+
+    -JP
+
+commit 2a2c3ada6664479e340b1e8c891c32da886ec76a
+Merge: 671c0449 e11c126f
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:17:25 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 671c044900b654e0b53a6160550ddd3ac188c143
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:17:14 2019 -0500
+
+    uh, it wasnt letting me push so here goes nothing -JP
+
+commit 59f10d7316ab0aff198b6102bbe3275f0ea05ad3
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 14:16:19 2019 -0500
+
+    Hopefully this does it -JP
+
+commit e11c126fc019c75378c738d54927050726cc26ac
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Tue Nov 26 14:01:51 2019 -0500
+
+    Playing a video. SJ
+
+commit f550ddf0c1ca623996b79393825f9c6a6cb2ba21
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Tue Nov 26 13:47:50 2019 -0500
+
+    HTML AND JAVASCRIPT
+
+commit 4a5db14464669c1f3f55dbe4546d387614f8f460
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 13:33:01 2019 -0500
+
+    updated -JP
+
+commit 8d66fb33f669a3e1c16dc9688612302fad0f87f9
+Merge: e7a62c8c 1c5a3b31
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 13:32:29 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e7a62c8c13156077550c1ca0b9c0ebea4530d668
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 13:31:34 2019 -0500
+
+    PlayListDAO and Playlist potentially done? idk -JP
+
+commit 1c5a3b31a4c1e20662440fa469b24d16d11299d4
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 13:28:11 2019 -0500
+
+    getSegments js second update via Stef's code
+
+commit 1483b83840c13356722b89d312816b63207ab01f
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 13:25:52 2019 -0500
+
+    Worked on Javascript for getSegments- still working on it
+
+commit 6a64b628256182e25a3973368d0ec466a9cbf915
+Merge: 86bd1977 fa3c7aa5
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Tue Nov 26 12:59:49 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 86bd1977e85892a1d44f140891670c2b94f51cc1
+Author: Shannon <Shannon@130.215.210.107>
+Date:   Tue Nov 26 12:52:00 2019 -0500
+
+    Removed the other playlistDAO
+
+commit fa3c7aa51b8cd1310b8366d57c5930bf6af88805
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:50:31 2019 -0500
+
+    deleted playlistDao -JP
+
+commit 57a0fd4c8005a3c8573f0ec9a8f17b69119aca1d
+Merge: 674cf5c9 90db6c5e
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:46:11 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 90db6c5ebd44658721ade1844bee6a5a5866bfde
+Merge: 06d4cab5 5355e516
+Author: Shannon <Shannon@130.215.210.107>
+Date:   Tue Nov 26 12:45:11 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 674cf5c9aea9d2aaf8587ee7696c8738fa68031b
+Merge: ad931564 5355e516
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:44:54 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 5355e51664ebf084ee8cf0e177f0e5f6d1db086f
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 12:44:43 2019 -0500
+
+    poiuyt
+
+commit ad93156466736c03e480a03bce8b2c02a08d1c04
+Merge: d1fa63a8 14b2f2c6
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:43:47 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 06d4cab559e68e339bc887c03d5d6e9288f93c8c
+Merge: 3bc4cd06 14b2f2c6
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 12:35:06 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 14b2f2c67d8a2e8a00659e44fbd010a23340e316
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 12:18:09 2019 -0500
+
+    hsghd
+
+commit d1fa63a861a127d5d42eb363fa7bbe4d24c30853
+Merge: b1fb51ee 20d09830
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:14:10 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit b1fb51eea811ff654d32844681491c567aa9e442
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 12:10:00 2019 -0500
+
+    getSeg update -JP
+
+commit 3bc4cd06506c709e80a3ff41f6e3791dd4562e30
+Merge: 3641ab33 20d09830
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 10:00:23 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 20d09830e9a32714377c3f562bb651233b32e388
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 09:52:01 2019 -0500
+
+    DAO - vk
+
+commit 8ecd99c6dbdeea1a93155a08bb8d01e1211b3b90
+Merge: 19234b6e 18028c87
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 09:50:10 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 19234b6ef36bad0bdd7d2189cb109c32d8bf8400
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 09:49:15 2019 -0500
+
+    Playlist DAO
+
+commit b4016ef2512f1341320a6782e531d8ce38e73ad8
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 09:48:38 2019 -0500
+
+    PlaylistDAO
+
+commit 9e5da02a2ab7d4710720b40b7b62adb0166c20a9
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 09:28:38 2019 -0500
+
+    Playlist DAO- vk
+
+commit 18028c875f331d53f7c82c67a467ca4110e3ae99
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 09:21:57 2019 -0500
+
+    update 9:21 -JP
+
+commit dae83f348ce105320b8be4cc386287862d41d4cb
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 09:15:45 2019 -0500
+
+    updated 9:15 am -JP
+
+commit 3641ab3312af383bfd73c54089e149cb2154c667
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 08:56:22 2019 -0500
+
+    PlaylistDAO and Playlist modifications- still needs some work
+
+commit b209e7c30b7d60333b9dd8d1dce3d21fec544603
+Merge: da54bbd9 7905fccf
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 08:31:28 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 7905fccfbfbe7a5d6ae4d67ddde7a799460cb1b9
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 08:30:40 2019 -0500
+
+    small test change -JP
+
+commit da54bbd9bece1a8c9f7b6745e74513297b7b17d1
+Merge: e8c83acc f89ec901
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 08:28:38 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit f89ec901f99c11250ad2fe9cfcb0e85bba1bce61
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 08:28:21 2019 -0500
+
+    testThings small change -JP
+
+commit e8c83acc0722aee970a5583995db5080de5828d9
+Merge: e4d015d9 6930b615
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 08:27:49 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 6930b61531abd35ada58c4f43daf3fe5248ef697
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 08:26:44 2019 -0500
+
+    Library fix 2
+
+commit e4d015d97a639318e904e0f9e20879080604534d
+Merge: 85d4e918 7b430163
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 08:25:31 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 7b4301635829aa4de288fc2f97f27bd2bbee876b
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 08:25:24 2019 -0500
+
+    library
+
+commit 9293787f849c5a3327aa8f9c9549d51b5dc12ec7
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Tue Nov 26 08:23:28 2019 -0500
+
+    getSegment not getConstant
+
+commit 85d4e9188bab327318a921d903204644adfeb790
+Merge: 30c83231 84259c68
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 08:19:28 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 84259c68fcdd49d8e8243400b64ee931174a0aa7
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 08:19:02 2019 -0500
+
+    Office Hours Test -JP
+
+commit ff50bb7a18d3f24a02e3f790793bd39bc41be94b
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 08:10:29 2019 -0500
+
+    make sure src/main/resources is non empty
+
+commit 30c83231ca7c07a547ddd6eaab1fc8b042bed24a
+Merge: 1d70f205 099413ba
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Tue Nov 26 07:40:38 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 099413bae9c4c1875e05000f749a1179735a8a85
+Author: jerryperez <jerryperez@localhost>
+Date:   Tue Nov 26 00:21:47 2019 -0500
+
+    Test listVideoSegmentsHandler -JP
+
+commit 4fc98be6a3b888330090120bf823a4faa7222c41
+Merge: 4df0191a 4a3de146
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:53:28 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 4a3de1466fa2c65a0f15d723da52f2353037b80d
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:53:19 2019 -0500
+
+    Fixed bracket and double class declaration error
+
+commit 4df0191aa91ede3bc5caf3d80c5ab71d97ba06b1
+Merge: c86ebd72 e9b9e871
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:51:25 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e9b9e871c0424319111cc7ed5bfff46b70953d43
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:50:37 2019 -0500
+
+    Forgot to change some names in AllSegmentsResponse
+
+commit c86ebd7288ab89c1869e740c78f0da431ceaf182
+Merge: 6dbecf33 b68df714
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:46:53 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit b68df714c068e5c9b44e3eb333754971c17f9265
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:46:49 2019 -0500
+
+    Added AllSegmentsResponse
+
+commit 6dbecf33eae81f413394e42129618f5fee4ec808
+Merge: a0b5f923 d86d6835
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:43:54 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit a0b5f92318cf498250ef37468224a9341b1818d7
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:43:11 2019 -0500
+
+    Updated listVideoSegmentsHandler -JP
+
+commit d86d68354bdc065cdbdc928fcc616b9256d152c2
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:40:49 2019 -0500
+
+    Just trying to fix my whole git situation sorry guys
+
+commit 1d70f205b1d1aa027156fd45bb9149ca204d1b27
+Merge: f50ef52c bff25920
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 23:29:12 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 56612f693cf4280a2bfbc7c3e491b0cceb14e099
+Merge: fcf6a2d1 bff25920
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:29:06 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit bff259205637f60cccd18282b264318f17ad9473
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:28:47 2019 -0500
+
+    Pom Works. SJ
+
+commit f50ef52cf4f649caf0f697035c4bf15bef0cb2c7
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 23:28:16 2019 -0500
+
+    hjashxhjsa
+
+commit fcf6a2d18988db3103eccd47cffd78c67fae7228
+Merge: 7b1dde1c 5ab4b13e
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:28:01 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 7b1dde1cee55b676216eb137ab547d229867cb96
+Merge: e7b67c5b b35b6e02
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:24:18 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            src/main/java/empiricist/segment/ListAllLocalSegsHandler.java
+
+commit 5ab4b13efcf43178791edddde2871cc8008c30ed
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:23:38 2019 -0500
+
+    listVideoSegmentsHandler -JP
+
+commit e7b67c5b4a585f66a76655de868a63651ed4498c
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 23:23:03 2019 -0500
+
+    AAaaa
+
+commit b35b6e02ff97a7fabb91a0b9d4b2ff6f4d5126f5
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:22:01 2019 -0500
+
+    Deleted the unneccesary package. SJ
+
+commit 8e3fa4f6bb8074d24f2b55add30535d16d65adc5
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:18:27 2019 -0500
+
+    List playlist handler.SJ
+
+commit 08870ac4074d04ac490e7ce77acd496b5383064f
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:07:46 2019 -0500
+
+    YUR
+
+commit a2ebf8d1a66b9d565b0f43efc1335614d4060738
+Merge: d6dd82b8 262ff11d
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:05:47 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit d6dd82b82c78baf8af7eb364571960bb8ea0a194
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 23:05:24 2019 -0500
+
+    The same thing. SJ
+
+commit 262ff11d391e6081ffd505024dd63cb7c5c30216
+Merge: a6816185 012edc15
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:04:37 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+    
+    Conflicts:
+            pom.xml
+
+commit a6816185c407f9de26d4b056e71bb57ee5a745ca
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 23:04:05 2019 -0500
+
+    Updated pom -JP
+
+commit 012edc1569a427a18cac82e199fc7281f28dbb4d
+Merge: 06d3b13f 3f45d981
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 22:56:59 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 3f45d98111abccca8041eeba49fc5a852f636a9e
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 22:40:33 2019 -0500
+
+    Javascript stuff. SJ
+
+commit 0b88833c7469a333229e9b433cb8c5042fcddfe4
+Merge: eacbbb3d 80466601
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 22:31:45 2019 -0500
+
+    Merge branch 'master' of
+    https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 8046660189761e9290837f8c9d2b1242209db5ed
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 22:30:45 2019 -0500
+
+    Added some javascript and made a playlist in our model package. SJ
+
+commit eacbbb3dbd838b1013fce49f14fb979533d6ab10
+Merge: a50bc916 e41d8bf5
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 21:32:12 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e41d8bf5c58726c15566c441e715887820934a02
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 21:31:34 2019 -0500
+
+    Create Playlist Request and Response. SJ
+
+commit 06d3b13fae2a3c0766f1651a3210eeef2f5292a7
+Merge: e126b60d d04efc80
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 14:41:24 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit e126b60dfe85cf0f1056909736a8d5093cecdad3
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 14:40:51 2019 -0500
+
+    Fussed with the Handler more, updated questions list
+
+commit d04efc8037f296e4a714a45fe5710d3428794992
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 14:18:20 2019 -0500
+
+    This is the start to the http code. SJ
+
+commit 365523ac1bfcee94aeb501c078df2f223ac81e9e
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 13:56:53 2019 -0500
+
+    Updated HTML. SJ
+
+commit a50bc9160f5b5d910510cbab34d5f7cdbe7571b1
+Merge: dfbcf2c8 f9547f28
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 13:55:42 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit f9547f28cfe7463c8dee95014c7c88bbf60e9a33
+Merge: 64886263 fb6f2190
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 13:53:37 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 64886263ef44d1b01abda18934474dd71f35d671
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 13:53:06 2019 -0500
+
+    Attempted to add libraries... not sure if it worked -Shannon
+
+commit fb6f219086bba00f00576cb2a91b22a260892d75
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 13:45:05 2019 -0500
+
+    Updated HTML -JP
+
+commit a8af15459c0a63949e866aaf68020ed5506f720f
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Mon Nov 25 13:39:41 2019 -0500
+
+    I literally just took out one bracket. SJ
+
+commit b60c3777a09762fc709c493c1dc5533365093f59
+Author: Shannon <Shannon@130.215.212.216>
+Date:   Mon Nov 25 13:32:13 2019 -0500
+
+    Fixed SegmentsDAO in response to database schema update and Segment
+    class update
+
+commit 25a0d476d7584ba6ce4364d48cf072f6a118fd17
+Author: jerryperez <jerryperez@localhost>
+Date:   Mon Nov 25 13:20:45 2019 -0500
+
+    This is an update to the Segment Class -JP
+
+commit dfbcf2c858212e836c977e76de8627d8e113fec6
+Author: vinit <vinit@LAPTOP-V0K7N6A5>
+Date:   Mon Nov 25 13:03:18 2019 -0500
+
+    fixed error
+
+commit e6ff798afa01f9775d83f56fdbf265934b88bcaf
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sun Nov 24 22:28:53 2019 -0500
+
+    Added a Questions doc so we can all keep track of things we need to
+    figure out and what's not currently working
+
+commit c7d45859b5858bc38429009e6b565f1df79a09e0
+Author: Shannon <Shannon@DESKTOP-2UMK8OH>
+Date:   Sun Nov 24 22:13:33 2019 -0500
+
+    Added DAO, Segment Class, Handler and Util
+    
+    Adapted some of Prof. Heineman's calculator classes to our uses-
+    substituted all instances of "constant" for "segment", and created a
+    segment class specific to our segment db structure with references using
+    our structure
+
+commit 037e0d07e3d25a374a5529fdec097e4eff5afafc
+Merge: 5cfb3318 e59ff389
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Sun Nov 24 15:25:29 2019 -0500
+
+    Merge branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
+
+commit 5cfb3318393d3fb60ab2dfcce37753c237c60f5c
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Sun Nov 24 15:11:09 2019 -0500
+
+    hello
+
+commit 126ac61e03ab99013daca4ddd216c658f1b4f296
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Sat Nov 23 21:25:29 2019 -0500
+
+    Here is what I believe is the start of a handler for segment. SJ
+
+commit e59ff389b54dab73b123d7d43ea26a47ebe3032e
+Author: sjordhani22 <54779205+sjordhani22@users.noreply.github.com>
+Date:   Sat Nov 23 13:52:41 2019 -0500
+
+    Initial commit
+
+commit c8c44dbe5e6192e3a73cf598218aba431c6afe81
+Author: sjordhani22 <sjordhani22@autoreg-171997.dyn.wpi.edu>
+Date:   Sat Nov 23 13:50:26 2019 -0500
+
+    Here is the new AWS Project Folder

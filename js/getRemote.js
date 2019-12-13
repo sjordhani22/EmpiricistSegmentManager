@@ -1,5 +1,6 @@
 
 function refreshRemoteList() {
+	
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", listRemoteSites_url, true); // from API
 		xhr.send();
@@ -86,14 +87,18 @@ function handleRegisterSite(e){
 	// remoteVideoSegmentList.innerHTML = "<code>" + result + "</code><p>";
 	// }
 	
+
+
 	function processRemoteListResponse(result) {
+		
+		
+		refreshRemoteList();
 	  console.log("res:" + result);
-	  // Can grab any DIV or SPAN HTML element and can then manipulate its
-		// contents dynamically via javascript
 	  var js = JSON.parse(result);
 	  var remSiteList = document.getElementById('remoteSiteList');
-	  
+	  console.log("list:" + js.list);
 	  var output = "";
+	  
 	  for (var i = 0; i < js.list.length; i++) { 
 	    var constantJson = js.list[i];
 	    console.log(constantJson);
