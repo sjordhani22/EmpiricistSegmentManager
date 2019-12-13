@@ -48,7 +48,7 @@ function handleRegisterSite(e){
 	  if (siteName != ""){
 		  
 		  var data = {};
-		  data["name"] = siteName;
+		  data["url"] = siteName;
 		  
 		  var js = JSON.stringify(data);
 		  
@@ -100,8 +100,7 @@ function handleRegisterSite(e){
 	    
 	    var url = constantJson["url"];
 	
-	    output = output + "<b>" + url + "<br/></b>"}
-
+	    output = output + "<b>" + url + "<br/></b>"
 
 	  }
 	  
