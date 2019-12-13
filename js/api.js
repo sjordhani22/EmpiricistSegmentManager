@@ -2,7 +2,6 @@
 // All from API Gateway										TYPE		CODE
 var base_url = "https://d7ci5h57fb.execute-api.us-east-1.amazonaws.com/Beta/"; 
 
-
 var base_remote_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/";
 
 
@@ -29,7 +28,7 @@ var getSegment_url = base_url + "listVideoSegments";    	// GET		getSegments.js
 var getPlaylist_url = base_url + "listPlaylists";			// GET		getPlaylists.js
 var listRemoteSites_url = base_url + "listRemoteSites";		// GET
 var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
-var remote_url = base_remote_url+ "publicsegments";			// GET 		getRemote.js
+var get_remote_url = base_remote_url+ "publicsegments";			// GET 		getRemote.js
 
 //
 //If we didn't need this before I'm not sure why we would now but they're in the API
@@ -37,4 +36,4 @@ var directAdmin_url = base_url + "directAdmin"			// POST
 var directParticipant_url = base_url + "directParticipant"
 var apikey = "ppdmq8sUtytYCOR6Z2oGa9fLT2qCSs32lk6so4hd";
 
-var sample_video_segments_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/publicsegments";
+//var sample_video_segments_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/publicsegments";
