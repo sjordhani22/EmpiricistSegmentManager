@@ -1,6 +1,5 @@
+
 function refreshRemoteList() {
-	
-	function refreshSegmentsList() {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", get_remote_url, true); // from API
 		xhr.send();
