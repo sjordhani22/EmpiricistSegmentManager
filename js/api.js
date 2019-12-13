@@ -29,6 +29,7 @@ var markSeg_url = base_url + "markSeg";						// POST
 var unmarkSeg_url = base_url + "unmarkSeg"					// POST
 var unregisterTP_url = base_url + "unregisterTP"			// POST
 
+
 //GETs
 var getPlaylist_url = base_url + "listPlaylists";			// GET		getPlaylists.js
 var listRemoteSites_url = base_url + "listRemoteSites";		// GET
@@ -38,6 +39,9 @@ var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
 //If we didn't need this before I'm not sure why we would now but they're in the API
 var directAdmin_url = base_url + "directAdmin"			// POST
 var directParticipant_url = base_url + "directParticipant"
+var apikey = "ppdmq8sUtytYCOR6Z2oGa9fLT2qCSs32lk6so4hd";
+
+var sample_video_segments_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/publicsegments";
 
 // NEEDED FOR G3					JS FILE MADE?		Handler?			NOTES:
 // List of segments							Y 				Y			- need help
