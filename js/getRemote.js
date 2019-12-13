@@ -53,7 +53,7 @@ function handleRegisterSite(e){
 		  var js = JSON.stringify(data);
 		  
 		  var xhr = new XMLHttpRequest();
-		  xhr.open("POST",post_remote_url, true);
+		  xhr.open("POST",registerTP_url, true);
 		  xhr.send(js);
 		  
 		  
@@ -71,7 +71,7 @@ function handleRegisterSite(e){
 					  alert (err);
 				  }
 			  }else{
-				  processCreatePlaylistResponse("N/A");
+				  processprocessRemoteListResponse("N/A");
 			  }
 		  }
 	  };
@@ -100,7 +100,8 @@ function handleRegisterSite(e){
 	    
 	    var url = constantJson["url"];
 	
-		output = output + "<b>" + url + "</b>"}
+	    output = output + "<b>" + url + "<br/></b>"}
+
 
 	  }
 	  
