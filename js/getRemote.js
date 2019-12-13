@@ -1,7 +1,7 @@
 
 function refreshRemoteList() {
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET", get_remote_url, true); // from API
+		xhr.open("GET",listRemoteSites_url, true); // from API
 		xhr.send();
 		console.log("sent");
 
