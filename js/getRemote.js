@@ -121,6 +121,7 @@ function processRemoteListResponse(result) {
     	output = output + url;
     }
   }
+  
 
   // Update computation result
   remSiteList.innerHTML = output;
