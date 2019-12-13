@@ -1,13 +1,13 @@
 function refreshRemoteList() {
 	
   var data = {};
-  data["minValue"] = 1;
-  data["maxValue"] = 3;
+//  data["minValue"] = 1;
+//  data["maxValue"] = 3;
   var js = JSON.stringify(data);	
 	
   var xhr = new XMLHttpRequest();
   xhr.open("POST", remote_url, true);
-  xhr.setRequestHeader("x-api-key", apikey);
+  xhr.setRequestHeader("x-api-key", apikey); 					//where is this from?
 
   // send the collected data as JSON
   xhr.send(js);
@@ -26,7 +26,7 @@ function refreshRemoteList() {
   
   // ALSO SEND remote video segments
   var another = new XMLHttpRequest();
-  another.open("GET", sample_video_segments_url, true);
+  another.open("GET", get_remote_url, true);
   another.setRequestHeader("x-api-key", apikey);
 
   // send the collected data as JSON
@@ -64,7 +64,7 @@ function processRemoteListResponse(result) {
   console.log("res:" + result);
   // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
   var js = JSON.parse(result);
-  var remoteConstList = document.getElementById('remoteConstantList');
+  var remoteConstList = document.getElementById('remoteSiteList');
   
   var output = "";
   for (var i = 0; i < js.list.length; i++) {
