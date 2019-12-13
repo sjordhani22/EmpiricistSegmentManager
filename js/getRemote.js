@@ -1,7 +1,7 @@
 
 function refreshRemoteList() {
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET",listRemoteSites_url, true); // from API
+		xhr.open("GET", listRemoteSites_url, true); // from API
 		xhr.send();
 		console.log("sent");
 
@@ -71,7 +71,7 @@ function handleRegisterSite(e){
 					  alert (err);
 				  }
 			  }else{
-				  processRemoteListResponse("N/A");
+				  processCreatePlaylistResponse("N/A");
 			  }
 		  }
 	  };
@@ -101,6 +101,7 @@ function handleRegisterSite(e){
 	    var url = constantJson["url"];
 	
 	    output = output + "<b>" + url + "<br/></b>"}
+
 
 	  }
 	  
