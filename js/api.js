@@ -30,7 +30,7 @@ var getPlaylist_url = base_url + "listPlaylists";			// GET		getPlaylists.js
 var listRemoteSites_url = base_url + "listRemoteSites";		// GET
 var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
 
-
+//
 //If we didn't need this before I'm not sure why we would now but they're in the API
 var directAdmin_url = base_url + "directAdmin"			// POST
 var directParticipant_url = base_url + "directParticipant"
