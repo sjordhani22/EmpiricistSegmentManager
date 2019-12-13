@@ -47,15 +47,15 @@
 			onClick="JavaScript:handleSearchByCharacterThis(this)">	
 	</form>
 	
+	 -->
+	 
 	<p></p>
-		<label>Select Which Segments</label> <select id="myList">
-			<option value="1">Remote Segments</option>
-			<option value="2">Local Segments</option>
+		<label>Select Which Segments</label> <select id="myDispOptions">
+			<option value="1">Local Segments</option>
+			<option value="2">Remote Segments</option>
 		</select>
 		<button class="btn displaySeg">Display Segments</button>
 	<p></p>
-	
-	  -->
 
 	<form name="uploadSeg" method="post">
 	   <input name="newChar" value="Enter Character Name" />
@@ -106,13 +106,14 @@
 	
 	<p></p>
 	
+	<!-- 
 	<form name="append" method="post">
 		<input name="segment" value="Enter Segment ID" id= "segApp" /> 
 		<input name="playlist" value="Enter Playlist Name" id = "playApp" /> 
 		<input type="button" id="appendButton" value="Append to Playlist"
 			onClick="JavaScript:handleAppendClick(this)">
 	</form>
-   
+    -->
    
 	<p></p>
 	<p>---------------------------------------------------------------------------------------</p>
@@ -123,7 +124,11 @@
   </tr>
   <tr>
     <td><div id="segmentList"></div></td>
-    <td valign="top">><div id="playlistList"></div></td>
+    <td valign="top"><div id="playlistList"></div></td>
+  </tr>
+  <tr>
+  	<td><h2>Remote Sites</h2>
+  		<div id= "remoteList"></div></td>
   </tr>
 </table>
 
