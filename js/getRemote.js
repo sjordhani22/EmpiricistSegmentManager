@@ -1,28 +1,27 @@
 function refreshRemoteList() {
 	
-  var data = {};
-//  data["minValue"] = 1;
-//  data["maxValue"] = 3;
-  var js = JSON.stringify(data);	
-	
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", post_remote_url, true);
-  xhr.setRequestHeader("x-api-key", apikey); 					//where is this from?
+	function refreshSegmentsList() {
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", get_remote_url, true); //from API
+		xhr.send();
+		console.log("sent");
 
-  // send the collected data as JSON
-  xhr.send(js);
-   
-  console.log("sent");
-
-  // This will process results and update HTML as appropriate. 
-  xhr.onloadend = function () {
-    if (xhr.readyState == XMLHttpRequest.DONE) {
-      console.log ("XHR:" + xhr.responseText);
-      processRemoteListResponse(xhr.responseText);
-    } else {
-    	processRemoteListResponse("N/A");
-    }
-  };
+		// This will process results and update HTML as appropriate.
+		xhr.onloadend = function() {
+			console.log(xhr);
+			console.log(xhr.request);
+			if (xhr.readyState == XMLHttpRequest.DONE) {
+				processRemoteListResponse(xhr.responseText);
+				//processRemoteVideoResponse(xhr.responseText);
+			} else {
+				processRemoteListResponse("N/A");
+				//processRemoteVideoResponse("N/A");
+			}
+		};
+	}
+  
+  
+  
   
   // ALSO SEND remote video segments
   var another = new XMLHttpRequest();
@@ -106,7 +105,7 @@ function processRemoteListResponse(result) {
   var remSiteList = document.getElementById('remoteSiteList');
   
   var output = "";
-  for (var i = 0; i < js.list.length; i++) {
+  for (var i = 0; i < js.list.length; i++) { 
     var constantJson = js.list[i];
     console.log(constantJson);
     
