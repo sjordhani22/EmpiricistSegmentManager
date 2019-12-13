@@ -20,6 +20,7 @@ var markSeg_url = base_url + "markSeg";						// POST
 var unmarkSeg_url = base_url + "unmarkSeg"					// POST
 var unregisterTP_url = base_url + "unregisterTP"			// POST
 var calculate_url  = base_url + "calculator";  // only here for testing.
+var post_remote_url = base_remote_url+ "postsegments";		// POST 	getRemote.js
 
 
 
