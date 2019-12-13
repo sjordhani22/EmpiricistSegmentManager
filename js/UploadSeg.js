@@ -1,7 +1,7 @@
 
 // some of this is from the add.js file
 
-function processUploadResponse(newChar, newQuote, result) {
+function processUploadResponse(result) {
 //  console.log("result:" + result);
 //  var js = JSON.parse(result);
 //
@@ -16,7 +16,7 @@ function processUploadResponse(newChar, newQuote, result) {
 //    document.addForm.result.value = "error:" + msg
 //  }
   
-	console.log("result:" newChar + newQuote + result);
+	console.log("result:" +  result);
 	
 	refreshSegmentsList();								// added this so that it refreshes the segments at the end: from create.js
 }
@@ -28,8 +28,8 @@ function handleUploadClick(e) {
 	  var data = {};
 	  data["name"]= form.newChar.value;
 	  data["quote"]= form.newQuote.value;
-	  data["id"]= newChar + newQuote.substring(0,5);
-	  data["address"] = "https://empiricistbucket2.s3.amazonaws.com/" + newID + ".ogg" ;
+	  data["id"]= form.newChar.value + form.newQuote.value.substring(0,5);
+	  data["address"] = "https://empiricistbucket2.s3.amazonaws.com/" + data["id"] + ".ogg" ;
 	  
 	  
 	  // base64EncodedValue":"data:text/plain;base64,My4xND....."
@@ -52,9 +52,9 @@ function handleUploadClick(e) {
     
     if (xhr.readyState == XMLHttpRequest.DONE) {
       console.log ("XHR:" + xhr.responseText);
-      processUploadResponse(name, quote, xhr.responseText);
+      processUploadResponse(xhr.responseText);
     } else {
-      processUploadResponse(name, quote, "N/A");
+      processUploadResponse("N/A");
     }
   };
 }
