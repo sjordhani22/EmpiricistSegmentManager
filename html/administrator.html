@@ -4,10 +4,13 @@
 
 	<script type='text/javascript' src='../js/api.js'></script>
 	<script type='text/javascript' src='../js/getSegments.js'></script>
+	<script type='text/javascript' src='../js/getRemote.js'></script>
+	
 
 	<script type="text/javascript">
 		function initialize() {
 			refreshSegmentsList();
+			refreshRemoteList();
 		}
 	</script>
 </head>
@@ -22,9 +25,14 @@
 	<h2>Available Segments</h2>
 	<div id="segmentList"></div>
 	<p>
-		<button class="btn register">Register</button>
-		<input type="text" id="searchURL" value="Enter URL Here" />
-	</p>
+		<form name="registerRemote" method="post">
+			<input name="name" value="Remote Site URL" id="remName"/> <input type="button"
+			id="regSite" value="Register" 
+			disabled onClick="JavaScript:handleRegisterSite(this)">
+	</form>
+	
+	<h2>Available Remote Sites</h2>
+	<div id= "remoteSiteList"></div>
 
 	<form name="searchQuote" method="post">
 		<input name="char" value="Enter Segment ID" />

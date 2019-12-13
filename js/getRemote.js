@@ -55,6 +55,45 @@ function processRemoteVideoResponse(result) {
   remoteVideoSegmentList.innerHTML = "<code>" + result + "</code><p>";
 }
 
+function handleRegisterSite(e){
+	var userIn = document.getElementById("remName");	
+	  console.log(userIn);
+	  var siteName = userIn.value;
+	  console.log(siteName);
+	  
+	  if (siteName != ""){
+		  
+		  var data = {};
+		  data["name"] = siteName;
+		  
+		  var js = JSON.stringify(data);
+		  
+		  var xhr = new XMLHttpRequest();
+		  xhr.open("POST",post_remote_url, true);
+		  xhr.send(js);
+		  
+		  
+		  console.log("sent remote site data");
+		// This will process results and update HTML as appropriate.
+		  xhr.onloadend = function (){
+			  if(xhr.readyState == XMLHttpRequest.DONE){
+				  if(xhr.status == 200){
+					  console.log("This is what we're getting: " + xhr.responseText);
+					  processCreatePlaylistResponse(xhr.responseText);
+				  }else{
+					  console.log("Actual Response" + xhr.responseText);
+					  var js = JSON.parse(xhr.responseText);
+					  var err = js["response"];
+					  alert (err);
+				  }
+			  }else{
+				  processCreatePlaylistResponse("N/A");
+			  }
+		  }
+	  };
+	}
+
+
 /**
  * Respond to server JSON object.
  *
@@ -64,23 +103,22 @@ function processRemoteListResponse(result) {
   console.log("res:" + result);
   // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
   var js = JSON.parse(result);
-  var remoteConstList = document.getElementById('remoteSiteList');
+  var remSiteList = document.getElementById('remoteSiteList');
   
   var output = "";
   for (var i = 0; i < js.list.length; i++) {
     var constantJson = js.list[i];
     console.log(constantJson);
     
-    var cname = constantJson["name"];
-    var cval = constantJson["value"];
-    var sysvar = constantJson["system"];
+    var url = constantJson["url"];
+  
     if (sysvar) {
-    	output = output + "<div id=\"const" + cname + "\"><b>" + cname + ":</b> = " + cval + "<br></div>";
+    	output = output + url;
     } else {
-    	output = output + "<div id=\"const" + cname + "\"><b>" + cname + ":</b> = " + cval + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+    	output = output + url;
     }
   }
 
   // Update computation result
-  remoteConstList.innerHTML = output;
+  remSiteList.innerHTML = output;
 }
