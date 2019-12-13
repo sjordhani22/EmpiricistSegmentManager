@@ -40,12 +40,12 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
 		
 	for(int i= 0; i< remoteSites.size(); i++) {
 		
-		if( remoteSites.get(i).getUrl().contentEquals(Url)) {
+		if( remoteSites.get(i).getUrl().contentEquals(Url)) 
 			
 			isthere= true;
-		}
+	}
 		
-		else if(!isthere) {
+		 if(!isthere) {
 			return dao.AddRemote(new RemoteSite(Url));
 		}
 		
@@ -55,8 +55,6 @@ public class RegisterRemoteSiteHandler implements RequestHandler<RegisterSiteReq
     	return false;
     }
 		
-	}
-	return false;
 		
 	}
     

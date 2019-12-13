@@ -3,8 +3,9 @@ package empiricist.database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.sql.Statement;
 
-import com.amazonaws.auth.policy.Statement;
+
 
 import empiricist.model.Playlist;
 import empiricist.model.RemoteSite;
@@ -63,7 +64,7 @@ public ArrayList<RemoteSite> getAllRemoteSites() throws Exception {
         
         ArrayList<RemoteSite> Remotes = new ArrayList<RemoteSite>();
         try {
-            java.sql.Statement statement = conn.createStatement();
+            Statement statement = conn.createStatement();
             String query = "SELECT * FROM Remote";
             ResultSet result = statement.executeQuery(query);
 
