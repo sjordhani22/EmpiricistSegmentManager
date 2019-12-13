@@ -71,7 +71,7 @@ function handleRegisterSite(e){
 					  alert (err);
 				  }
 			  }else{
-				  processCreatePlaylistResponse("N/A");
+				  processprocessRemoteListResponse("N/A");
 			  }
 		  }
 	  };
