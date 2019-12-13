@@ -15,7 +15,7 @@ public class RemoteSegmentTest extends LambdaTest{
 	   public void testListSegments() {
 	    	 
 	        RemoteSegmentsResponse resp = new listRemoteSegmentsHandler().handleRequest(null, createContext("listsegs"));
-	        Assert.assertEquals(3, resp.segments.size());
+	        Assert.assertEquals(10, resp.segments.size());
 	        
 	        System.out.println(new Gson().toJson(resp));
 	    }
