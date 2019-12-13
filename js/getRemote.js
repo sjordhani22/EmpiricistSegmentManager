@@ -111,11 +111,23 @@ function processRemoteListResponse(result) {
     console.log(constantJson);
     
     var url = constantJson["url"];
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
     if (sysvar) {
+<<<<<<< HEAD
     	output = output + url;
+=======
+    	output = output + "<b>" + url + "</b>"
+>>>>>>> branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
     } else {
+<<<<<<< HEAD
     	output = output + url;
+=======
+    	output = output + "<div id=\"const" + url "\"><b>" + cname + ":</b> = " + cval + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+>>>>>>> branch 'master' of https://github.com/sjordhani22/EmpiricistSegmentManager.git
     }
   }
 
