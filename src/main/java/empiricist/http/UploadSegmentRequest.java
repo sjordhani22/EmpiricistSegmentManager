@@ -75,12 +75,12 @@ public class UploadSegmentRequest {
     	
 	}
 	
-	public UploadSegmentRequest(String charName, String quote, String encode, boolean system) {
-		this.name = charName;
-		this.quote = quote;
-		this.base64EncodedValue = encode;
-		this.system = system;
-	}
+//	public UploadSegmentRequest(String charName, String quote, String encode, boolean system) {
+//		this.name = charName;
+//		this.quote = quote;
+//		this.base64EncodedValue = encode;
+//		this.system = system;
+//	}
 	
 	public String toString() {
 		return "UploadSegment("+ id +"," + name + "," + quote + ",\" + base64EncodedValue + \")";

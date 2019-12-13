@@ -23,7 +23,7 @@ public class DeletePlaylistResponse {
 		if (statusCode == 200) {
 			return "DeleteResponse(" + name + ")";
 		} else {
-			return "ErrorResult(" + name + ", statusCode=" + statusCode + ", err=" + error + ")";
+		return "ErrorResult(" + name + ", statusCode=" + statusCode + ", err=" + error + ")";
 		}
 	}
 }
