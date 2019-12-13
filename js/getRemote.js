@@ -1,3 +1,4 @@
+
 function refreshRemoteList() {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", listRemoteSites_url, true); // from API
@@ -38,9 +39,6 @@ function refreshRemoteList() {
 // };
 // }
 
-
-
-
 function handleRegisterSite(e){
 	var userIn = document.getElementById("remName");	
 	  console.log(userIn);
@@ -65,7 +63,7 @@ function handleRegisterSite(e){
 			  if(xhr.readyState == XMLHttpRequest.DONE){
 				  if(xhr.status == 200){
 					  console.log("This is what we're getting: " + xhr.responseText);
-					  processCreatePlaylistResponse(xhr.responseText);
+					  processRemoteListResponse(xhr.responseText);
 				  }else{
 					  console.log("Actual Response" + xhr.responseText);
 					  var js = JSON.parse(xhr.responseText);
@@ -102,14 +100,8 @@ function handleRegisterSite(e){
 	    
 	    var url = constantJson["url"];
 	
-	    if (sysvar) {
-	
-	    	output = output + url;
-	
-	    	output = output + "<b>" + url + "</b>"
-	    } else {
-	    	output = output + url;
-	    }
+		output = output + "<b>" + url + "</b>"}
+
 	  }
 	  
 	  // Update computation result
