@@ -2,7 +2,7 @@ function refreshRemoteList() {
 	
 	function refreshSegmentsList() {
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET", get_remote_url, true); //from API
+		xhr.open("GET", get_remote_url, true); // from API
 		xhr.send();
 		console.log("sent");
 
@@ -12,47 +12,36 @@ function refreshRemoteList() {
 			console.log(xhr.request);
 			if (xhr.readyState == XMLHttpRequest.DONE) {
 				processRemoteListResponse(xhr.responseText);
-				//processRemoteVideoResponse(xhr.responseText);
+				// processRemoteVideoResponse(xhr.responseText);
 			} else {
 				processRemoteListResponse("N/A");
-				//processRemoteVideoResponse("N/A");
+				// processRemoteVideoResponse("N/A");
 			}
 		};
 	}
   
   
-  
-  
-  // ALSO SEND remote video segments
-  var another = new XMLHttpRequest();
-  another.open("GET", get_remote_url, true);
-  another.setRequestHeader("x-api-key", apikey);
+// // ALSO SEND remote video segments
+// var another = new XMLHttpRequest();
+// another.open("GET", get_remote_url, true);
+// another.setRequestHeader("x-api-key", apikey);
+//
+// // send the collected data as JSON
+// another.send();
+//   
+// console.log("sent");
+//
+// // This will process results and update HTML as appropriate.
+// another.onloadend = function () {
+// if (another.readyState == XMLHttpRequest.DONE) {
+// console.log ("XHR:" + another.responseText);
+// processRemoteVideoResponse(another.responseText);
+// }
+// };
+// }
 
-  // send the collected data as JSON
-  another.send();
-   
-  console.log("sent");
 
-  // This will process results and update HTML as appropriate. 
-  another.onloadend = function () {
-    if (another.readyState == XMLHttpRequest.DONE) {
-      console.log ("XHR:" + another.responseText);
-      processRemoteVideoResponse(another.responseText);
-    }
-  };
-}
 
-/**
- * Respond to server JSON object.
- *
- * Replace the contents of 'constantList' with a <br>-separated list of name,value pairs.
- */
-function processRemoteVideoResponse(result) {
-  console.log("res-vs:" + result);
-  
-  var remoteVideoSegmentList = document.getElementById('remoteVieoSegmentsList');
-  remoteVideoSegmentList.innerHTML = "<code>" + result + "</code><p>";
-}
 
 function handleRegisterSite(e){
 	var userIn = document.getElementById("remName");	
@@ -93,35 +82,38 @@ function handleRegisterSite(e){
 	}
 
 
-/**
- * Respond to server JSON object.
- *
- * Replace the contents of 'constantList' with a <br>-separated list of name,value pairs.
- */
-function processRemoteListResponse(result) {
-  console.log("res:" + result);
-  // Can grab any DIV or SPAN HTML element and can then manipulate its contents dynamically via javascript
-  var js = JSON.parse(result);
-  var remSiteList = document.getElementById('remoteSiteList');
-  
-  var output = "";
-  for (var i = 0; i < js.list.length; i++) { 
-    var constantJson = js.list[i];
-    console.log(constantJson);
-    
-    var url = constantJson["url"];
-
-    if (sysvar) {
-
-    	output = output + url;
-
-    	output = output + "<b>" + url + "</b>"
-    } else {
-    	output = output + url;
-    }
-  }
-  
-
-  // Update computation result
-  remSiteList.innerHTML = output;
-}
+	// function processRemoteVideoResponse(result) {
+	// console.log("res-vs:" + result);
+	//
+	// var remoteVideoSegmentList =
+	// document.getElementById('remoteVieoSegmentsList');
+	// remoteVideoSegmentList.innerHTML = "<code>" + result + "</code><p>";
+	// }
+	
+	function processRemoteListResponse(result) {
+	  console.log("res:" + result);
+	  // Can grab any DIV or SPAN HTML element and can then manipulate its
+		// contents dynamically via javascript
+	  var js = JSON.parse(result);
+	  var remSiteList = document.getElementById('remoteSiteList');
+	  
+	  var output = "";
+	  for (var i = 0; i < js.list.length; i++) { 
+	    var constantJson = js.list[i];
+	    console.log(constantJson);
+	    
+	    var url = constantJson["url"];
+	
+	    if (sysvar) {
+	
+	    	output = output + url;
+	
+	    	output = output + "<b>" + url + "</b>"
+	    } else {
+	    	output = output + url;
+	    }
+	  }
+	  
+	  // Update computation result
+	  remSiteList.innerHTML = output;
+	}
