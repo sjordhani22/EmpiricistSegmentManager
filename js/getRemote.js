@@ -71,13 +71,12 @@ function processRemoteListResponse(result) {
     var constantJson = js.list[i];
     console.log(constantJson);
     
-    var cname = constantJson["name"];
-    var cval = constantJson["value"];
-    var sysvar = constantJson["system"];
+    var url = constantJson["url"];
+
     if (sysvar) {
-    	output = output + "<div id=\"const" + cname + "\"><b>" + cname + ":</b> = " + cval + "<br></div>";
+    	output = output + "<b>" + url + "</b>"
     } else {
-    	output = output + "<div id=\"const" + cname + "\"><b>" + cname + ":</b> = " + cval + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
+    	output = output + "<div id=\"const" + url "\"><b>" + cname + ":</b> = " + cval + "(<a href='javaScript:requestDelete(\"" + cname + "\")'><img src='deleteIcon.png'></img></a>) <br></div>";
     }
   }
 
