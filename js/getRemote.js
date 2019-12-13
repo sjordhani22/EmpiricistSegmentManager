@@ -104,14 +104,8 @@ function handleRegisterSite(e){
 	    
 	    var url = constantJson["url"];
 	
-	    if (sysvar) {
-	
-	    	output = output + url;
-	
-	    	output = output + "<b>" + url + "</b>"
-	    } else {
-	    	output = output + url;
-	    }
+	    if (sysvar) {output = output + "<b>" + url + "</b>"}
+	    else {output = output + url;}
 	  }
 	  
 	  // Update computation result
