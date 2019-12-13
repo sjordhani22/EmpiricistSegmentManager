@@ -3,7 +3,7 @@
 var base_url = "https://d7ci5h57fb.execute-api.us-east-1.amazonaws.com/Beta/"; 
 
 
-var remote_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/";
+var base_remote_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/";
 
 
 //POSTs
@@ -29,6 +29,7 @@ var getSegment_url = base_url + "listVideoSegments";    	// GET		getSegments.js
 var getPlaylist_url = base_url + "listPlaylists";			// GET		getPlaylists.js
 var listRemoteSites_url = base_url + "listRemoteSites";		// GET
 var listSegInPlaylist_url = base_url + "ListSegInPlaylist";	// GET
+var remote_url = base_remote_url+ "publicsegments";			// GET 		getRemote.js
 
 //
 //If we didn't need this before I'm not sure why we would now but they're in the API
@@ -37,17 +38,3 @@ var directParticipant_url = base_url + "directParticipant"
 var apikey = "ppdmq8sUtytYCOR6Z2oGa9fLT2qCSs32lk6so4hd";
 
 var sample_video_segments_url = "https://q644890lfb.execute-api.us-east-1.amazonaws.com/Remote/publicsegments";
-
-// NEEDED FOR G3					JS FILE MADE?		Handler?			NOTES:
-// List of segments							Y 				Y			- need help
-// Upload new segment						  							- no idea how to do this
-// Delete segment							Y
-
-// List of playlists						Y 				Y			- need help
-// Create new playlist						Y				Y
-// Delete new playlist						Y
-
-// Search for segment by character name		  							- a tomorrow problem
-// Search for segment by text				  							- a tomorrow problem
-
-// Add a remote site						  							- a tomorrow problem
