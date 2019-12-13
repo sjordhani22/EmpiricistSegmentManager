@@ -17,7 +17,7 @@ public class RemoteSitesDAO {
 	ResultSet result;
 
 	
-	
+	//
 	public RemoteSitesDAO() {
 		try {
 			conn = DatabaseUtil.connect();
