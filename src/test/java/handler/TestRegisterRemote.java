@@ -18,7 +18,7 @@ public class TestRegisterRemote extends LambdaTest {
 	RegisterSiteRequest duplicate = new RegisterSiteRequest("Georgie_is_a_wizard");
 	RegisterSiteResponse res = new RegisterRemoteSiteHandler().handleRequest(RegiSite, createContext(null));
 	Assert.assertEquals("Georgie_is_a_wizard", response.response);
-	Assert.assertEquals(422, response.httpCode);
+	Assert.assertEquals(422, res.httpCode);
 	
 	
 	}
