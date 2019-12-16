@@ -64,7 +64,8 @@ function handleRegisterSite(e){
 			  if(xhr.readyState == XMLHttpRequest.DONE){
 				  if(xhr.status == 200){
 					  console.log("This is what we're getting: " + xhr.responseText);
-					  processRemoteListResponse(xhr.responseText);
+					  //processRemoteListResponse(xhr.responseText);
+					  refreshRemoteList();
 				  }else{
 					  console.log("Actual Response" + xhr.responseText);
 					  var js = JSON.parse(xhr.responseText);
@@ -72,7 +73,8 @@ function handleRegisterSite(e){
 					  alert (err);
 				  }
 			  }else{
-				  processprocessRemoteListResponse("N/A");
+				  //processRemoteListResponse("N/A");
+				  refreshRemoteList();
 			  }
 		  }
 	  };
@@ -92,7 +94,7 @@ function handleRegisterSite(e){
 	function processRemoteListResponse(result) {
 		
 		
-		refreshRemoteList();
+		//refreshRemoteList();
 	  console.log("res:" + result);
 	  var js = JSON.parse(result);
 	  var remSiteList = document.getElementById('remoteSiteList');
